@@ -1,0 +1,21 @@
+{
+  "name": "jekyll-angular",
+  "version": "0.0.0",
+  "authors": [
+    "adrianjonmiller@gmail.com"
+  ],
+  "description": "Blog template using Jekyll and Angular JS",
+  "keywords": [
+    "template",
+    "angular",
+    "jekyll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
