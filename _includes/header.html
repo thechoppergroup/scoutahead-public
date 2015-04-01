@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/#/">{{ site.title }}</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -13,13 +13,33 @@
         </svg>
       </a>
 
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
+      <ul class="inline">
+        {% assign pages = site.pages | sort: "order" %}
+        {% for page in pages %}
+        {% if page.title %}
+        {% if page.parent == nil %}
+        <li>
+            {% if page.order == 0 %}
+              <a class="page-link" href="/#/">{{ page.title }}</a>
+            {% else %}
+              <a class="page-link" href="/#{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            {% endif %}
+            <ul>
+            {% assign children = site.pages | sort: "order" %}
+            {% for child in children %}
+            {% if child.title %}
+            {% if child.parent == page.title %}
+              <li><a class="page-link" href="/#{{ child.url | prepend: site.baseurl }}">{{ child.title }}</a></li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+        {% endif %}
         {% endfor %}
-      </div>
+
+      </ul>
     </nav>
 
   </div>

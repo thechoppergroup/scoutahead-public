@@ -23,6 +23,21 @@
     }
 }
 
+.inline {
+    @extend %clearfix;
+    > * {
+        float: left;
+    }
+}
+
+[role="dropdown"] {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+}
+
 .site-nav {
     float: right;
     line-height: 56px;
