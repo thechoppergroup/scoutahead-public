@@ -1,9 +1,6 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
-
 @import "vars";
-// @import "../bower_components/thin-scss/dist/thin";
+@import "../bower_components/thin-scss/dist/thin";
 @import "typography";
 @import "theme";
