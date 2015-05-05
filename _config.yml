@@ -17,6 +17,10 @@ keywords: ["jekyll", "demo site", "framework"]
 # Build settings
 markdown: kramdown
 
+# SASS Dir
+sass:
+    sass_dir: assets
+
 gems:
 - jekyll-mentions
 - jemoji
