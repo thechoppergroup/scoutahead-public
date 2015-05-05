@@ -1,14 +1,14 @@
 var app = angular.module( 'app', [
 	'ngRoute',
 	'ui.router',
-	'app.controllers'
+	'app.controllers',
+	'ngDisqus'
 	], function($interpolateProvider) {
 	  $interpolateProvider.startSymbol('[[');
 	  $interpolateProvider.endSymbol(']]');
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-
 	$stateProvider
 
 	// route to show our basic form (/form)
@@ -19,9 +19,9 @@ var app = angular.module( 'app', [
 			if($stateParams.path) {
 				return $stateParams.path;
 			} else {
-				return '/home/index.html'
+				return base+'/home/index.html'
 			}
   	}
 	})
 	$urlRouterProvider.otherwise('/');
-})
+});
