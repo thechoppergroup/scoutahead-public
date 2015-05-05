@@ -8,7 +8,7 @@ var app = angular.module( 'app', [
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-
+	console.log(base);
 	$stateProvider
 
 	// route to show our basic form (/form)
@@ -19,7 +19,7 @@ var app = angular.module( 'app', [
 			if($stateParams.path) {
 				return $stateParams.path;
 			} else {
-				return '/home/index.html'
+				return base+'/home/index.html'
 			}
   	}
 	})
