@@ -1,8 +1,7 @@
 var app = angular.module( 'app', [
 	'ngRoute',
 	'ui.router',
-	'app.controllers',
-	'ngDisqus'
+	'app.controllers'
 	], function($interpolateProvider) {
 	  $interpolateProvider.startSymbol('[[');
 	  $interpolateProvider.endSymbol(']]');

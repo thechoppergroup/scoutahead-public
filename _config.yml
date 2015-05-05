@@ -12,7 +12,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 assets: "assets/"
 disqus_shortname: "demo_site"
-keywords: ["jekyll", "demo site", "framework"]
+keywords: ["your", "key", "words"]
 
 # Build settings
 markdown: kramdown
