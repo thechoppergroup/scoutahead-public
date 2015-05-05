@@ -1,7 +1,10 @@
 ---
 ---
+@charset "UTF-8";
 
 @import "sass/vars";
 @import "vendor/thin-scss/dist/thin";
 @import "sass/typography";
 @import "sass/theme";
+
+@import "sass/syntax-highlighting";
