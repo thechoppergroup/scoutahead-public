@@ -1,6 +1,12 @@
 angular.module('app.controllers', [])
 
-	.controller('homeCtrl', function($scope, $rootScope) {
+	.controller('homeCtrl', function($scope, $rootScope, $location) {
+  })
+
+  .controller('headerCtrl', function($scope, $location, $window){
+  	$scope.isActive = function (viewLocation) {
+      return viewLocation === $location.path();
+    };
   })
 
   .controller('disqusCtrl', function(){

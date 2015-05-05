@@ -58,9 +58,12 @@ li {
 		text-transform: uppercase;
 		letter-spacing: .1em;
 		border-left: solid thin darken($c-gray, 10%);
-		&:hover {
+		&:hover, .active & {
 			background: darken($c-gray, 10%);
 		}
+	}
+	&.active > a {
+		background: darken($c-gray, 10%);
 	}
 	&:last-of-type {
 		border-right: solid thin darken($c-gray, 10%);
@@ -84,9 +87,12 @@ li {
 		letter-spacing: .1em;
 		border-left: solid thin darken($c-gray, 10%);
 
-		&:hover {
+		&:hover,  {
 			background: darken($c-gray, 10%);
 		}
+	}
+	&.active > a {
+		background: darken($c-gray, 10%);
 	}
 
 	&:last-of-type {

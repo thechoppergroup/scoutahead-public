@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header" ng-controller="headerCtrl">
   <div class="container">
     <div class="grid-4">
       <div class="col col-1">
@@ -11,7 +11,7 @@
           {% for node in nodes %}
             {% if node.title != nil and node.url != '/' and node.parent == nil node.order >= 0 %}
             {% capture nodediff %}{{ node.url | remove:"/" }}{% endcapture %}
-            <li class="table-col nav-style--a">
+            <li ng-class="{ active: isActive('{{node.url}}')}" class="table-col nav-style--a">
               {% if node.order == 0 %}
               <a href="#/">{{ node.title }}</a>
               {% else %}
@@ -21,7 +21,7 @@
               {% if children %}
               <ul role="dropdown">
               {% for child in children %}
-                <li class="nav-style--b"><a href="#{{ child.url }}">{{ child.title }}</a></li>
+                <li ui-sref-active="active" class="nav-style--b"><a href="#{{ child.url }}">{{ child.title }}</a></li>
               {% endfor %}
               </ul>
               {% endif %}
