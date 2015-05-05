@@ -1,25 +1,21 @@
 ---
 layout: page
-title: Home
+permalink: home/
 order: 0
+layout: splash
+splash-text: "An amazingly simple framework"
+splash-image: https://unsplash.it/1400/300/?random
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section>
+	<div class="grid-3">
+		<div class="col col-1">
+			<span>test</span>
+		</div>
+		<div class="col col-2">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed dapibus mauris. In a feugiat urna. Integer laoreet mauris vitae dui pharetra molestie. Aenean vehicula nisl magna, at convallis nibh lacinia non. Ut interdum, purus in laoreet fermentum, tellus purus accumsan risus, id cursus risus orci quis ipsum. Nulla malesuada quam nulla, euismod tempus ligula dictum vel. Nunc pharetra rutrum mi, in lobortis ligula scelerisque in. Vestibulum fringilla metus non tincidunt tempor. Donec bibendum fermentum dapibus.
+			</p>
+		</div>
+	</div>
+</section>

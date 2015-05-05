@@ -10,5 +10,7 @@
   <article class="post-content">
     {{ content }}
   </article>
-
+  {% if site.disqus_shortname %}
+		{% include disqus.html %}
+	{% endif %}
 </div>

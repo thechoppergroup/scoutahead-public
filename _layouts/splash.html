@@ -1,0 +1,16 @@
+---
+---	
+{% if page.splash-image %}
+<div class="splash">
+	<img src="{{ page.splash-image }}" alt="">
+	{% if page.splash-text %}
+		<h1 class="splash-heading">{{ page.splash-text }}</h1>
+	{% endif %}
+</div>
+{% endif %}
+
+<div role="main">
+	<div class="container">
+	  {{ content }}
+	</div>
+</div>

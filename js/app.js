@@ -19,7 +19,7 @@ var app = angular.module( 'app', [
 			if($stateParams.path) {
 				return $stateParams.path;
 			} else {
-				return '/pages/index.html'
+				return '/home/index.html'
 			}
   	}
 	})
