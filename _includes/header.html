@@ -9,7 +9,7 @@
           <ul class="table-row">
           {% assign nodes = site.pages | sort: "order" %}
           {% for node in nodes %}
-            {% if node.title != nil and node.url != '/' and node.parent == nil node.order >= 0 %}
+            {% if node.title != nil and node.url != '/' and node.parent == nil and node.order >= 0 %}
             {% capture nodediff %}{{ node.url | remove:"/" }}{% endcapture %}
             <li ng-class="{ active: isActive('{{node.url}}')}" class="table-col nav-style--a">
               {% if node.order == 0 %}

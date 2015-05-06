@@ -17,6 +17,7 @@
 
 [role="main"] {
 	margin-top: $lineheight;
+	display: block;
 }
 
 ul {
@@ -33,6 +34,7 @@ li {
 	background: #333;
 	text-align: center;
 	line-height: 0;
+	margin-top: -$lineheight;
 	> img {
 		display: inline-block;
 	}
