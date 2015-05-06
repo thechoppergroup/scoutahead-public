@@ -5,6 +5,7 @@ angular.module('app.controllers', [])
 
   .controller('headerCtrl', function($scope, $location, $window){
   	$scope.isActive = function (viewLocation) {
+      console.log($location.path());
       return viewLocation === $location.path();
     };
   })

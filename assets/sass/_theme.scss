@@ -29,6 +29,14 @@ li {
 
 .splash {
 	position: relative;
+	width: 100%;
+	background: #333;
+	text-align: center;
+	line-height: 0;
+	> img {
+		display: inline-block;
+	}
+
 	.splash-heading {
 		padding: 2rem;
 		background: rgba(black, 0.6);

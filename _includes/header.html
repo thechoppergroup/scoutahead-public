@@ -21,7 +21,7 @@
               {% if children %}
               <ul role="dropdown">
               {% for child in children %}
-                <li ui-sref-active="active" class="nav-style--b"><a href="#{{ child.url }}">{{ child.title }}</a></li>
+                <li ng-class="{ active: isActive('{{child.url}}')}" class="nav-style--b"><a href="#{{ child.url }}">{{ child.title }}</a></li>
               {% endfor %}
               </ul>
               {% endif %}

@@ -4,7 +4,7 @@ permalink: home/
 order: 0
 layout: splash
 splash-text: "An amazingly simple framework"
-splash-image: https://unsplash.it/1400/300/?random
+splash-image: https://unsplash.it/960/300/?random
 ---
 
 <section>
