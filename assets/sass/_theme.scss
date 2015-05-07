@@ -17,6 +17,7 @@
 
 [role="main"] {
 	margin-top: $lineheight;
+	display: block;
 }
 
 ul {
@@ -29,6 +30,15 @@ li {
 
 .splash {
 	position: relative;
+	width: 100%;
+	background: #333;
+	text-align: center;
+	line-height: 0;
+	margin-top: -$lineheight;
+	> img {
+		display: inline-block;
+	}
+
 	.splash-heading {
 		padding: 2rem;
 		background: rgba(black, 0.6);
@@ -58,9 +68,12 @@ li {
 		text-transform: uppercase;
 		letter-spacing: .1em;
 		border-left: solid thin darken($c-gray, 10%);
-		&:hover {
+		&:hover, .active & {
 			background: darken($c-gray, 10%);
 		}
+	}
+	&.active > a {
+		background: darken($c-gray, 10%);
 	}
 	&:last-of-type {
 		border-right: solid thin darken($c-gray, 10%);
@@ -84,9 +97,12 @@ li {
 		letter-spacing: .1em;
 		border-left: solid thin darken($c-gray, 10%);
 
-		&:hover {
+		&:hover,  {
 			background: darken($c-gray, 10%);
 		}
+	}
+	&.active > a {
+		background: darken($c-gray, 10%);
 	}
 
 	&:last-of-type {

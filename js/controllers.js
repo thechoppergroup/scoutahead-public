@@ -1,10 +1,16 @@
 angular.module('app.controllers', [])
 
-	.controller('homeCtrl', function($scope, $rootScope) {
-
+	.controller('homeCtrl', function($scope, $rootScope, $location) {
   })
 
-  .controller('disqusCtrl', function($scope, $rootScope){
+  .controller('headerCtrl', function($scope, $location, $window){
+  	$scope.isActive = function (viewLocation) {
+      console.log($location.path());
+      return viewLocation === $location.path();
+    };
+  })
+
+  .controller('disqusCtrl', function(){
   	/* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = '50wordsaday';
     
