@@ -10,9 +10,9 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
-assets: "assets/"
 disqus_shortname: "demo_site"
 keywords: ["your", "key", "words"]
+pagination: 3
 
 # Build settings
 markdown: kramdown

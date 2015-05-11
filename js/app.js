@@ -1,7 +1,10 @@
 var app = angular.module( 'app', [
 	'ngRoute',
 	'ui.router',
-	'app.controllers'
+	'app.controllers',
+	'app.filters',
+	'app.directives',
+	'angularUtils.directives.dirPagination'
 	], function($interpolateProvider) {
 	  $interpolateProvider.startSymbol('[[');
 	  $interpolateProvider.endSymbol(']]');
@@ -12,7 +15,7 @@ var app = angular.module( 'app', [
 
 	// route to show our basic form (/form)
 	.state('page',{
-		url: '/*path',
+		url: '/{path}{p}',
 		controller: 'homeCtrl',
 		templateUrl: function ($stateParams){
 			if($stateParams.path) {

@@ -5,6 +5,7 @@
 
 #logo {
 	color: #fff;
+
 	height: 3rem;
 	line-height: 3rem;
 	text-decoration: none;
@@ -15,18 +16,16 @@
 	padding: 30px;
 }
 
+.unstyle {
+	padding: 0;
+	list-style: none;
+}
+
 [role="main"] {
 	margin-top: $lineheight;
 	display: block;
 }
 
-ul {
-	margin: 0;
-}
-
-li {
-	margin-top: 0;
-}
 
 .splash {
 	position: relative;

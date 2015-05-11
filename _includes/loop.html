@@ -1,7 +1,7 @@
-{% assign posts = include.posts %}
+This partial is for outputing the post loop
 
 <ul class="post-list">
-  {% for post in posts %}
+  {% for post in include.posts  %}
     <li>
       <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
