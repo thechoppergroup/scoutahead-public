@@ -1,18 +1,27 @@
 angular.module('app.controllers', [])
 
-	.controller('homeCtrl', function($scope, $rootScope, $location, $stateParams) {
+	.controller('homeCtrl', function($scope, $rootScope, $location, $stateParams, $detection) {
     $scope.posts = posts;
     $scope.post = 0;
+    console.log($detection.isiOS());
+    $detection.isAndroid();
+    $detection.isiOS();
+    $detection.isWindowsPhone();
+    $detection.isBB10();
   })
 
   .controller('paginator', function($scope, $rootScope, $location, $stateParams){
-    $scope.pageMin = 1;
-    $scope.pageMax = 1;
-    if($stateParams.p) {
-      $scope.current = $stateParams.p;
-    } else {
-      $scope.current =1;
-    }
+    $scope.$on('$viewContentLoaded', function() {
+      if($stateParams.p <= $scope.pageMax ) {
+        console.log($scope.pageMax);
+        $scope.current = $stateParams.p;
+        _setPage($scope.current);
+      } else {
+        $scope.current =1;
+        _setPage($scope.current);
+      }
+    });
+    
 
     $scope.paginate = function(index) {
       if (index <= $scope.pagination)
@@ -31,7 +40,7 @@ angular.module('app.controllers', [])
 
     $scope.pageTo = function(page) {
       $scope.current = page;
-      $location.search('p', page);
+      _setPage($scope.current);
     }
 
     $scope.show = function(page) {
@@ -40,13 +49,22 @@ angular.module('app.controllers', [])
     }
 
     $scope.nextPage = function() {
-      if($scope.current < $scope.pageMax)
+      if($scope.current < $scope.pageMax){
+        console.log($scope.pageMax);
         $scope.current ++;
+      }
+        _setPage($scope.current);
     }
 
     $scope.prevPage = function() {
-      if($scope.current > 1)
+      if($scope.current > 1) {
         $scope.current --;
+      }
+        _setPage($scope.current);
+    }
+
+    function _setPage(p) {
+      $location.search('p', p);
     }
   })
 

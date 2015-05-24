@@ -2,14 +2,8 @@
 ---
 @charset "UTF-8";
 
-@import "sass/vars";
-@import "vendor/thin-scss/dist/thin";
-@import "sass/typography";
-@import "sass/theme";
-
-@import "sass/syntax-highlighting";
-
-
-.is-current {
-	background: blue;
-}
+@import
+	"sass/vars",
+	"sass/vendor",
+	"sass/theme/theme",
+	"sass/syntax-highlighting";
