@@ -18,7 +18,7 @@
               <a ui-sref="page({path: '{{node.url | remove:'/'}}' })">{{ node.title }}</a>
               {% endif %}
               {% assign children = site.pages | where:  "parent", nodediff %}
-              {% if children %}
+              {% if children != empty %}
               <ul role="dropdown">
               {% for child in children %}
                 <li ui-sref-active="active" class="nav-style--b">

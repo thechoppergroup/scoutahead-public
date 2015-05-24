@@ -1,20 +1,16 @@
 <!-- Vendor -->
-<script type="text/javascript" src="{{ "/assets/vendor/angular/angular.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/assets/vendor/angular-route/angular-route.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/assets/vendor/angular-ui-router/release/angular-ui-router.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/assets/vendor/angular-adaptive-detection/angular-adaptive-detection.min.js" | prepend: site.baseurl }}"></script>
-
+<script type="text/javascript" src="{{ "assets/vendor/angular/angular.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "assets/vendor/angular-route/angular-route.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "assets/vendor/angular-ui-router/release/angular-ui-router.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "assets/vendor/angular-adaptive-detection/angular-adaptive-detection.min.js" | prepend: site.baseurl }}"></script>
 <!-- End Vendor -->
 
-
-<script type="text/javascript" data-main="scripts/app.js" src="{{ "/assets/vendor/requirejs/require.js" | prepend: site.baseurl }}"></script>
-
 <!-- App -->
-<script type="text/javascript" src="{{ "/scripts/app.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/scripts/controllers.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/scripts/filters.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/scripts/directives.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/app.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/controllers.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/filters.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/directives.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/aj/aj.controllers.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/aj/aj.directives.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "scripts/aj/aj.filters.js" | prepend: site.baseurl }}"></script>
 <!-- End App -->
-
-
-{% include posts.html %}

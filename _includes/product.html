@@ -1,19 +1,19 @@
-{% if include.product %}
+{% if include.post %}
 	<div class="grid-3">
 		<div class="col">
-			<img src="{{ product.image }}" alt="{{ product.name }}" class="thumbnail"/>
+			<img src="{{ post.image }}" alt="{{ post.name }}" class="thumbnail"/>
 			<button class="snipcart-add-item"
-		    data-item-name="{{product.name}}"
-		    data-item-id="{{product.sku}}"
-		    data-item-image="{{product.image}}"
-		    data-item-url="{{include.url}}"
-		    data-item-price="{{product.price}}">
-		    Buy it for ${{product.price}}
+		    data-item-name="{{post.name}}"
+		    data-item-id="{{post.sku}}"
+		    data-item-image="{{post.image}}"
+		    data-item-url="{{ post.url | prepend: site.baseurl }}"
+		    data-item-price="{{post.price}}">
+		    Buy it for ${{post.price}}
 		  </button>
 		</div>
 		<div class="col col-2">
-			{{ product.name }}
-		  {{ product.description }}
+			<a href="{{ post.url | prepend: site.baseurl | prepend: '#' }}">{{ post.name }}</a>
+		  <p>{{ post.content }}</p>
 		</div>
 	</div>
 {% endif %}

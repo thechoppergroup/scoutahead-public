@@ -21,6 +21,12 @@ markdown: kramdown
 sass:
     sass_dir: assets
 
+
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+
 gems:
 - jekyll-mentions
 - jemoji
