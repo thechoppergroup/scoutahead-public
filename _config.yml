@@ -4,7 +4,7 @@ author: Adrian Jon Miller
 email: adrianjonmiller@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   This is the demo site of my angular-jekyll framework
-baseurl: "angular-jekyll" # the subpath of your site, e.g. /blog/
+baseurl: "angular-jekyll/" # the subpath of your site, e.g. /blog/
 url: "http://www.adrianjmiller.me/" # the base hostname & protocol for your site
 twitter_username: adrianjmiller
 github_username:  adrianjmiller
