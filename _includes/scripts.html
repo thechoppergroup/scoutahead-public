@@ -1,11 +1,11 @@
-{% capture posts %}
+{% capture pages %}
 	[
-		{% for post in site.pages %}
-			{% if post.title %}
+		{% for page in site.pages %}
+			{% if page.title %}
 				{
-				"name"             : "{{ post.title | slugify}}",
-				"url"							 : "{% if post.parent %}/{{ post.parent | slugify }}{% endif %}/{{ post.title | slugify }}",
-				"templateUrl"      : "{{ post.url }}"
+				"name"             : "{{ page.title | slugify}}",
+				"url"							 : "{% if page.parent %}/{{ page.parent | slugify }}{% endif %}/{{ page.title | slugify }}",
+				"templateUrl"      : "{{ page.url }}"
 				} {% if forloop.last %}{% else %},{% endif %}
 			{% endif %}
 		{% endfor %}
@@ -20,7 +20,7 @@
 <!-- End Vendor -->
 
 <script type="text/javascript">
-	var posts = {{ posts | strip_newlines }};
+	var pages = {{ pages | strip_newlines }};
 	var app = angular.module( 'app', [
 		'ngRoute',
 		'ui.router',
@@ -44,7 +44,7 @@
 
 		$urlRouterProvider.otherwise('/');
 
-		posts.forEach(function (item) {
+		pages.forEach(function (item) {
 			console.log(item);
 		  $stateProvider.state(item);
 		});
@@ -52,7 +52,6 @@
 </script>
 
 <!-- App -->
-<script type="text/javascript" src="{{ "scripts/app.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "scripts/controllers.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "scripts/filters.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "scripts/directives.js" | prepend: site.baseurl }}"></script>
