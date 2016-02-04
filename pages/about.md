@@ -4,4 +4,5 @@ title: About
 permalink: about.html
 order: 3
 ---
-about
+
+Input some text on the about page
