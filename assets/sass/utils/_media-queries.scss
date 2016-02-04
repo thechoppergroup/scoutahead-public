@@ -1,0 +1,28 @@
+/* --------- Custom Media Quiries ----------- */
+
+/* Custom Media Query */
+@mixin media($media) {
+  @media (min-width: #{$media}) {
+    @content;
+  }
+}
+
+/* Tablet */
+@mixin tablet {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+/* Desktop/Wide Tablet */
+@mixin desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
+@mixin is-open() {
+  .is-open {
+    @content;
+  }
+}

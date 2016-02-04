@@ -2,14 +2,6 @@
 	<div class="grid-3">
 		<div class="col">
 			<img src="{{ post.image }}" alt="{{ post.name }}" class="thumbnail"/>
-			<button class="snipcart-add-item"
-		    data-item-name="{{post.name}}"
-		    data-item-id="{{post.sku}}"
-		    data-item-image="{{post.image}}"
-		    data-item-url="{{ post.url | prepend: site.baseurl }}"
-		    data-item-price="{{post.price}}">
-		    Buy it for ${{post.price}}
-		  </button>
 		</div>
 		<div class="col col-2">
 			<a href="{{ post.url | prepend: site.baseurl | prepend: '#' }}">{{ post.name }}</a>

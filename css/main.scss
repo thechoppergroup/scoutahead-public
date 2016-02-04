@@ -3,7 +3,9 @@
 @charset "UTF-8";
 
 @import
-	"sass/vars",
-	"sass/vendor",
-	"sass/theme/theme",
-	"sass/syntax-highlighting";
+	"sass/base/glob",
+	"sass/utils/glob",
+	"sass/layout/glob",
+	"sass/components/glob",
+	"sass/theme/glob",
+	"sass/vendor/glob";

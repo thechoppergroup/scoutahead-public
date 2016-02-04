@@ -13,6 +13,7 @@ github_username:  jekyll
 disqus_shortname: "demo_site"
 keywords: ["your", "key", "words"]
 pagination: 3
+logo:
 
 # Build settings
 markdown: kramdown
@@ -22,12 +23,13 @@ sass:
     sass_dir: assets
 
 collections:
-  products:
+  faqs:
     output: true
-    permalink: /products/:path/
+    permalink: /faqs/:path/
 
 gems:
 - jekyll-mentions
 - jemoji
 - jekyll-redirect-from
 - jekyll-sitemap
+- octopress-autoprefixer

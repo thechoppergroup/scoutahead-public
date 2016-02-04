@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
 
   {% include head.html %}
 
@@ -7,7 +7,7 @@
 
     {% include header.html %}
 
-    <ui-view role="main" class="[[device()]]"></ui-view>
+    {{ content }}
 
     {% include footer.html %}
     {% include scripts.html %}

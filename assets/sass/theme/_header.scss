@@ -1,0 +1,21 @@
+.header {
+  background-color: rgba(black, 0.6);
+
+  .header-logo {
+    display: inline-block;
+    padding: 1rem;
+
+    svg {
+      width: 225px;
+      fill: #ffffff;
+    }
+  }
+
+  .header-menu {
+    background-color: black;
+    
+    @include tablet {
+      background-color: transparent;
+    }
+  }
+}

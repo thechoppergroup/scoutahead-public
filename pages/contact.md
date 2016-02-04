@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Contact
-permalink: contact
-order: 3
+permalink: contact.html
+order: 4
 ---

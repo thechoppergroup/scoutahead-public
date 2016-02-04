@@ -12,50 +12,7 @@
 	]
 {% endcapture %}
 
-<!-- Vendor -->
-<script type="text/javascript" src="{{ "assets/vendor/angular/angular.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/vendor/angular-route/angular-route.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/vendor/angular-ui-router/release/angular-ui-router.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "assets/vendor/angular-adaptive-detection/angular-adaptive-detection.min.js" | prepend: site.baseurl }}"></script>
-<!-- End Vendor -->
 
-<script type="text/javascript">
-	var pages = {{ pages | strip_newlines }};
-	var app = angular.module( 'app', [
-		'ngRoute',
-		'ui.router',
-		'adaptive.detection',
-		'aj.controllers',
-		'aj.directives',
-		'aj.filters',
-		'app.controllers',
-		'app.filters',
-		'app.directives',
-		], function($interpolateProvider) {
-		  $interpolateProvider.startSymbol('[[');
-		  $interpolateProvider.endSymbol(']]');
-	})
-
-	.config(function($stateProvider, $urlRouterProvider) {
-		$stateProvider.state('home', {
-	    url: "/",
-	    templateUrl: "pages/index.html"
-	  });
-
-		$urlRouterProvider.otherwise('/');
-
-		pages.forEach(function (item) {
-			console.log(item);
-		  $stateProvider.state(item);
-		});
-	});
-</script>
-
-<!-- App -->
-<script type="text/javascript" src="{{ "scripts/controllers.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "scripts/filters.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "scripts/directives.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "scripts/aj/aj.controllers.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "scripts/aj/aj.directives.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "scripts/aj/aj.filters.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/scripts/behaviors.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/assets/scripts/scripts.js" | prepend: site.baseurl }}"></script>
 <!-- End App -->
