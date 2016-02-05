@@ -24,7 +24,7 @@ sass:
 
 collections:
   faqs:
-    output: true
+    output: false
     permalink: /faqs/:path/
 
 gems:
