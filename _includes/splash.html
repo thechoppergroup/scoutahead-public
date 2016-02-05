@@ -1,8 +1,14 @@
 {% if include.image %}
 <div class="splash">
 	<img src="{{ include.image }}" alt="">
-	{% if include.text %}
-		<h1 class="splash-heading">{{ include.text }}</h1>
-	{% endif %}
+	<div class="splash-heading">
+		{% if include.subhead %}
+			<h2 class="banner--hero-subhead inverse p-centered">{{ include.subhead }}</h2>
+		{% endif %}
+
+		{% if include.heading %}
+			<h1 class="banner--hero inverse p-centered">{{ include.heading }}</h1>
+		{% endif %}
+	</div>
 </div>
 {% endif %}

@@ -1,0 +1,81 @@
+$width-tablet: 768px !default;
+$width-desktop: 1025px !default;
+
+$grid: (
+  col: 0,
+  tablet: $width-tablet,
+  desktop: $width-desktop
+) !default;
+
+$columns: 12 !default;
+
+
+/* --------- Custom Media Quiries ----------- */
+
+/* Custom Media Query */
+@mixin media($media) {
+  @media (min-width: #{$media}) {
+    @content;
+  }
+}
+
+/* Tablet */
+@mixin tablet {
+  @media (min-width: #{$width-tablet}) {
+    @content;
+  }
+}
+
+/* Desktop/Wide Tablet */
+@mixin desktop {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
+@mixin is-open() {
+  .is-open {
+    @content;
+  }
+}
+
+
+
+/* ----------- Grid Generator ----------- */
+@mixin grid-generator($grid) {
+  .grid {
+    @extend .flex;
+    margin-left: -1rem;
+
+    > * {
+      padding-left: 1rem;
+    }
+
+    &.gutter--lg {
+      margin-left: -3rem;
+      > * {
+        padding-left: 3rem;
+      }
+    }
+
+    @each $name, $value in $grid {
+      @include media($value) {
+        > [class*="#{$name}-"] {
+          width: 100%;
+        }
+      }
+
+      @for $i from 1 through $columns {
+        @for $j from 1 through $i {
+          @if $j < $i {
+            @include media($value) {
+              > .#{$name}-#{$j}-#{$i} {
+                width: percentage($j/$i);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

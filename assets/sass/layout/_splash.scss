@@ -1,0 +1,17 @@
+.splash {
+  min-width: 100%;
+  align-items: center;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  margin-top: -$height-header;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    flex-shrink: 0;
+    min-height: 100%;
+    min-width: 100%;
+  }
+}

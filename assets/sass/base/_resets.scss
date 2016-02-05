@@ -8,6 +8,7 @@
 	border: 0 none;
 	outline: 0;
 	margin: 0;
+  box-sizing: border-box;
 
   + * {
     margin-top: 2rem;
@@ -28,6 +29,11 @@ body {
 }
 
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 html {
   font-size: 87.5%;
   line-height: 2em;
@@ -37,6 +43,13 @@ html {
 
 body {
   min-height: 100%;
+}
+
+p {
+  margin-top: 0;
+  + p {
+    margin-top: 1rem;
+  }
 }
 
 a img, :link img, :visited img {

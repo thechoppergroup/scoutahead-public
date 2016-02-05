@@ -19,3 +19,6 @@
     margin-left: auto;
   }
 }
+
+
+@include grid-generator($grid);

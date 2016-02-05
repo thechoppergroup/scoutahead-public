@@ -21,6 +21,21 @@
 
 .nav-login {
   > a {
-    background-color: green;
+    background-color: $color-a;
+  }
+}
+
+
+.nav-style--b {
+  display: none;
+  
+  @include tablet {
+    display: block;
+  }
+
+  > a {
+    padding: 0 .5rem;
+    color: #fff;
+    display: inline-block;
   }
 }

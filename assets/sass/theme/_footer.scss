@@ -1,4 +1,11 @@
 .footer {
   padding: 1rem 0;
-  background-color: gray;
+  background-color: #241f1f;
+
+  .footer-logo {
+    svg {
+      fill: #fff;
+      width: 150px;
+    }
+  }
 }

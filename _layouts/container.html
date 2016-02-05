@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% include splash.html image=page.splash-image text=page.splash-text %}
+{% include splash.html image=page.splash-image heading=page.splash-banner subhead=page.splash-subhead %}
 
-<div class="container {{ page.title | slugify }}">
+<div class="container">
 	{{content}}
 </div>

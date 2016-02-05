@@ -1,11 +1,4 @@
 {% if include.post %}
-	<div class="grid-3">
-		<div class="col">
-			<img src="{{ post.image }}" alt="{{ post.name }}" class="thumbnail"/>
-		</div>
-		<div class="col col-2">
-			<a href="{{ post.url | prepend: site.baseurl | prepend: '#' }}">{{ post.name }}</a>
-		  <p>{{ post.content }}</p>
-		</div>
-	</div>
+	<h4 id="faq-{{include.index}}" class="text--heading">{{ post.name }}</h4>
+  {{ post.content | strip }}
 {% endif %}

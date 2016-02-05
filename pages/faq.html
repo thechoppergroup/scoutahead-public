@@ -1,0 +1,29 @@
+---
+layout: container
+title: FAQ
+permalink: store.html
+order: 2
+---
+<div class="grid gutter--lg">
+  <div class="col-1 tablet-2-3">
+    {% for post in site.faqs %}
+      <div>
+        <h4 id="faq-{{forloop.index}}" class="text--heading">{{ post.name }}</h4>
+        {{ post.content | strip }}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="col-1 tablet-1-3">
+    <div class="sidebar">
+      <div class="module">
+        <ul class="unstyle--list">
+        {% for post in site.faqs %}
+          <li class="col">
+            <a href="#faq-{{forloop.index}}">{{post.name}}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
