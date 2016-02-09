@@ -18,6 +18,8 @@ logo:
 # Build settings
 markdown: kramdown
 
+exclude: [README.md, bower.json, Gemfile, Gemfile.lock ]
+
 # SASS Dir
 sass:
     sass_dir: assets
@@ -26,6 +28,9 @@ collections:
   faqs:
     output: false
     permalink: /faqs/:path/
+  welcomes:
+    output: true
+    permalink: /welcome/
 
 gems:
 - jekyll-mentions
