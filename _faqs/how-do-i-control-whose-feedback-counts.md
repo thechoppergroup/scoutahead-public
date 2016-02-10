@@ -1,5 +1,6 @@
 ---
 title: How do I control whose feedback counts?
+order: 5
 ---
 
 For anyone's feedback to count, both you and the person who is reviewing you must indicate:

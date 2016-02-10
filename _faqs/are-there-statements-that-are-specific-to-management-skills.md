@@ -1,5 +1,6 @@
 ---
 title: Are there statements that are specific to management skills?
+order: 11
 ---
 
 If you have management experience, we will ask you to review yourself based on management-related statements.

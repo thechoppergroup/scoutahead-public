@@ -1,41 +1,81 @@
-.nav-style--a, .nav-login {
+.nav-style--a,
+.nav-login {
   min-width: 100%;
+  padding: 0 1rem;
 
   > a {
     display: inline-block;
     height: $height-header;
     line-height: $height-header;
-    padding: 0 1rem;
-    color: #ffffff;
+    color: $white--off;
     width: 100%;
+    font-weight: 200;
+    position: relative;
+  }
+
+  &.is-current > a {
+    color: $white;
   }
 
   @include tablet {
     min-width: 0;
 
     > a {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 1rem;
+        width: 0%;
+        left: 50%;
+        border-bottom: solid thin $color-a;
+        margin: auto;
+        transition: width .25s, left .25s;
+      }
 
+      &:hover {
+        color: $white;
+
+        &::after {
+          left: 0%;
+          width: 100%;
+        }
+      }
     }
   }
 }
 
 .nav-login {
+  padding: 0 1rem;
+
+  @include tablet {
+    padding: 0;
+  }
+
   > a {
+    color: $white;
     background-color: $color-a;
+
+    @include tablet {
+      padding: 0 1rem;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 
 .nav-style--b {
   display: none;
-  
+
   @include tablet {
     display: block;
   }
 
   > a {
     padding: 0 .5rem;
-    color: #fff;
+    color: $white;
     display: inline-block;
   }
 }

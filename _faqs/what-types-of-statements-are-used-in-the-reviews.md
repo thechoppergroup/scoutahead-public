@@ -1,5 +1,6 @@
 ---
 title: What types of statements are used in the reviews?
+order: 7
 ---
 
 We use two kinds of statements: General and job-specific.

@@ -1,21 +1,69 @@
 .header {
-  background-color: rgba(black, 0.6);
+  background-color: rgba($black, 0.6);
 
   .header-logo {
     display: inline-block;
     padding: 1rem;
+    flex: 1 0 auto;
+    text-align: center;
+
+    @include tablet {
+      flex: 0 1 auto;
+      text-align: left;
+    }
+
 
     svg {
-      width: 225px;
-      fill: #ffffff;
+      max-width: 150px;
+      fill: $white;
+
+      @include tablet {
+        width: 225px;
+      }
+    }
+  }
+
+  .header-toggle {
+    padding: 0 1.5rem;
+    font-size: 21pt;
+    color: $white;
+    background: rgba($black, 0.6);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .header-login {
+    padding: 0 1rem;
+    background-color: $color-a;
+    line-height: 4rem;
+    color: $white;
+
+    @include tablet {
+      display: none;
     }
   }
 
   .header-menu {
-    background-color: black;
-    
+    background-color: $black;
+
     @include tablet {
       background-color: transparent;
+    }
+
+    .header-menu-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 3rem;
+      line-height: 2rem;
+      width: 3rem;
+      z-index: 100;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 }

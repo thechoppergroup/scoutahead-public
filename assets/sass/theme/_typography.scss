@@ -5,12 +5,12 @@ html {
 
 .banner- {
 	&-hero {
-    font-size: 36pt;
+    @include fp(font-size, 24, 48);
     font-weight: 100;
     line-height: 4rem;
 
 		&-subhead {
-      font-size: 18pt;
+      @include fp(font-size, 16, 24);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: .1em;

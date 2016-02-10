@@ -1,5 +1,6 @@
 ---
 title: 'If I review my colleague, will they be able to see what I said?'
+order: 9
 ---
 
 No. We never share individual reviews with anyone, even the person being reviewed. We anonymize and aggregate reviews to protect other users' privacy and to encourage honest feedback.
