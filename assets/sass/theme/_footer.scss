@@ -1,5 +1,5 @@
 .footer {
-  padding: 1rem 0;
+  padding: 2rem 0 1rem;
   background-color: $color-g;
 
   .footer-logo {
@@ -7,5 +7,15 @@
       fill: $white;
       width: 150px;
     }
+  }
+
+  .footer-sublinks {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 }

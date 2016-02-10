@@ -1,0 +1,61 @@
+---
+layout: page
+title: Contact
+permalink: contact.html
+order: 4
+---
+<div class="grid gutter--lg">
+  <div class="col-1 tablet-3-4">
+    <form id="contact-form" data-behavior="validateForm">
+      <fieldset class="text js-field-name">
+        <input type="text" name="name" value="">
+        <legend>
+          <label for="contact-name">Name</label>
+        </legend>
+        <p id="validation-error-name" class="input-error js-form-error"></p>
+      </fieldset>
+      <fieldset class="text js-field-email">
+        <input type="text" name="email" value="">
+        <legend>
+          <label for="contact-email">Email</label>
+        </legend>
+        <p id="validation-error-email" class="input-error js-form-error"></p>
+      </fieldset>
+      <fieldset class="js-field-text">
+        <textarea name="contact-message" rows="6"></textarea>
+        <legend><label for="contact-message">Message</label></legend>
+        <p id="validation-error-text" class="input-error js-form-error"></p>
+      </fieldset>
+      {{#do_captcha}}
+        <fieldset class="js-field-captcha">
+          <div class="g-recaptcha" data-sitekey="{{recaptcha-site-key}}"
+                  data-callback="captchaSuccessful" data-expired-callback="captchaExpired"></div>
+          <p id="captcha-validation-error" class="input-error js-form-error"></p>
+        </fieldset>
+      {{/do_captcha}}
+      <button class="button-a js-send-button">Send</button>
+    </form>
+  </div>
+  <sidebar class="col-1 tablet-1-4 sidebar">
+    <h3 class="display--sidebar">Reach out</h3>
+    <div class="module">
+      <h2 class="display--sidebar-subhead">Email us:</h2>
+      <p>
+        <a href="mailto:contact@scoutahead.com" title="Contact Us">contact@scoutahead.com</a>
+      </p>
+    </div>
+    <div class="module">
+      <h2 class="display--sidebar-subhead">Questions/Concerns:</h2>
+      <p>
+        <a href="mailto:help@scoutahead.com" title="Contact Us">help@scoutahead.com</a>
+      <p>
+    </div>
+    <hr class="spacer--desktop"></hr>
+    <h3 class="display--sidebar-subhead">Find us online</h3>
+      <ul class="sidebar-social unstyle--list">
+        <li class="social-link--a inverse"><a href="https://twitter.com/ScoutaheadHQ"><i class="ion-social-twitter"></i></a></li>
+        <li class="social-link--a inverse"><a href="https://www.facebook.com/ScoutaheadHQ"><i class="ion-social-facebook"></i></a></li>
+        <li class="social-link--a inverse"><a href="https://plus.google.com/108067813429361510728"><i class="ion-social-googleplus"></i></a></li>
+      </ul>
+  </sidebar>
+</div>

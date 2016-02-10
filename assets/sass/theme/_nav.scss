@@ -11,6 +11,10 @@
     width: 100%;
     font-weight: 200;
     position: relative;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   &.is-current > a {
@@ -21,10 +25,12 @@
     min-width: 0;
 
     > a {
+      transition: color .25s;
+
       &:after {
         content: "";
         position: absolute;
-        bottom: 1rem;
+        bottom: 1.5rem;
         width: 0%;
         left: 50%;
         border-bottom: solid thin $color-a;
@@ -44,18 +50,65 @@
   }
 }
 
+.nav-style--a {
+  border-bottom: solid thin scale-color($color-f, $lightness: 10%);
+
+  @include tablet {
+    border-bottom: none;
+  }
+
+  .not-inview & {
+    > a {
+      @include tablet {
+        color: $black;
+      }
+
+      &::after {
+        border-bottom-color: $color-a;
+      }
+    }
+  }
+
+  &.is-current {
+    background-color: scale-color($color-f, $lightness: 10%);
+
+    @include tablet {
+      background-color: transparent;
+    }
+
+    > a {
+      color: $white;
+
+      @include tablet {
+        color: $color-a;
+      }
+
+      &::after {
+        left: 0%;
+        width: 100%;
+      }
+    }
+  }
+}
+
 .nav-login {
   padding: 0 1rem;
+  display: none;
 
   @include tablet {
     padding: 0;
+    display: inline-block;
   }
 
   > a {
     color: $white;
-    background-color: $color-a;
+
+    &:hover {
+      text-decoration: none;
+    }
 
     @include tablet {
+      background-color: $color-a;
       padding: 0 1rem;
     }
 
@@ -74,8 +127,41 @@
   }
 
   > a {
-    padding: 0 .5rem;
+    padding: 0 2rem;
     color: $white;
     display: inline-block;
+  }
+}
+
+.social-link--a {
+  border: solid thin $color-a;
+  text-align: center;
+  border-radius: 999em;
+
+  > a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 14pt;
+    color: $color-a;
+    transition: background-color .5s, color .5s;
+    border-radius: 999em;
+
+    &:hover {
+      background-color: $color-a;
+      color: #fff;
+    }
+  }
+
+  + .social-link--a {
+    margin-left: 1rem;
+  }
+}
+
+.footer-link--a {
+
+  + .footer-link--a {
+    margin-left: 1rem;
   }
 }

@@ -1,9 +1,10 @@
 .header {
   background-color: rgba($black, 0.6);
+  transition: background-color .25s;
 
   .header-logo {
     display: inline-block;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     flex: 1 0 auto;
     text-align: center;
 
@@ -11,7 +12,6 @@
       flex: 0 1 auto;
       text-align: left;
     }
-
 
     svg {
       max-width: 150px;
@@ -37,7 +37,7 @@
   .header-login {
     padding: 0 1rem;
     background-color: $color-a;
-    line-height: 4rem;
+    line-height: $height-header;
     color: $white;
 
     @include tablet {
@@ -56,14 +56,31 @@
       position: absolute;
       top: 0;
       right: 0;
-      height: 3rem;
-      line-height: 2rem;
-      width: 3rem;
+      height: 4rem;
+      line-height: 4rem;
+      width: 4rem;
       z-index: 100;
+      font-size: 42pt;
+      color: #fff;
+      background-color: transparent;
 
       @include tablet {
         display: none;
       }
+    }
+  }
+
+  &.not-inview {
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba($black, 0.6);
+
+    .header-toggle {
+      background: rgba($black, 0.1);
+      color: $black;
+    }
+
+    .header-logo > svg {
+      fill: $color-b;
     }
   }
 }

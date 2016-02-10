@@ -1,4 +1,4 @@
-<header id="header" class="header flex js-header">
+<header id="header" class="header flex not-inview js-header">
   <button class="header-toggle" data-behavior="openMenu" data-target="js-menu"><i class="ion-navicon"></i></button>
 
   <a href="/" class="header-logo" id="logo">
@@ -7,7 +7,7 @@
   </a>
 
   <nav class="header-menu flex-end js-menu" data-behavior="menu">
-    <button class="header-menu-close collapse js-close"><i class="ion-close"></i></button>
+    <button class="header-menu-close collapse js-close"><i class="ion-ios-close-empty"></i></button>
     <ul class="flex">
     {% assign nodes = site.pages | sort: "order" %}
     {% for node in nodes %}
