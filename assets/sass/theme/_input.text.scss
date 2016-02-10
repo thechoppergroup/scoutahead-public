@@ -3,29 +3,16 @@
   padding: 0;
 
   legend {
-    position: absolute;
-    top: .5rem;
-    margin-top: 0;
-    transition: transform .25s;
-    transform: translateY(-1.25rem);
+
   }
 
   input {
-    color: $black;
-    padding: .25rem .5em;
-    width: 100%;
-    font-size: 1.5rem;
-    line-height: 2rem;
     border: solid thin $white--off;
-    transition: transform .25s;
-    transform: translateY(1.25rem);
-
-    &:empty {
-      transform: translateY(0rem);
-      + legend {
-        transform: translateY(0rem);
-      }
-    }
+    padding: .25rem .5rem;
+    line-height: 2rem;
+    font-size: 14pt;
+    width: 100%;
+    margin-top: 0;
   }
 
   //   &.has-content {

@@ -1,0 +1,11 @@
+.button-a {
+  background-color: $color-b;
+  border-radius: .25rem;
+  padding: 1rem 3rem;
+  color: $white;
+
+  &:hover {
+    background-color: scale-color($color-b, $lightness: -20%);
+    cursor: pointer;
+  }
+}

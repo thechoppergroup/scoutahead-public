@@ -1,4 +1,10 @@
 .sidebar {
+  margin-top: 2rem;
+
+  @include tablet {
+    margin-top: 0;
+  }
+  
   .sidebar-social {
     display: flex;
   }
