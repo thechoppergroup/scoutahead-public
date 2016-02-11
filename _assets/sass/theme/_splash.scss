@@ -43,6 +43,7 @@
     margin: 0 auto;
 
     @include tablet {
+      min-width: 660px;
       max-width: 60%;
     }
   }
