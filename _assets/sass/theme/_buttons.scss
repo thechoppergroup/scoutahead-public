@@ -9,3 +9,16 @@
     cursor: pointer;
   }
 }
+
+.button-cta {
+  font-size: 12pt;
+  border: solid thin $white;
+  border-radius: 3px;
+  padding: 1rem 3rem;
+  color: $white;
+  background-color: rgba($black, 0.6);
+}
+
+.fluid {
+  width: 100%;
+}

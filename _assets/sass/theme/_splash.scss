@@ -2,6 +2,17 @@
   background-color: $black;
   margin-top: -($offset-body + $height-header);
 
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba($black, 0.15);
+  }
+
   > img {
     opacity: 0.6;
   }
@@ -9,20 +20,29 @@
   .splash-heading {
     justify-content: center;
     margin-top: 0;
-    padding-top: $height-header;
-    position: absolute;
-    top: 0;
-    left: 0;
+    padding: $height-header 1rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    padding: 0 1rem;
+    height: 70%;
+    position: relative;
+    z-index: 10;
 
     @include tablet {
-      padding: 0 25%;
+      padding: $height-header 25% 0;
+    }
+  }
+
+  .splash-cta {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 60%;
     }
   }
 }
