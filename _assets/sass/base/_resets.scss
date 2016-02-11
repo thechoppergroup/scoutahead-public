@@ -14,11 +14,12 @@
     margin-top: 2rem;
   }
 
-  .is-hidden,
-  .collapse {
-    + * {
-      margin-top: 0;
-    }
+
+}
+.is-hidden,
+.collapse {
+  + * {
+    margin-top: 0 !important;
   }
 }
 

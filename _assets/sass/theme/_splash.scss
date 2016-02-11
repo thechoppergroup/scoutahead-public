@@ -42,6 +42,14 @@
     position: relative;
     margin: 0 auto;
 
+    a {
+      width: 100%;
+
+      @include tablet {
+        width: auto;
+      }
+    }
+
     @include tablet {
       min-width: 660px;
       max-width: 60%;
