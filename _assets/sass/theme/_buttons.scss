@@ -1,6 +1,10 @@
 button,
 [role="button"] {
   transition: background .25s;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .button-a {
@@ -19,7 +23,7 @@ button,
   font-size: 13.5pt;
   border: solid thin $white;
   border-radius: 3px;
-  padding: 1rem 1.5rem 1rem 4rem;
+  padding: .75rem 1.5rem .75rem 4rem;
   color: $white;
   background-color: rgba($black, 0.6);
   overflow: hidden;

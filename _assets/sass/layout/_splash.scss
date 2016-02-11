@@ -3,11 +3,11 @@
   height: 100vh;
   justify-content: center;
   margin-top: -$height-header;
-  background-position: center top;
+  background-position: center center;
   overflow: hidden;
   position: relative;
   background-size: cover;
-  
+
   @include tablet {
     height: 90vh;
   }
