@@ -1,35 +1,37 @@
 ---
 layout: default
-title: Welcome
-permalink: "/"
+title: Welcome 2
+permalink: /
 order: 1
-splash-image: https://res.cloudinary.com/chopper/image/upload/v1453404197/Site%20Images/desktop-hero.jpg
+splash-image: 'https://res.cloudinary.com/chopper/image/upload/v1453404197/Site%20Images/desktop-hero.jpg'
 ---
+
 <div class="splash collapse" data-behavior="inView" data-target="js-header" style="background-image: url({{ page.splash-image }})">
 	<div class="splash-heading">
-		<h2 class="banner--hero-subhead inverse p-centered"><span class="editable">Don't get left behind</span></h2>
-		<h1 class="banner--hero inverse p-centered"><span class="editable">The Professional
+		<h2 class="banner--hero-subhead inverse p-centered"><span>Don't get left behind</span></h2>
+		<h1 class="banner--hero inverse p-centered"><span>The Professional
 Landscape is Shifting</span></h1>
 	</div>
 	<div class="splash-cta">
 		<div class="grid">
 			<div class="col-1 tablet-2-5">
-				<a role="button" href="/signup" class="button-cta green"><i class="ion-clipboard icon"></i> <span class="editable">Sign up for Scoutahead</span></a>
+				<a role="button" href="/signup" class="button-cta green"><i class="ion-clipboard icon"></i> <span>Sign up for Scoutahead</span></a>
 			</div>
 			<div class="col-1 tablet-1-5"><span class="or inverse">or</span></div>
 			<div class="col-1 tablet-2-5">
-				<a role="button" href="/self_evaluation/questions" class="button-cta blue"><i class="ion-locked icon"></i><span class="editable">Try our Self Review</span></a>
+				<a role="button" href="/self_evaluation/questions" class="button-cta blue"><i class="ion-locked icon"></i><span>Try our Self Review</span></a>
 			</div>
 		</div>
 	</div>
 </div>
+
 <section class="collapse">
   <div class="container">
     <div class="grid gutter--lg">
       <div class="col-1 tablet-2-3">
-        <h3 class="display--welcome editable">Scoutahead gives you the tools you need to succeed</h3>
-				<h4 class="text--heading editable">Be better at your job by understanding your strengths and weaknesses.</h4>
-        <p class="editable">
+        <h3 class="display--welcome">Scoutahead gives you the tools you need to succeed</h3>
+				<h4 class="text--heading">Be better at your job by understanding your strengths and weaknesses.</h4>
+        <p>
 It can be difficult to be objective about yourself and your colleagues, but now there is a way to get the information you need to improve. Scoutahead offers a way to assess yourself, as well as to anonymously get feedback about your work performance from your peers. Scores from your peers are analyzed and you receive clear, relevant results. All your information remains private and anonymous.
         </p>
       </div>
@@ -37,27 +39,28 @@ It can be difficult to be objective about yourself and your colleagues, but now 
 				<h4 class="display--page-subhead">Scoutahead is...</h4>
 				<ul class="unstyle--list">
           <li>
-            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i> <span class="editable">Anonymous</span></h4>
+            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i> <span>Anonymous</span></h4>
           </li>
           <li>
-            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i>  <span class="editable">Private</span></h4>
+            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i>  <span>Private</span></h4>
           </li>
           <li>
-            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i>  <span class="editable">No Pressure</span></h4>
+            <h4 class="text--heading-large"><i class="ion-checkmark text-blue"></i>  <span>No Pressure</span></h4>
           </li>
         </ul>
     </div>
   </div>
 </div></section>
+
 <section class="welcome-2 collapse">
   <div class="container">
     <div class="grid gutter--lg">
       <div class="col-1 tablet-1-3">
-				<img class="editable" src="https://res.cloudinary.com/chopper/image/upload/v1453430973/Site%20Images/phone_in_hand.jpg" alt="" />
+				<img src="https://res.cloudinary.com/chopper/image/upload/v1453430973/Site%20Images/phone_in_hand.jpg" alt="" />
       </div>
       <div class="col-1 tablet-2-3">
-        <h3 class="display--welcome collapse editable">How we do this:</h3>
-				<div class="editable">
+        <h3 class="display--welcome collapse">How we do this:</h3>
+				<div>
 	        <ul>
 	          <li>
 	            Only you see your feedback - not your boss, not your peers, and not the public.
@@ -77,6 +80,7 @@ It can be difficult to be objective about yourself and your colleagues, but now 
     </div>
   </div>
 </section>
+
 <section class="welcome-3 collapse">
 	<div class="container">
 	  <div class="grid">
@@ -84,9 +88,9 @@ It can be difficult to be objective about yourself and your colleagues, but now 
 				<div class="flex">
 					<div class="ion-pie-graph icon--xl ellipse--xl inverse centered text-blue"></div>
 				</div>
-	      <h3 class="display--module inverse p-centered"><span class="editable">Looking Ahead</span></h3>
+	      <h3 class="display--module inverse p-centered"><span>Looking Ahead</span></h3>
 				<div>
-		      <p class="editable inverse">
+		      <p class="inverse">
 		        Scoutahead's revolutionary methodology is a powerful base for expanded functionality. We don't want to give anything away, but Scoutahead plans to launch an ambitious set of new features in the coming months. For now, please take advantage of our platform to see how your strengths and skills are truly perceived and how you can grow on your own terms.
 		      </p>
 				</div>
@@ -98,8 +102,8 @@ It can be difficult to be objective about yourself and your colleagues, but now 
       <div class="col-1 tablet-1-2">
         <div class="module demographics">
           <img class="demographics-splash" src="https://res.cloudinary.com/chopper/image/upload/v1452896105/Site%20Images/offset_293138.jpg" alt="" />
-          <h4 class="display--module demographics-heading inverse editable">For Professionals</h4>
-          <p class="demographics-body inverse editable">
+          <h4 class="display--module demographics-heading inverse">For Professionals</h4>
+          <p class="demographics-body inverse">
             Our comprehensive system of discretion and privacy provides a new kind of feedback just for you. Use your information to hone already developed skills or improve upon areas you see fit. With Scoutahead, everybody wins. You benefit from reliable, private information that enables you to grow and gain the confidence to advance your career. Your employer benefits from gaining motivated employees invested in their own improvement.
           </p>
         </div>
@@ -108,8 +112,8 @@ It can be difficult to be objective about yourself and your colleagues, but now 
 
         <div class="module demographics">
           <img class="demographics-splash" src="https://res.cloudinary.com/chopper/image/upload/v1452896161/Site%20Images/offset_205802.jpg" alt="" />
-          <h4 class="display--module demographics-heading inverse editable">For Students</h4>
-          <p class="demographics-body inverse editable">
+          <h4 class="display--module demographics-heading inverse">For Students</h4>
+          <p class="demographics-body inverse">
             At Scoutahead, we believe it's never too early to take charge of your future. Like everyone else, you are bombarded with feedback. For the first time, Scoutahead allows you to take control of information and grow on your terms. See how people you know view your strengths and skills with nobody else seeing these reviews. Use this information to learn more about yourself and figure out what career path you can be excited about.
           </p>
         </div>
