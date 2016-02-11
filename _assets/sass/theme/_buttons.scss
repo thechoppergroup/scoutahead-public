@@ -23,7 +23,7 @@ button,
   font-size: 13.5pt;
   border: solid thin $white;
   border-radius: 3px;
-  padding: .75rem 1.5rem .75rem 4rem;
+  padding: .75rem 0 .75rem 0;
   color: $white;
   background-color: rgba($black, 0.6);
   overflow: hidden;
@@ -32,6 +32,11 @@ button,
   box-shadow: 0 3px 3px rgba($black, 0.3);
   color: $white--off;
   text-shadow: 0 -1px rgba($black, 0.3);
+  text-align: center;
+
+  @include tablet {
+    padding: .75rem 1.5rem .75rem 4rem;
+  }
 
   &:visited,
   &:link,
