@@ -5,9 +5,10 @@ html {
 
 .banner- {
 	&-hero {
-    @include fp(font-size, 24, 48);
+    @include fp(font-size, 32, 56);
     font-weight: 100;
-    line-height: 4rem;
+    line-height: 1em;
+    text-shadow: 0 1px rgba($black, 0.4);
 
 		&-subhead {
       @include fp(font-size, 16, 24);
@@ -40,8 +41,8 @@ html {
   }
 
   &-welcome {
-    font-size: 24pt;
-    font-weight: 900;
+    font-size: 28pt;
+    font-weight: 700;
     line-height: 3rem;
     display: inline-block;
     position: relative;
@@ -67,7 +68,7 @@ html {
 
 	&-page {
     font-size: 32pt;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 3rem;
     padding-bottom: 1rem;
     display: inline-block;
@@ -95,6 +96,12 @@ html {
     font-size: 13pt;
     line-height: 2rem;
     font-weight: 600;
+
+    &-large {
+      font-size: 24pt;
+      line-height: 3rem;
+      font-weight: 700;
+    }
   }
 
 	// &-warning {
@@ -108,4 +115,8 @@ html {
 
 em {
   font-style: italic;
+}
+
+.text-blue {
+  color: $color-b;
 }
