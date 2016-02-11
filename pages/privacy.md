@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Scoutahead Privacy Policy
-permalink: privacy/
+permalink: privacy.html
 order: -1
 ---
 <div class="grid">

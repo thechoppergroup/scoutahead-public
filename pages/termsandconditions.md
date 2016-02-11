@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Terms and Conditions
-permalink: terms/
+permalink: terms.html
 order: -1
 ---
 
