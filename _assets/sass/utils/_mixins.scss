@@ -67,6 +67,7 @@ $columns: 12 !default;
     margin-left: -1rem;
 
     > * {
+      margin-top: 2rem;
       padding-left: 1rem;
     }
 
@@ -89,6 +90,7 @@ $columns: 12 !default;
           @if $j < $i {
             @include media($value) {
               > .#{$name}-#{$j}-#{$i} {
+                margin-top: 0;
                 width: percentage($j/$i);
               }
             }

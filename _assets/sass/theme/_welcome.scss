@@ -9,10 +9,18 @@
       background-size: cover;
     }
 
+    &:nth-of-type(2) {
+      padding-bottom: 5rem;
+
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
     &:nth-of-type(3) {
       background: url('https://res.cloudinary.com/chopper/image/upload/s--_r2wnzbE--/q_jpegmini/v1453404196/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
       background-size: cover;
       padding-bottom: 5rem;
+      margin-bottom: -$height-header;
     }
   }
 }

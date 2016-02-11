@@ -5,10 +5,4 @@ body {
     align-self: flex-end;
     margin-top: $height-header;
   }
-
-  &.welcome {
-    > footer {
-      margin-top: 0;
-    }
-  }
 }
