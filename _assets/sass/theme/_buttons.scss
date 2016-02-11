@@ -17,6 +17,8 @@
   padding: 1rem 3rem;
   color: $white;
   background-color: rgba($black, 0.6);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .fluid {
