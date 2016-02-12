@@ -1,6 +1,7 @@
 .footer {
   padding: 2rem 0 1rem;
   background-color: $color-g;
+  position: relative;
 
   .footer-logo {
     svg {
@@ -17,5 +18,16 @@
 
   .footer-social {
     justify-content: center;
+  }
+
+  .footer-share {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 }
