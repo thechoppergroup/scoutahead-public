@@ -24,3 +24,14 @@
     }
   }
 }
+
+
+.welcome-new {
+  section {
+    &:nth-of-type(1) {
+      @include tablet {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
