@@ -4,7 +4,6 @@
     &:nth-of-type(1) {
       @include tablet {
         background: url('https://res.cloudinary.com/chopper/image/upload/v1453430861/Site%20Images/better_info-bg.webp') no-repeat left top;
-        padding-bottom: 5rem;
       }
       background-size: cover;
     }
@@ -30,7 +29,7 @@
   section {
     &:nth-of-type(1) {
       @include tablet {
-        padding-bottom: 0;
+        padding-bottom: 5rem;
       }
     }
   }
