@@ -43,10 +43,6 @@
 
     a {
       width: 100%;
-
-      @include tablet {
-        width: auto;
-      }
     }
 
     @include tablet {
