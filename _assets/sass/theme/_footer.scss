@@ -4,9 +4,12 @@
   position: relative;
 
   .footer-logo {
+    display: inline-block;
+
     svg {
       fill: $white;
       width: 150px;
+      height: 2rem;
     }
   }
 

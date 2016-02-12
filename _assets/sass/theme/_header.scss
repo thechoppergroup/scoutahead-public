@@ -1,12 +1,14 @@
 .header {
   background-color: rgba($black, 0.6);
   transition: background-color .25s;
+  height: $height-header;
 
   .header-logo {
     display: inline-block;
     padding: 1.5rem 1rem;
     flex: 1 0 auto;
     text-align: center;
+    text-decoration: none;
 
     @include tablet {
       flex: 0 1 auto;

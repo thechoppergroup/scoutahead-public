@@ -1,5 +1,4 @@
-.nav-style--a,
-.nav-login {
+.nav-style--a {
   min-width: 100%;
   padding: 0 1rem;
 
@@ -92,29 +91,26 @@
 }
 
 .nav-login {
-  padding: 0 1rem;
-  display: none;
-
-  @include tablet {
-    padding: 0;
-    display: inline-block;
-  }
+  background-color: $color-a;
+  transition: background-color .25s;
 
   > a {
+    display: block;
+    height: $height-header;
+    line-height: $height-header;
     color: $white;
+    padding: 0 1.25rem;
 
     &:hover {
       text-decoration: none;
     }
 
-    @include tablet {
-      background-color: $color-a;
-      padding: 0 1rem;
-    }
-
     &::after {
       display: none;
     }
+  }
+  &:hover {
+    background-color: scale-color($color-a, $lightness: -10%);
   }
 }
 

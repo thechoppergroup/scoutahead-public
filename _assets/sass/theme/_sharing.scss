@@ -4,6 +4,10 @@
     border-bottom: none;
     width: 100% !important;
 
+    .icon {
+      float: left;
+    }
+
     a {
       padding: 0 1rem;
       text-decoration: none;
@@ -28,7 +32,9 @@
     }
 
     svg {
+      padding-top: 2px;
       width: 1rem;
+      max-height: 1rem;
       margin-right: .5rem;
       fill: $white;
     }
