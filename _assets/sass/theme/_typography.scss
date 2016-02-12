@@ -9,6 +9,7 @@ html {
     font-weight: 100;
     line-height: 1em;
     text-shadow: 0 1px rgba($black, 0.4);
+    max-width: 100%;
 
 		&-subhead {
       @include fp(font-size, 16, 24);
