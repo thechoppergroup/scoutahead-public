@@ -47,11 +47,13 @@ Js.Behaviors.inView = function(container) {
 
 Js.Behaviors.links = function(container) {
   var children = $(container).children('li');
-  
+
   $.each(children, function(index, item){
     var child = $(item).children()[0];
     if(window.location.pathname == $(child).attr('href')) {
       $(item).addClass('is-current');
+    } else if(window.location.pathname == '' || window.location.pathname == undefined) {
+      $(children[0]).addClass('is-current');
     }
   })
 }
