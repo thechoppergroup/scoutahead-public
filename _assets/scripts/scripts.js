@@ -1,15 +1,3 @@
-
-Js.States = {
-  "/": {
-    templateUrl: '/pages/index.html'
-  },
-  "/about": {
-    templateUrl: '/pages/about.html'
-  }
-}
-
-
-
 Js.Behaviors.load = function(container){
   var hash = window.location.hash;
   var state = hash.slice(1, window.location.hash.length);
@@ -35,12 +23,13 @@ Js.Behaviors.openMenu = function(container) {
 
 Js.Behaviors.menu = function(container) {
   var body = $('body');
-  
+
   $(container).on('click', '.js-close', function(){
     $(container).removeClass('is-open');
     body.removeClass('is-fixed');
   });
 }
+
 
 Js.Behaviors.inView = function(container) {
   $this = $(container);
@@ -51,6 +40,18 @@ Js.Behaviors.inView = function(container) {
       target.removeClass('not-inview');
     } else {
       target.addClass('not-inview');
+    }
+  })
+}
+
+
+Js.Behaviors.links = function(container) {
+  var children = $(container).children('li');
+  
+  $.each(children, function(index, item){
+    var child = $(item).children()[0];
+    if(window.location.pathname == $(child).attr('href')) {
+      $(item).addClass('is-current');
     }
   })
 }
