@@ -93,9 +93,9 @@ Js.Behaviors.welcomeLink = function(container){
 
 Js.Behaviors.facebookShare = function(container){
   var $this = $(container);
-  $this.on('click', function(){
+  $this.on('click', function(e){
     e.preventDefault();
-    facebookFeedDialog();
+    facebookFeedDialog(window.userIsLoggedIn);
   })
 };
 
@@ -103,6 +103,6 @@ Js.Behaviors.twitterShare = function(container){
   var $this = $(container);
   $this.on('click', function(e){
     e.preventDefault();
-    twitterFeedDialog();
+    twitterFeedDialog(window.userIsLoggedIn);
   })
 };
