@@ -92,17 +92,39 @@ Js.Behaviors.welcomeLink = function(container){
 }
 
 Js.Behaviors.facebookShare = function(container){
-  var $this = $(container);
-  $this.on('click', function(){
-    e.preventDefault();
-    facebookFeedDialog();
-  })
-};
 
-Js.Behaviors.twitterShare = function(container){
   var $this = $(container);
   $this.on('click', function(e){
     e.preventDefault();
+
+    if(!window.userIsLoggedIn) {
+      var link = "https://www.facebook.com/sharer/sharer.php?u=https://scoutahead.com/";
+      var facebook = d3.select('.js-share-facebook');
+      facebook.attr('href', link);
+      facebook.click();
+      return;
+    }
+
+    facebookFeedDialog();
+  });
+
+};
+
+Js.Behaviors.twitterShare = function(container){
+
+  var $this = $(container);
+  $this.on('click', function(e){
+    e.preventDefault();
+
+    if(!window.userIsLoggedIn) {
+      var link = "https://twitter.com/intent/tweet?text=https%3A%2F%2Fscoutahead.com%2F";
+      var twitter = d3.select('.js-share-twitter');
+      twitter.attr('href', link);
+      twitter.click();
+      return;
+    }
+
     twitterFeedDialog();
-  })
+  });
+
 };
