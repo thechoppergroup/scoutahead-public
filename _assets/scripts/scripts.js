@@ -72,3 +72,23 @@ Js.Behaviors.faqScroll = function(container) {
     })
   })
 }
+
+Js.Behaviors.welcomeLink = function(container){
+  window.userIsLoggedIn = false;
+  xhr.insecurePost("/login", {}, function (response) {
+    console.log(response);
+     userIsLoggedIn = response.loggedIn;
+     console.log(userIsLoggedIn);
+  });
+
+
+  $(container).on('click', function(e){
+    e.preventDefault();
+
+    if(userIsLoggedIn) {
+      window.location.href = "/welcome";
+    } else {
+      window.location.href = "/"
+    }
+  })
+}

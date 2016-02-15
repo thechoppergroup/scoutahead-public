@@ -10,7 +10,7 @@
     <button class="header-menu-close collapse js-close"><i class="ion-ios-close-empty"></i></button>
     <ul class="flex" data-behavior="links">
       <li class="nav-style--a">
-        <a href="/">Welcome</a>
+        <a href="/" data-behavior="welcomeLink">Welcome</a>
       </li>
     {% assign nodes = site.pages | sort: "order" %}
     {% for node in nodes %}
