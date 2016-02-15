@@ -78,17 +78,31 @@ Js.Behaviors.welcomeLink = function(container){
   xhr.insecurePost("/login", {}, function (response) {
     console.log(response);
      userIsLoggedIn = response.loggedIn;
-     console.log(userIsLoggedIn);
+
+     $(container).on('click', function(e){
+       e.preventDefault();
+
+       if(userIsLoggedIn) {
+         window.location.href = "/welcome";
+       } else {
+         window.location.href = "/"
+       }
+     });
   });
-
-
-  $(container).on('click', function(e){
-    e.preventDefault();
-
-    if(userIsLoggedIn) {
-      window.location.href = "/welcome";
-    } else {
-      window.location.href = "/"
-    }
-  })
 }
+
+Js.Behaviors.facebookShare = function(container){
+  var $this = $(container);
+  $this.on('click', function(){
+    e.preventDefault();
+    facebookFeedDialog();
+  })
+};
+
+Js.Behaviors.twitterShare = function(container){
+  var $this = $(container);
+  $this.on('click', function(e){
+    e.preventDefault();
+    twitterFeedDialog();
+  })
+};
