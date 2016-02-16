@@ -3,7 +3,7 @@
     padding-top: 5rem;
     &:nth-of-type(1) {
       @include tablet {
-        background: url('https://res.cloudinary.com/chopper/image/upload/v1453430861/Site%20Images/better_info-bg.webp') no-repeat left top;
+        background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/better_info-bg.jpg') no-repeat left top;
       }
       background-size: cover;
     }
@@ -16,7 +16,7 @@
       }
     }
     &:nth-of-type(3) {
-      background: url('https://res.cloudinary.com/chopper/image/upload/s--_r2wnzbE--/q_jpegmini/v1453404196/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
+      background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
       background-size: cover;
       padding-bottom: 5rem;
       margin-bottom: -$height-header;
