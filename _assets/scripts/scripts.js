@@ -76,7 +76,6 @@ Js.Behaviors.faqScroll = function(container) {
 Js.Behaviors.welcomeLink = function(container){
   window.userIsLoggedIn = false;
   xhr.insecurePost("/login", {}, function (response) {
-    console.log(response);
      userIsLoggedIn = response.loggedIn;
 
      $(container).on('click', function(e){
@@ -106,3 +105,14 @@ Js.Behaviors.twitterShare = function(container){
     twitterFeedDialog(window.userIsLoggedIn);
   })
 };
+
+Js.Behaviors.loggedInHide = function(container) {
+  window.userIsLoggedIn = false;
+  xhr.insecurePost("/login", {}, function (response) {
+     userIsLoggedIn = response.loggedIn;
+     
+     if (userIsLoggedIn) {
+       $(container).addClass('is-hidden');
+     }
+  });
+}
