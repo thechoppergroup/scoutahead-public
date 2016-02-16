@@ -34,3 +34,11 @@
     }
   }
 }
+
+.browser_frame {
+  display: none;
+  + [role="main"] {
+    display: none;
+    margin-top: 0;
+  }
+}

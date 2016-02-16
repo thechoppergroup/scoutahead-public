@@ -76,19 +76,43 @@ Js.Behaviors.faqScroll = function(container) {
 Js.Behaviors.welcomeLink = function(container){
   window.userIsLoggedIn = false;
   xhr.insecurePost("/login", {}, function (response) {
-    console.log(response);
      userIsLoggedIn = response.loggedIn;
-     console.log(userIsLoggedIn);
+
+     $(container).on('click', function(e){
+       e.preventDefault();
+
+       if(userIsLoggedIn) {
+         window.location.href = "/?noredirect";
+       } else {
+         window.location.href = "/"
+       }
+     });
   });
+}
 
-
-  $(container).on('click', function(e){
+Js.Behaviors.facebookShare = function(container){
+  var $this = $(container);
+  $this.on('click', function(e){
     e.preventDefault();
-
-    if(userIsLoggedIn) {
-      window.location.href = "/welcome";
-    } else {
-      window.location.href = "/"
-    }
+    facebookFeedDialog(window.userIsLoggedIn);
   })
+};
+
+Js.Behaviors.twitterShare = function(container){
+  var $this = $(container);
+  $this.on('click', function(e){
+    e.preventDefault();
+    twitterFeedDialog(window.userIsLoggedIn);
+  })
+};
+
+Js.Behaviors.loggedInHide = function(container) {
+  window.userIsLoggedIn = false;
+  xhr.insecurePost("/login", {}, function (response) {
+     userIsLoggedIn = response.loggedIn;
+     
+     if (userIsLoggedIn) {
+       $(container).addClass('is-hidden');
+     }
+  });
 }
