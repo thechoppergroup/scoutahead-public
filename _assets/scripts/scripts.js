@@ -83,7 +83,7 @@ Js.Behaviors.welcomeLink = function(container){
        e.preventDefault();
 
        if(userIsLoggedIn) {
-         window.location.href = "/welcome";
+         window.location.href = "/?noredirect";
        } else {
          window.location.href = "/"
        }
