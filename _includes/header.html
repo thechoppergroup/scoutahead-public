@@ -15,7 +15,7 @@
     {% assign nodes = site.pages | sort: "order" %}
     {% for node in nodes %}
       {% if node.title != nil and node.parent == nil and node.order > 0 %}
-      {% capture nodediff %}{{ node.url | remove:"/" }}{% endcapture %}
+      <!-- {% capture nodediff %}{{ node.url | remove:"/" }}{% endcapture %} -->
       <li class="nav-style--a {% if page.url == node.url %} is-current {% endif %}">
         {% if node.order == 0 %}
         <a href="/">{{ node.title }}</a>

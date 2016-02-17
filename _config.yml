@@ -35,6 +35,7 @@ defaults:
       type: "welcomes" # a collection in your site, in plural form
     values:
       slug: "welcome"
+      order: -1
 gems:
 - jekyll-mentions
 - jemoji
