@@ -17,11 +17,11 @@
     }
 
     svg {
+      width: 100%;
       max-width: 140px;
       fill: $white;
 
       @include tablet {
-        width: 100%;
         max-width: 160px;
       }
     }
