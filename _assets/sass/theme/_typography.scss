@@ -3,6 +3,26 @@ html {
   font-family: 'Proxima Nova', 'Helvetica', sans-serif;
 }
 
+h1 {
+  font-size: 32pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+h4 {
+  font-size: 14pt;
+}
+
+h5 {
+  font-size: 12pt;
+}
+
 .banner- {
 	&-hero {
     @include fp(font-size, 32, 56);
