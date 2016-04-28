@@ -49,8 +49,7 @@
     }
 
     @include tablet {
-      min-width: 660px;
-      max-width: 60%;
+      width: 720px;
     }
   }
 }
