@@ -1,0 +1,77 @@
+---
+layout: default
+title: Welcome to Scoutahead
+permalink: welcome_1.html
+splash_image_path: https://res.cloudinary.com/chopper/image/upload/v1452896158/Site%20Images/homepage-hero-img.jpg
+meta_name:
+meta_description:
+meta_image_path:
+expID:
+expVar:
+slug:
+---
+<div class="splash collapse" data-behavior="inView" data-target="js-header" style="background-image: url({{ page.splash_image_path }})">
+	<div class="splash-heading">
+		<h1 class="banner--hero inverse p-centered"><span class="editable">Better Information</span></h1>
+	</div>
+	<div class="splash-cta" data-behavior="loggedInHide">
+		<div class="grid flex-center">
+			<div class="col-1 tablet-1-2">
+				<a role="button" href="/signup" class="button-cta green"><i class="ion-clipboard icon"></i> <span class="editable">Sign up for Scoutahead</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section class="welcomeQuote collapse">
+	<div class="grid flex-center">
+		<div class="col-1 tablet-2-3">
+			<blockquote class="text--heading-large p-centered">
+				It ain’t what you don’t know that gets you into trouble. It’s what you know for sure that just ain’t so.
+			</blockquote>
+			<div class="p-right">
+				<em>– Mark Twain / The Big Short</em>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="welcomeUsers collapse">
+  <div class="">
+		<div class="flex flex-center">
+			<h3 class="display--page-subhead inverse p-centered">Who’s on Scoutahead?</h3>
+		</div>
+    <div class="grid">
+			<div class="col-1 tablet-1-3">
+        <div class="module demographics">
+          <img class="demographics-splash" src="https://res.cloudinary.com/chopper/image/upload/v1452896087/Site%20Images/offset_177963.jpg" alt="" />
+          <h4 class="display--module demographics-heading inverse editable">Companies</h4>
+          <p class="demographics-body inverse editable">
+            Get the most accurate information available to recruit, retain and develop your workforce.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-1 tablet-1-3">
+        <div class="module demographics">
+          <img class="demographics-splash" src="https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/offset_293138.jpg" alt="" />
+          <h4 class="display--module demographics-heading inverse editable">Professionals</h4>
+          <p class="demographics-body inverse editable">
+            Give and receive candid feedback on what you want, when you want it, and from who want.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-1 tablet-1-3">
+        <div class="module demographics">
+          <img class="demographics-splash" src="https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/offset_205802.jpg" alt="" />
+          <h4 class="display--module demographics-heading inverse editable">Students</h4>
+          <p class="demographics-body inverse editable">
+            Ask your Scoutahead community to weigh in on subjects you care about and learn what they really think.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include browser-upgrade.html %}

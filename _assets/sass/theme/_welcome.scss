@@ -1,38 +1,51 @@
-[class*="welcome"] {
-  section {
-    padding-top: 5rem;
-    &:nth-of-type(1) {
-      @include tablet {
-        background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/better_info-bg.jpg') no-repeat left top;
-      }
-      background-size: cover;
-    }
+// [class*="welcome"] {
+//   section {
+//     padding-top: 5rem;
+//     &:nth-of-type(1) {
+//       @include tablet {
+//         background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/better_info-bg.jpg') no-repeat left top;
+//       }
+//       background-size: cover;
+//     }
+//
+//     &:nth-of-type(2) {
+//       padding-bottom: 5rem;
+//
+//       @include tablet {
+//         padding-bottom: 0;
+//       }
+//     }
+//     &:nth-of-type(3) {
+//       background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
+//       background-size: cover;
+//       padding-bottom: 5rem;
+//       margin-bottom: -$height-header;
+//     }
+//   }
+// }
+//
+//
+// .welcome-new {
+//   section {
+//     &:nth-of-type(1) {
+//       @include tablet {
+//         padding-bottom: 5rem;
+//       }
+//     }
+//   }
+// }
 
-    &:nth-of-type(2) {
-      padding-bottom: 5rem;
-
-      @include tablet {
-        padding-bottom: 0;
-      }
-    }
-    &:nth-of-type(3) {
-      background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
-      background-size: cover;
-      padding-bottom: 5rem;
-      margin-bottom: -$height-header;
-    }
-  }
+.welcomeQuote {
+  padding: 5rem 2rem;
+  background-image: linear-gradient(to bottom, rgba(black, 0.3), rgba(black, 0.1), rgba(black, 0.2), rgba(black, 0.5));
+  text-shadow: 0 -1px rgba(white, 0.4);
 }
 
-
-.welcome-new {
-  section {
-    &:nth-of-type(1) {
-      @include tablet {
-        padding-bottom: 5rem;
-      }
-    }
-  }
+.welcomeUsers {
+  padding: 5rem 2rem;
+  background: url('https://res.cloudinary.com/chopper/image/upload/f_auto/Site%20Images/looking_ahead-bg.jpg') no-repeat left top;
+  background-size: cover;
+  margin-bottom: -$height-header;
 }
 
 .browser_frame {
