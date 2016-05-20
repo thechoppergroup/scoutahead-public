@@ -1,5 +1,5 @@
 ---
-title: 2 How do I respond to a survey? Is it different than a review?
+title: How do I respond to a survey? Is it different than a review?
 order: '4'
 ---
 
