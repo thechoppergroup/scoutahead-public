@@ -23,6 +23,14 @@ h5 {
   font-size: 12pt;
 }
 
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
 .banner- {
 	&-hero {
     @include fp(font-size, 32, 56);
