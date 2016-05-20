@@ -1,6 +1,6 @@
 ---
 title: Why should I use Scoutahead?
-order:
+order: '2'
 ---
 
 
