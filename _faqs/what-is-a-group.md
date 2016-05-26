@@ -1,6 +1,6 @@
 ---
 title: What is a Group?
-order: '29'
+order: 29
 ---
 
 

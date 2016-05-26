@@ -1,6 +1,6 @@
 ---
 title: How do I set up a Company Account?
-order: '36'
+order: 36
 ---
 
 

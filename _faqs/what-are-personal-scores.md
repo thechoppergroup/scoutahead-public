@@ -1,6 +1,6 @@
 ---
 title: What are Personal Scores?
-order: '12'
+order: 12
 ---
 
 

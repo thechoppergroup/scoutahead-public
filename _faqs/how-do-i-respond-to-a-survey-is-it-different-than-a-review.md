@@ -1,6 +1,6 @@
 ---
 title: How do I respond to a survey? Is it different than a review?
-order: '4'
+order: 4
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: What is Scoutahead?
-order: '1'
+order: 1
 ---
 
 

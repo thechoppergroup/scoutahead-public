@@ -1,6 +1,6 @@
 ---
 title: How do I see reviews from my colleagues?
-order: '11'
+order: 11
 ---
 
 

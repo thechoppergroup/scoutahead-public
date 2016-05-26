@@ -1,6 +1,6 @@
 ---
 title: Can I create my own survey?
-order: '25'
+order: 25
 ---
 
 

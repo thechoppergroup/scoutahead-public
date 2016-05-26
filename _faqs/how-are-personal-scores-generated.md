@@ -1,6 +1,6 @@
 ---
 title: How are Personal Scores generated?
-order: '13'
+order: 13
 ---
 
 

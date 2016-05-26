@@ -1,6 +1,6 @@
 ---
 title: Who can participate in the surveys I create?
-order: '26'
+order: 26
 ---
 
 

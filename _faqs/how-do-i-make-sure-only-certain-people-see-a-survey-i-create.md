@@ -1,6 +1,6 @@
 ---
 title: How do I make sure only certain people see a survey I create?
-order: '27'
+order: 27
 ---
 
 

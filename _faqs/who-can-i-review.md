@@ -1,6 +1,6 @@
 ---
 title: Who can I review?
-order: '8'
+order: 8
 ---
 
 
