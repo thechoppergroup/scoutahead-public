@@ -1,6 +1,6 @@
 ---
 title: What types of statements are used in reviews?
-order: '9'
+order: 9
 ---
 
 

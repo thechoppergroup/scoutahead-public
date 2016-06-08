@@ -1,6 +1,6 @@
 ---
 title: Who can review me?
-order: '6'
+order: 6
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: What is a Company Account?
-order: '35'
+order: 35
 ---
 
 

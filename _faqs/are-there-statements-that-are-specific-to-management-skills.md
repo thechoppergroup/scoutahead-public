@@ -1,6 +1,6 @@
 ---
 title: Are there statements that are specific to management skills?
-order: '10'
+order: 10
 ---
 
 

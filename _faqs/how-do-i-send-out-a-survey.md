@@ -1,6 +1,6 @@
 ---
 title: How do I send out a survey?
-order: '37'
+order: 37
 ---
 
 

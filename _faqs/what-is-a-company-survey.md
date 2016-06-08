@@ -1,6 +1,6 @@
 ---
 title: What is a Company survey?
-order: '30'
+order: 30
 ---
 
 

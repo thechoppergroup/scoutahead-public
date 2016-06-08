@@ -1,6 +1,6 @@
 ---
 title: What do other people see about me?
-order: '16'
+order: 16
 ---
 
 

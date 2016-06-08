@@ -1,6 +1,6 @@
 ---
 title: How do I fill out a review?
-order: '3'
+order: 3
 ---
 
 

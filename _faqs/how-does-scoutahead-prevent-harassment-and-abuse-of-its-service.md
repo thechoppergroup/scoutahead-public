@@ -1,6 +1,6 @@
 ---
 title: How does Scoutahead prevent harassment and abuse of its service?
-order: '22'
+order: 22
 ---
 
 

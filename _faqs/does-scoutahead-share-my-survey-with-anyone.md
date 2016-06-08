@@ -1,6 +1,6 @@
 ---
 title: Does Scoutahead share my survey with anyone?
-order: '38'
+order: 38
 ---
 
 
