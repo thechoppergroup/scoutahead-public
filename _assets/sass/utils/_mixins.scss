@@ -66,7 +66,15 @@ $columns: 12 !default;
     @extend .flex;
     margin-left: -1rem;
 
-    > * {
+    &.mobile-stack {
+      flex-direction: column-reverse;
+
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+
+    &:not(.flush) > * {
       margin-top: 2rem;
       padding-left: 1rem;
     }
