@@ -35,20 +35,29 @@
   transition: background-color .25s ease-in-out;
   min-height: 20rem;
 
+  &:link {
+    color: $white;
+  }
+
   &:hover {
     color: $white;
     text-decoration: none;
     cursor: pointer;
     background-color: scale-color(#000, $lightness: 8%);
+
+    span {
+      border-bottom: solid thin $color-b;
+    }
   }
 
-  a {
+  span {
     font-weight: 100;
     position: absolute;
     bottom: 0;
     right: 0;
     transform: translate(-1rem, -1rem);
     font-size: 13pt;
+    color: $color-b;
 
     &:after {
       content: url('/_assets/img/arrow-right-circle-half.svg');
