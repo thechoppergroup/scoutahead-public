@@ -35,7 +35,7 @@
   transition: background-color .25s ease-in-out;
   min-height: 20rem;
 
-  &:link {
+  h2 {
     color: $white;
   }
 
@@ -58,6 +58,7 @@
     transform: translate(-1rem, -1rem);
     font-size: 13pt;
     color: $color-b;
+    border-bottom: solid thin transparent;
 
     &:after {
       content: url('/_assets/img/arrow-right-circle-half.svg');
