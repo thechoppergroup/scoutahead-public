@@ -22,6 +22,9 @@
 
 .welcomeLink {
   background-color: #000;
+
+  > * {
+
   color: $white;
   position: relative;
   height: 100%;
@@ -34,6 +37,7 @@
   transition: background-color .25s ease-in-out;
   min-height: 20rem;
 
+}
   h2 {
     color: $white;
   }
