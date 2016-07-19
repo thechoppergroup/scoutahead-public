@@ -1,0 +1,19 @@
+@function get($list, $name) {
+  @if map-has-key($list, $name) {
+    @return map-get($list, $name);
+  }
+  @debug $list;
+  @error "`#{$name}` does not exist";
+}
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}

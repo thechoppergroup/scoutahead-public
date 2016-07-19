@@ -16,3 +16,14 @@ $columns: 12;
 
 $white: #ffffff !default;
 $black: #000000 !default;
+
+$index:
+  footer,
+  navigation,
+  origin,
+  trays,
+  tooltips,
+  dropdowns,
+  header,
+  popovers,
+  modals !default;
