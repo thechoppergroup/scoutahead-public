@@ -34,7 +34,8 @@
         color: get($olympics-colors, brand);
         line-height: 1em;
         margin-right: 1rem;
-        width: 2em;
+        max-width: 3rem;
+        width: 100%;
         font-weight: 700;
         display: block;
       }
