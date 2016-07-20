@@ -1,6 +1,10 @@
 .olympics-splash {
   height: 70vh;
   background-color: get($olympics-colors, backgroundTrans);
+  background-image: url('/_assets/img/splash_overlay.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 436px 290px;
 
   &:before {
     content: "";
