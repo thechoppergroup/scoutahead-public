@@ -1,4 +1,6 @@
 .olympics-splash {
+  height: 70vh;
+  background-color: get($olympics-colors, backgroundTrans);
 
   &:before {
     content: "";
@@ -38,7 +40,7 @@
 
     @include tablet {
       font-size: 54pt;
-      transform: translate(10vw, 8rem);
+      transform: translate(10vw, 15vh);
     }
   }
 
