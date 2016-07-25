@@ -116,3 +116,19 @@ Js.Behaviors.loggedInHide = function(container) {
      }
   });
 }
+
+Js.Behaviors.OlympicsTimer = function(container) {
+  function zeroPad(x) {
+    var text = (x + '');
+    return text.length > 1 ? text : '0' + text; 
+  }
+  function setTicker() {
+    var leftTo = moment.duration(moment.utc('2016-08-05 23:00:00').diff(moment()));
+    $('.js-days').text(zeroPad(leftTo.days()));
+    $('.js-hours').text(zeroPad(leftTo.hours()));
+    $('.js-minutes').text(zeroPad(leftTo.minutes()));
+    $('.js-seconds').text(zeroPad(leftTo.seconds()));
+  }
+  setTicker(); 
+  setInterval(setTicker, 500);
+}
