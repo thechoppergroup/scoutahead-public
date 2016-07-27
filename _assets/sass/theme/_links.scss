@@ -1,4 +1,4 @@
-a {
+a:not([role="button"]) {
   text-decoration: none;
 
   &:hover,

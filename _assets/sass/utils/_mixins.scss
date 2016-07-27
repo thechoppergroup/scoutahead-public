@@ -64,7 +64,7 @@ $columns: 12 !default;
 @mixin grid-generator($grid) {
   .grid {
     @extend .flex;
-    margin-left: -1rem;
+
 
     &.mobile-stack {
       flex-direction: column-reverse;
@@ -74,9 +74,13 @@ $columns: 12 !default;
       }
     }
 
-    &:not(.flush) > * {
-      margin-top: 2rem;
-      padding-left: 1rem;
+    &:not(.flush) {
+      margin-left: -1rem;
+      
+      > * {
+        margin-top: 2rem;
+        padding-left: 1rem;
+      }
     }
 
     &.gutter--lg {

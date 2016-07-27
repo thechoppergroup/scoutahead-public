@@ -10,8 +10,9 @@ button,
 .button-a {
   background-color: $color-b;
   border-radius: .25rem;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
   color: $white;
+  line-height: 3rem;
 
   &:hover {
     background-color: scale-color($color-b, $lightness: -20%);

@@ -32,8 +32,6 @@
   background-repeat: no-repeat;
   background-size: 6rem  auto, 10rem auto;
   display: block;
-  // box-shadow: 0 0 0 1px rgba($white, 0) inset;
-  box-shadow: 0 0 0 1000px #000;
   transition: background-color .25s ease-in-out;
 
   @include tablet {

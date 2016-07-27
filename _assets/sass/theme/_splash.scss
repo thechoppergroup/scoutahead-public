@@ -52,3 +52,21 @@
     }
   }
 }
+
+.subsplash {
+  background: no-repeat center top;
+  background-size: cover;
+  padding: 3rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .subsplash-heading {
+    font-size: 28pt;
+    line-height: 3rem;
+    font-weight: 100;
+  }
+
+  .subsplash-footer {
+    margin-top: auto;
+  }
+}
