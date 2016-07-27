@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 436px 290px;
+  padding-right: 6rem;
 
   &:before {
     content: "";
@@ -39,14 +40,25 @@
 
   .olympics-splash-heading {
     font-weight: 100;
-    line-height: 4rem;
-    transform: translate(0, 5rem);
+    line-height: 3rem;
+    transform-origin: bottom left;
+    transform: translate(0, 4rem);
     padding: 0 1rem;
-    font-size: 42pt;
+    font-size: 28pt;
+    text-align: center;
 
     @include tablet {
+      text-align: left;
+      line-height: 4rem;
+      padding: 0;
+      font-size: 42pt;
+      transform: translate(5vw, 8vh);
+    }
+
+    @include desktop {
+      line-height: 5rem;
+      transform: translate(10vw, 8vh);
       font-size: 54pt;
-      transform: translate(10vw, 15vh);
     }
   }
 
