@@ -14,14 +14,17 @@
     margin-top: 2rem;
   }
 
-
-}
-.is-hidden,
-.collapse {
-  + * {
+  .is-hidden + &,
+  .collapse + & {
     margin-top: 0 !important;
   }
+
+  .collapse--half + & {
+    margin-top: 1rem !important;
+  }
 }
+
+
 
 html,
 body {
@@ -51,7 +54,7 @@ body {
 p {
   margin-top: 1rem;
 
-  &:first-of-type {
+  &:first-child {
     margin-top: 0;
   }
 

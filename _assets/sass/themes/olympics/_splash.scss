@@ -103,7 +103,11 @@
 
     .olympics-splash-timer-heading {
       width: 100%;
-      padding-left: 3rem;
+      padding-left: 4rem;
+      font-size: 12pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 2.5rem;
 
       &:before {
         content: url('/_assets/img/bg_timer.svg');
@@ -134,7 +138,8 @@
     }
 
     > a {
-      display: inline-block;
+      display: block;
+      height: 100%;
     }
 
     .olympics-splash-cta-heading {
