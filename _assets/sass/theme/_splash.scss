@@ -74,6 +74,10 @@
   }
 
   .subsplash-footer {
-    margin-top: auto;
+    margin-top: 2rem;
+
+    @include tablet {
+      margin-top: auto;
+    }
   }
 }
