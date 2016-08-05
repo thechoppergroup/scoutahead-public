@@ -110,7 +110,7 @@ Js.Behaviors.loggedInHide = function(container) {
   window.userIsLoggedIn = false;
   xhr.insecurePost("/login", {}, function (response) {
      userIsLoggedIn = response.loggedIn;
-     
+
      if (userIsLoggedIn) {
        $(container).addClass('is-hidden');
      }
@@ -120,7 +120,7 @@ Js.Behaviors.loggedInHide = function(container) {
 Js.Behaviors.OlympicsTimer = function(container) {
   function zeroPad(x) {
     var text = (x + '');
-    return text.length > 1 ? text : '0' + text; 
+    return text.length > 1 ? text : '0' + text;
   }
   function setTicker() {
     var leftTo = moment.duration(moment.utc('2016-08-05 23:00:00').diff(moment()));
@@ -129,6 +129,25 @@ Js.Behaviors.OlympicsTimer = function(container) {
     $('.js-minutes').text(zeroPad(leftTo.minutes()));
     $('.js-seconds').text(zeroPad(leftTo.seconds()));
   }
-  setTicker(); 
+  setTicker();
   setInterval(setTicker, 500);
+}
+
+
+Js.Behaviors.slick = function(container){
+
+	$(container).slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		centerMode: true,
+		autoplay: true,
+		autoplaySpeed: 2000,
+    dots: false,
+    arrows: false,
+    centerPadding: '0px'
+	});
+
+  console.log("success");
 }

@@ -35,6 +35,10 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+
   <!--[if IE]>
   <link rel="stylesheet" type="text/css" href="{{ "/_css/browser-upgrade.css" | prepend: site.baseurl }}"/>
   <![endif]-->
@@ -57,7 +61,7 @@
   <script type="text/javascript" src="{{ "/js/site/d3_selection.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "/js/site/utility.js" | prepend: site.baseurl }}"></script>
   <script type="text/javascript" src="{{ "/js/site/xhr.js" | prepend: site.baseurl }}"></script>
-  
+
   <script src="https://www.google-analytics.com/analytics.js"></script>
 
   <script type="text/javascript">
