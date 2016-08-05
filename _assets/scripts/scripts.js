@@ -135,19 +135,24 @@ Js.Behaviors.OlympicsTimer = function(container) {
 
 
 Js.Behaviors.slick = function(container){
+  xhr.insecureGet('/surveys/weekly_polls/featured', function (response) {
+    d3.selectOne('.js-featured-polls').templated(response, function (poll, pollLi) {
+      pollLi.populateFrom(poll);
+      pollLi.selectOne('.js-poll_link_ref').attr("href", poll.poll_link);
+    });
 
-	$(container).slick({
-		dots: true,
-		infinite: true,
-		speed: 300,
-		slidesToShow: 1,
-		centerMode: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
-    dots: false,
-    arrows: false,
-    centerPadding: '0px'
-	});
-
+	  $(container).slick({
+		  dots: true,
+		  infinite: true,
+		  speed: 300,
+		  slidesToShow: 1,
+		  centerMode: true,
+		  autoplay: true,
+		  autoplaySpeed: 2000,
+      dots: false,
+      arrows: false,
+      centerPadding: '0px'
+	  });
+  });   
   console.log("success");
 }
