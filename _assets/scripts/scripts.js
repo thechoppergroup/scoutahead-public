@@ -123,7 +123,7 @@ Js.Behaviors.OlympicsTimer = function(container) {
     return text.length > 1 ? text : '0' + text; 
   }
   function setTicker() {
-    var leftMillis = moment.utc('2016-08-08 06:00:00').diff(moment());
+    var leftMillis = moment.utc('2016-08-22 06:00:00').diff(moment());
     if ( leftMillis > 0 ) {
       var leftTo = moment.duration(leftMillis);
       $('.js-days').text(zeroPad(leftTo.days()));
