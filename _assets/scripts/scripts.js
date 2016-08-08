@@ -156,7 +156,7 @@ Js.Behaviors.slick = function(container){
 		  slidesToShow: 1,
 		  centerMode: true,
 		  autoplay: true,
-		  autoplaySpeed: 2000,
+		  autoplaySpeed: 4000,
       dots: false,
       arrows: false,
       centerPadding: '0px'
