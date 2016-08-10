@@ -148,19 +148,20 @@ Js.Behaviors.slick = function(container){
       pollLi.populateFrom(poll);
       pollLi.selectOne('.js-poll_link_ref').attr("href", poll.poll_link);
     });
-
-	  $(container).slick({
-		  dots: true,
-		  infinite: true,
-		  speed: 300,
-		  slidesToShow: 1,
-		  centerMode: true,
-		  autoplay: true,
-		  autoplaySpeed: 4000,
-      dots: false,
-      arrows: false,
-      centerPadding: '0px'
-	  });
-  });   
+    if (response.length > 1 ) {
+	    $(container).slick({
+		    dots: true,
+		    infinite: true,
+		    speed: 300,
+		    slidesToShow: 1,
+		    centerMode: true,
+		    autoplay: true,
+		    autoplaySpeed: 4000,
+        dots: false,
+        arrows: false,
+        centerPadding: '0px'
+	    })
+    };
+  });
   console.log("success");
 }
