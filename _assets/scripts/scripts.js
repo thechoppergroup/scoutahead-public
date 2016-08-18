@@ -123,11 +123,19 @@ Js.Behaviors.OlympicsTimer = function(container) {
     return text.length > 1 ? text : '0' + text;
   }
   function setTicker() {
-    var leftTo = moment.duration(moment.utc('2016-08-05 23:00:00').diff(moment()));
-    $('.js-days').text(zeroPad(leftTo.days()));
-    $('.js-hours').text(zeroPad(leftTo.hours()));
-    $('.js-minutes').text(zeroPad(leftTo.minutes()));
-    $('.js-seconds').text(zeroPad(leftTo.seconds()));
+    var leftMillis = moment.utc('2016-08-22 06:00:00').diff(moment());
+    if ( leftMillis > 0 ) {
+      var leftTo = moment.duration(leftMillis);
+      $('.js-days').text(zeroPad(leftTo.days()));
+      $('.js-hours').text(zeroPad(leftTo.hours()));
+      $('.js-minutes').text(zeroPad(leftTo.minutes()));
+      $('.js-seconds').text(zeroPad(leftTo.seconds()));
+    } else {
+      $('.js-days').text('00');
+      $('.js-hours').text('00');
+      $('.js-minutes').text('00');
+      $('.js-seconds').text('00');
+    }
   }
   setTicker();
   setInterval(setTicker, 500);
@@ -140,19 +148,20 @@ Js.Behaviors.slick = function(container){
       pollLi.populateFrom(poll);
       pollLi.selectOne('.js-poll_link_ref').attr("href", poll.poll_link);
     });
-
-	  $(container).slick({
-		  dots: true,
-		  infinite: true,
-		  speed: 300,
-		  slidesToShow: 1,
-		  centerMode: true,
-		  autoplay: true,
-		  autoplaySpeed: 2000,
-      dots: false,
-      arrows: false,
-      centerPadding: '0px'
-	  });
-  });   
+    if (response.length > 1 ) {
+	    $(container).slick({
+		    dots: true,
+		    infinite: true,
+		    speed: 300,
+		    slidesToShow: 1,
+		    centerMode: true,
+		    autoplay: true,
+		    autoplaySpeed: 4000,
+        dots: false,
+        arrows: false,
+        centerPadding: '0px'
+	    })
+    };
+  });
   console.log("success");
 }
