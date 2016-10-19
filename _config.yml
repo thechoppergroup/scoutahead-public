@@ -21,12 +21,12 @@ sass:
     sass_dir: _assets
 
 collections:
-  faqs:
-    output: false
-    permalink: /faqs/:path/
   welcomes:
     output: true
     permalink: /welcome/:path/
+  privacy policy:
+    output: true
+    permalink: /privacy-policy/:path/
 
 defaults:
   -
