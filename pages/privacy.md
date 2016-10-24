@@ -73,7 +73,7 @@ order: -1
           <li>Comply with the law.</li>
         </ul>
       </li>
-      <li><em>As directed by your Organization.</em> We will disclose information as directed by your Organization.</li>
+      <li><em>As directed by your Organization.</em> If asked to do so by your Organization, we will disclose information on its behalf.</li>
     </ul>
 
   <p><strong>If I respond to a survey on Scoutahead for Enterprise, what information do you share about my response?</strong></p>
