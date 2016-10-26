@@ -26,5 +26,13 @@ body {
         height: auto;
       }
     }
+
+    .nav-login {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
   }
 }

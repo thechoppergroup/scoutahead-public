@@ -10,12 +10,24 @@ button,
 .button-a {
   background-color: $color-b;
   border-radius: .25rem;
-  padding: 1rem 3rem;
+  padding: 0 3rem;
   color: $white;
+  line-height: 3rem;
 
   &:hover {
     background-color: scale-color($color-b, $lightness: -20%);
     cursor: pointer;
+  }
+
+  &.outlined {
+    background-color: rgba(black, 0.2);
+    box-shadow: 0 1px $color-b, 0 -1px $color-b, 1px 0 $color-b, -1px 0 $color-b;
+    color: $color-b;
+
+    &:hover {
+      background-color: rgba(scale-color($color-b, $lightness: -70%), 0.8);
+      cursor: pointer;
+    }
   }
 }
 

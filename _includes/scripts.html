@@ -1,5 +1,4 @@
-<script src="https://www.google-analytics.com/analytics.js"></script>
-	{% if site.expID %}
+	<!-- {% if site.expID %}
 	  <script>
 	    if (window.location === 'scoutahead.com') {
 	      var gaTracker = ga.create('UA-72053902-1', 'auto');
@@ -14,10 +13,10 @@
 	      });
 	    }
 	  </script>
-	{% endif %}
+	{% endif %} -->
 
 <script type="text/javascript" src="{{ "/js/d3.3.5.6.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/js/lodash-3.10.0.min.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/js/lodash-4.15.0.min.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/site/d3_selection.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/js/site/utility.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{  "/js/site/xhr.js" | prepend: site.baseurl }}"></script>
@@ -26,4 +25,7 @@
 
 <script type="text/javascript" src="{{ "/_assets/scripts/behaviors.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" src="{{ "/_assets/scripts/scripts.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
 <!-- End App -->
