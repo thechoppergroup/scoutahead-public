@@ -5,12 +5,17 @@ title_page: Scoutahead Blog
 permalink: blog.html
 order: -1
 ---
-
 <div class="grid gutter--lg">
   <div class="col-1 tablet-2-3">
-    {% include loop.html  %}
+    <div class="{{page.title | slugify}}-content-main">
+      {% include loop.html  %}
+    </div>
   </div>
   <div class="col-1 tablet-1-3">
-    {% include archive.html %}
+    <div class="{{page.title | slugify}}-content-aside">
+      <h4 class="inverse collapse">Blog Archive</h4>
+      <hr style="border-bottom: solid thin white; width: 100%">
+      {% include archive.html %}
+    </div>
   </div>
 </div>
