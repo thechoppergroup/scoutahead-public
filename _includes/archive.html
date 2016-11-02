@@ -1,0 +1,8 @@
+<!-- This partial is for outputing the post loop -->
+<ul class="unstyle--list">
+  {% for post in site.posts  %}
+    <li class="overflow--ellipsis">
+      <a class="post-link" href="{{ site.baseurl}}{{ post.url }}"><span class="post-meta collapse">{{ post.date | date: "%b %-d, %Y" }}</span> - {{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

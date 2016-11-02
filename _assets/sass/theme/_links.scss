@@ -1,5 +1,7 @@
-a:not([role="button"]) {
-  text-decoration: none;
+a {
+  &:not([role="button"]) {
+    text-decoration: none;
+  }
 
   &:hover,
   &:link,

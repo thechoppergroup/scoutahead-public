@@ -1,12 +1,14 @@
 <!-- This partial is for outputing the post loop -->
-<ul class="post-list">
-  {% for post in include.posts  %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-      <h2>
-        <a class="post-link" href="{{ site.baseurl}}/#{{ post.url }}">{{ post.title }}</a>
-      </h2>
+<ul class="unstyle--list">
+  {% for post in site.posts  %}
+    <li data-behavior="tagShow" data-tags="{% for category in post.categories %} {{ category | slugify }} {% endfor %}">
+      <h4 class="collapse">
+        <a class="post-link" href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+        <small class="post-meta collapse">{{ post.date | date: "%b %-d, %Y" }}</small>
+      </h4>
+      <p>
+        {{ post.short_description }}
+      </p>
     </li>
   {% endfor %}
 </ul>

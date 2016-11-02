@@ -165,3 +165,20 @@ Js.Behaviors.slick = function(container){
   });
   console.log("success");
 }
+
+Js.Behaviors.tagShow = function (container) {
+  var tags = container.getAttribute('data-tags');
+  var parser = document.createElement('a');
+  parser.href = window.location.href;
+
+  if (parser.search) {
+    container.style.display = 'none';
+    var search = parser.search;
+    var index = search.indexOf('=');
+    var tag = search.substring(index + 1)
+    
+    if (tags.indexOf(tag) > 0) {
+      container.style.display = 'block';
+    }
+  }
+}

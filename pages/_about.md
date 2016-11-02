@@ -1,8 +1,6 @@
 ---
 layout: page
-title: About
+title: Test
 permalink: about.html
 order: 3
 ---
-
-Coming soon
