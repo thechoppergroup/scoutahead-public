@@ -1,7 +1,7 @@
 # Site settings
 title: Scoutahead
 description: > # this means to ignore newlines until "baseurl:"
-  Be better at your job by understanding your strengths and weaknesses. It can be difficult to be objective about yourself and your colleagues, but now there is a way to get the information you need to improve.
+  Transforming Enterprise Communications
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://scoutahead.com" # the base hostname & protocol for your site
 twitter_username: ScoutaheadHQ
