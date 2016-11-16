@@ -13,6 +13,7 @@ button,
   padding: 0 3rem;
   color: $white;
   line-height: 3rem;
+  font-size: 11pt;
 
   &:hover {
     background-color: scale-color($color-b, $lightness: -20%);

@@ -8,6 +8,31 @@ Js.Behaviors.load = function(container){
   });
 }
 
+Js.Behaviors.inputsCheck = function (container) {
+  setInterval(function(){
+    var inputs = container.querySelectorAll('input');
+    Array.prototype.forEach.call(inputs, function(el, i){
+      if(el.value !== '') {
+        Js._addClass(el.parentNode, 'has-content')
+      } else {
+        Js._removeClass(el.parentNode, 'has-content')
+      }
+
+      el.addEventListener('focus', function (e) {
+        if (!Js._hasClass(e.target.parentNode, 'has-focus')) {
+          Js._addClass(e.target.parentNode, 'has-focus')
+        }
+      })
+
+      el.addEventListener('blur', function (e) {
+        if (Js._hasClass(e.target.parentNode, 'has-focus')) {
+          Js._removeClass(e.target.parentNode, 'has-focus')
+        }
+      })
+    });
+  }, 100);
+}
+
 Js.Behaviors.openMenu = function(container) {
   var $this = $(container);
   var target = $this.attr('data-target');

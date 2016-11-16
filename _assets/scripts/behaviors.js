@@ -120,3 +120,51 @@ function _view(view) {
   }
   return view;
 }
+
+// Check if has a class
+Js._hasClass = function(el, className) {
+  if (el.classList)
+    return el.classList.contains(className)
+  else
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+}
+
+// Add a class
+Js._addClass = function(el, className) {
+  if (el.classList)
+    el.classList.add(className)
+  else if (!hasClass(el, className)) el.className += " " + className
+}
+
+// Remove a class
+Js._removeClass = function(el, className) {
+  if (el.classList)
+    el.classList.remove(className)
+  else if (hasClass(el, className)) {
+    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+    el.className=el.className.replace(reg, ' ')
+  }
+}
+
+// Find Closest Element
+Js._closest = function(el, selector) {
+  var matchesFn;
+  ['matches','webkitMatchesSelector','mozMatchesSelector','msMatchesSelector','oMatchesSelector'].some(function(fn) {
+    if (typeof document.body[fn] == 'function') {
+        matchesFn = fn;
+        return true;
+    }
+    return false;
+  })
+  var parent;
+
+  // traverse parents
+  while (el) {
+    parent = el.parentElement;
+    if (parent && parent[matchesFn](selector)) {
+        return parent;
+    }
+    el = parent;
+  }
+  return null;
+}
