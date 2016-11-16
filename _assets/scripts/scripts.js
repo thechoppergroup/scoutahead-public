@@ -176,9 +176,14 @@ Js.Behaviors.tagShow = function (container) {
     var search = parser.search;
     var index = search.indexOf('=');
     var tag = search.substring(index + 1)
-    
+
     if (tags.indexOf(tag) > 0) {
       container.style.display = 'block';
     }
   }
+}
+
+Js.Behaviors.replaceSection = function (container) {
+  var section = new ContentSection(container.getAttribute('data-container-class'));
+  section.replaceSection(null, container.getAttribute('data-snip-url'), noop, noop);
 }
