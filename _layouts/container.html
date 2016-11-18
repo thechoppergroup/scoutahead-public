@@ -4,6 +4,6 @@ layout: default
 
 {% include splash.html image=page.splash_image_path heading=page.splash-banner subhead=page.splash-subhead %}
 
-<div class="container">
+<div class="container {{page.title | slugify }}-content">
 	{{content}}
 </div>
