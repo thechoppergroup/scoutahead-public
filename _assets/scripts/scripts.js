@@ -210,5 +210,7 @@ Js.Behaviors.tagShow = function (container) {
 
 Js.Behaviors.replaceSection = function (container) {
   var section = new ContentSection(container.getAttribute('data-container-class'));
-  section.replaceSection(null, container.getAttribute('data-snip-url'), noop, noop);
+  section.replaceSection(null, container.getAttribute('data-snip-url'), function () {
+    section.revealMain();
+  }, noop);
 }
