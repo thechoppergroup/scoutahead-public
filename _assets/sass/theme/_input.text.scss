@@ -48,40 +48,6 @@ fieldset {
   }
 }
 
-
-
-fieldset {
-
-  > p.input-error {
-    position: absolute;
-    top: 5pt;
-    margin-top: 0;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background: $white;
-    font-size: 1rem;
-    line-height: 1rem;
-
-    &--top {
-      @extend p.input-error;
-      top: auto;
-      bottom: 100%;
-    }
-
-    &.left {
-      transform: translate(-100%, 0);
-      left: 0;
-      top: 0;
-    }
-
-    &.right {
-      transform: translate(0%, 0);
-      top: 0;
-    }
-  }
-}
-
 .input-error {
   border: thin solid #ccc;
   border-radius: 5pt;
@@ -138,6 +104,38 @@ fieldset {
       border: 0;
       border-bottom: thin solid #ccc;
       border-left: thin solid #ccc;
+    }
+  }
+}
+
+fieldset {
+
+  > p.input-error {
+    position: absolute;
+    top: 5pt;
+    margin-top: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: $white;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &--top {
+      @extend p.input-error;
+      top: auto;
+      bottom: 100%;
+    }
+
+    &.left {
+      transform: translate(-100%, 0);
+      left: 0;
+      top: 0;
+    }
+
+    &.right {
+      transform: translate(0%, 0);
+      top: 0;
     }
   }
 }
