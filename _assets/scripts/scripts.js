@@ -99,10 +99,7 @@ Js.Behaviors.faqScroll = function(container) {
 }
 
 Js.Behaviors.welcomeLink = function(container){
-  window.userIsLoggedIn = false;
-  xhr.insecurePost("/login", {}, function (response) {
-     userIsLoggedIn = response.loggedIn;
-
+  function act() {
      $(container).on('click', function(e){
        e.preventDefault();
 
@@ -112,7 +109,17 @@ Js.Behaviors.welcomeLink = function(container){
          window.location.href = "/"
        }
      });
-  });
+
+  }
+
+  if (_.isUndefined(window.userIsLoggedIn)) {
+    xhr.insecurePost("/login", {}, function (response) {
+       window.userIsLoggedIn = response.loggedIn;
+       act();
+    });
+  } else {
+    act();
+  }
 }
 
 Js.Behaviors.facebookShare = function(container){
@@ -132,14 +139,18 @@ Js.Behaviors.twitterShare = function(container){
 };
 
 Js.Behaviors.loggedInHide = function(container) {
-  window.userIsLoggedIn = false;
-  xhr.insecurePost("/login", {}, function (response) {
-     userIsLoggedIn = response.loggedIn;
-
+  if (_.isUndefined(window.userIsLoggedIn)) {
+    xhr.insecurePost("/login", {}, function (response) {
+      window.userIsLoggedIn = response.loggedIn;
+      if (userIsLoggedIn) {
+        $(container).addClass('is-hidden');
+      }
+    });
+  } else {
      if (userIsLoggedIn) {
        $(container).addClass('is-hidden');
      }
-  });
+  }
 }
 
 Js.Behaviors.OlympicsTimer = function(container) {
