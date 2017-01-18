@@ -221,7 +221,18 @@ Js.Behaviors.tagShow = function (container) {
 
 Js.Behaviors.replaceSection = function (container) {
   var section = new ContentSection(container.getAttribute('data-container-class'));
-  section.replaceSection(null, container.getAttribute('data-snip-url'), function () {
+  var queryParams = (container.getAttribute('data-query-params') || "").split(/\s*,\s*/);
+  var url = container.getAttribute('data-snip-url');
+  var started = false;
+  queryParams.forEach(function(param) { 
+      if (param && !started) {
+        started = true;
+        url += '?';
+        url += param + '=' + queryParameter(param); // should be subject to URL escaping if it comes up.
+      } 
+  });
+  
+  section.replaceSection(null, url, function () {
     section.revealMain();
   }, noop);
 }
