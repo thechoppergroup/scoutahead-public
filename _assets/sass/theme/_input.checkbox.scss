@@ -21,7 +21,7 @@ fieldset {
 
     input[type="checkbox"] {
       + span:before {
-        content: "\f14e";
+        content: "\f372";
       }
 
       &:checked + span:before {
