@@ -225,11 +225,14 @@ Js.Behaviors.replaceSection = function (container) {
   var url = container.getAttribute('data-snip-url');
   var started = false;
   queryParams.forEach(function(param) { 
-      if (param && !started) {
+      if (! param) return;
+      var paramValue = queryParameter(param);
+      if (!paramValue) return;
+      if (!started) {
         started = true;
         url += '?';
-        url += param + '=' + queryParameter(param); // should be subject to URL escaping if it comes up.
-      } 
+      }
+      url += param + '=' + paramValue; // should be subject to URL escaping if it comes up.
   });
   
   section.replaceSection(null, url, function () {
