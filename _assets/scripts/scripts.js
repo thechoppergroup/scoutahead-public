@@ -237,5 +237,7 @@ Js.Behaviors.replaceSection = function (container) {
   
   section.replaceSection(null, url, function () {
     section.revealMain();
-  }, noop);
+  }, function(){
+    Js._init(section);
+  });
 }
