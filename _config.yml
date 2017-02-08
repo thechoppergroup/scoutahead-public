@@ -14,7 +14,7 @@ markdown: kramdown
 
 include: [_css, _assets]
 
-exclude: [README.md, bower.json, Gemfile, Gemfile.lock ]
+exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
 
 # SASS Dir
 sass:
