@@ -1,0 +1,44 @@
+# Site settings
+title: Scoutahead
+description: > # this means to ignore newlines until "baseurl:"
+  Transforming Enterprise Communications
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://scoutahead.com" # the base hostname & protocol for your site
+twitter_username: ScoutaheadHQ
+facebook_username: ScoutaheadHQ
+keywords: ["professionals", "students", "companies", "career", "jobs", "survey", "self improvement"]
+pagination: 3
+
+# Build settings
+markdown: kramdown
+
+include: [_css, _assets]
+
+exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
+
+# SASS Dir
+sass:
+    sass_dir: _assets
+
+collections:
+  welcomes:
+    output: true
+    permalink: /welcome/:path/
+  privacy policy:
+    output: true
+    permalink: /privacy-policy/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "welcomes" # a collection in your site, in plural form
+    values:
+      slug: "welcome"
+      order: -1
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
+- octopress-autoprefixer

@@ -1,0 +1,81 @@
+$text-color: #333333 !default;
+
+@function get($list, $name) {
+  @if map-has-key($list, $name) {
+    $item: map-get($list, $name);
+    @if(type-of($item) == string) {
+      @if(str-index($item, 'http') or str-index($item, '/')) {
+        @return url($item);
+      } @else{
+        @return $item;
+      }
+    }
+    @return $item;
+  }
+  @debug $list;
+  @error "`#{$name}` does not exist";
+}
+
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/* ----------- Functions ----------- */
+@function check-text-color($color) {
+  @if (lightness($color) < 60 and $color != transparent and $color != none) {
+    @return #ffffff; // Lighter backgorund, return dark color
+  } @else {
+    @return $text-color; // Darker background, return light color
+  }
+}
+
+@function dark($color, $darken: 10%, $saturation: 0%) {
+  $dark: scale-color($color, $lightness: -$darken, $saturation: $saturation);
+  @if (lightness($dark) > 0) {
+    @return $dark; // If not black return darkened color
+  } @else {
+    @return $color; // Return input color
+  }
+  @debug $color;
+  @error "`#{$color}` is not a color";
+}
+
+@function light($color, $lighten: 12%, $saturation: 0%) {
+  $light: scale-color($color, $lightness: $lighten, $saturation: $saturation);
+  @if (lightness($light) < 100%) {
+    @return $light; // If not black return darkened color
+  } @else {
+    @return $color; // Return input color
+  }
+  @debug $color;
+  @error "`#{$color}` is not a color";
+}
+
+// Index check function
+@function z($list, $element) {
+   $z-index: index($list, $element);
+
+   @if $z-index {
+      @return $z-index;
+   }
+
+   @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+   @return null;
+}

@@ -1,0 +1,25 @@
+---
+layout: container
+---
+<div class="grid gutter--lg">
+  <div class="col-1 tablet-2-3">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <article class="post-content">
+      {{ content }}
+    </article>
+    <ul class="unstyle--list grid">
+      {% for category in page.categories %}
+        <li><a href="/blog.html/?category={{category | slugify}}">{{category}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-1 tablet-1-3">
+    <h4 class="collapse">Archive</h4>
+    {% include archive.html %}
+  </div>
+</div>
+
+{% if site.disqus_shortname %}
+	{% include disqus.html %}
+{% endif %}

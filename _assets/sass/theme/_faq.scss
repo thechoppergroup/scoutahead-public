@@ -1,0 +1,9 @@
+.faq {
+  .sidebar {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}

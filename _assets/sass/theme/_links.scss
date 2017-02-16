@@ -1,0 +1,17 @@
+a {
+  &:not([role="button"]) {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:link,
+  &:hover,
+  &:active,
+  &:visited {
+    color: $color-b;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

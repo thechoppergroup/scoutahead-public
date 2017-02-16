@@ -1,0 +1,147 @@
+html {
+  color: #444;
+  font-family: 'Proxima Nova', 'Helvetica', sans-serif;
+}
+
+h1 {
+  font-size: 32pt;
+}
+
+h2 {
+  font-size: 24pt;
+}
+
+h3 {
+  font-size: 18pt;
+}
+
+h4 {
+  font-size: 14pt;
+}
+
+h5 {
+  font-size: 12pt;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.banner- {
+	&-hero {
+    @include fp(font-size, 32, 56);
+    font-weight: 100;
+    line-height: 1em;
+    text-shadow: 0 1px rgba($black, 0.4);
+    max-width: 100%;
+
+		&-subhead {
+      @include fp(font-size, 16, 24);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      line-height: 2rem;
+
+      + .banner--hero {
+        margin-top: 1rem;
+      }
+		}
+	}
+}
+
+.display- {
+
+  &-sidebar {
+    font-size: 18pt;
+    line-height: 2rem;
+    font-weight: 200;
+    color: $color-a;
+
+    &-subhead {
+      font-size: 14pt;
+      font-weight: 400;
+      line-height: 1.5rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-welcome {
+    font-size: 28pt;
+    font-weight: 700;
+    line-height: 3rem;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-bottom: solid .5rem $color-b;
+      width: 80%;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &-module {
+    font-size: 21pt;
+    font-weight: 700;
+    line-height: 2.5rem;
+    margin-bottom: .5rem
+  }
+
+	&-page {
+    font-size: 24pt;
+    font-weight: 800;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 80%;
+      border-bottom: solid .5rem $color-b;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+		&-subhead {
+      font-size: 18pt;
+      font-weight: 700;
+      line-height: 2rem;
+		}
+	}
+}
+
+.text- {
+  &-heading {
+    font-size: 13pt;
+    line-height: 2rem;
+    font-weight: 600;
+
+    &-large {
+      font-size: 24pt;
+      line-height: 3rem;
+      font-weight: 700;
+    }
+  }
+
+	&-error {
+    color: $color-warning;
+	}
+}
+
+em {
+  font-style: italic;
+}
+
+.text-blue {
+  color: $color-b !important;
+}

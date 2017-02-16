@@ -1,0 +1,27 @@
+	<!-- {% if site.expID %}
+	  <script>
+	    if (window.location === 'scoutahead.com') {
+	      var gaTracker = ga.create('UA-72053902-1', 'auto');
+	      ga('set', 'expId', '{{ page.expID }}');
+	      ga('set', 'expVar', '{{ page.expVar }}');
+	      gaTracker.send('pageview');
+	      window.addEventListener('error', function (e) {
+	        gaTracker.send('exception', {exDescription: 'JavaScript Error ' + e.message + ' ' + e.filename + ': ' + e.lineno});
+	      });
+	      jQuery(document).ajaxError(function (e, request, settings) {
+	        gaTracker.send('exception', {exDescription: 'Ajax Error ' + settings.url + ' ' + e.result});
+	      });
+	    }
+	  </script>
+	{% endif %} -->
+
+<script type="text/javascript" src="//oss.maxcdn.com/rrssb/1.6.0/js/rrssb.min.js"></script>
+<script type="text/javascript" src="{{ "/_assets/vendor/inview/jquery.inview.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/_assets/vendor/lodash/dist/lodash.core.min.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript" src="{{ "/_assets/scripts/behaviors.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ "/_assets/scripts/scripts.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+<!-- End App -->
