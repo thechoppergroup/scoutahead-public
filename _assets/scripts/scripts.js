@@ -299,31 +299,38 @@ Js.Behaviors.product = function (container) {
 }
 
 Js.Behaviors.scroll = function (container) {
-  var content = {
-    'intro': document.getElementById('content:intro'),
-    'product': document.getElementById('content:product'),
-    'beyond': document.getElementById('content:beyond')
-  };
+  var sectionHeight = 1000;
+
+  var nav = document.getElementById('section:nav');
+  var sections = [
+    document.getElementById('section:intro'),
+    document.getElementById('section:product'),
+    document.getElementById('section:beyond')
+  ];
+
+  function switchTo (index) {
+    for (var i = 0; i < sections.length; i++)
+    sections.forEach(function (section, i) {
+      var section = sections[i];
+      var navItem = nav.children[i];
+      if (index === i) {
+        section.style.opacity = '1';
+        navItem.classList.add("active");
+      } else {
+        section.style.opacity = '0';
+        navItem.classList.remove("active");
+      }
+    });
+  }
+
+  switchTo(0);
 
   window.addEventListener('scroll', function (e) {
-    console.log(e.currentTarget.pageYOffset)
+    console.log(e.currentTarget.pageYOffset);
 
-    if(e.currentTarget.pageYOffset < 1200) {
-      content.intro.style.opacity = '1'
-    } else {
-      content.intro.style.opacity = '0'
-    }
+    var scrollPos = e.currentTarget.pageYOffset;
+    var sectionIndex = Math.floor(scrollPos / 1000);
 
-    if(e.currentTarget.pageYOffset < 3600 && e.currentTarget.pageYOffset > 2400) {
-      content.product.style.opacity = '1'
-    } else {
-      content.product.style.opacity = '0'
-    }
-
-    if(e.currentTarget.pageYOffset < 4800 && e.currentTarget.pageYOffset > 3600) {
-      content.beyond.style.opacity = '1'
-    } else {
-      content.beyond.style.opacity = '0'
-    }
-  })
+    switchTo(sectionIndex);
+  });
 }

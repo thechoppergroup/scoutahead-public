@@ -80,6 +80,13 @@ h5 {
       transform: translate(0, -50%);
     }
 
+    &.active {
+      font-weight: bold;
+      &:after {
+        background-color: gray;
+      }
+    }
+
     &:last-of-type:before {
       display: none;
     }
@@ -108,7 +115,7 @@ body {
   width: 100%;
   height: 100%;
 
-  [id="content:intro"] {
+  [id="section:intro"] {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -116,8 +123,8 @@ body {
     color: white;
   }
 
-  [id="content:product"],
-  [id="content:beyond"] {
+  [id="section:product"],
+  [id="section:beyond"] {
     position: absolute;
     top: 50%;
     left: 50%;

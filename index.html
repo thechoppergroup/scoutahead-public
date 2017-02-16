@@ -22,7 +22,7 @@ whatever_iwant: foobar
 </section>
 
 <div id="content" data-behavior="scroll">
-  <div id="content:intro" class="intro contentSection" collapse>
+  <div id="section:intro" class="intro contentSection" collapse>
     <h1 class="paragraph--center">Welcome to <br> Scoutahead</h1>
     <h4 class="paragraph--center">Secure &amp; Encrypted Enterprise Collaboration System</h4>
     <div class="flex">
@@ -30,7 +30,7 @@ whatever_iwant: foobar
     </div>
   </div>
 
-  <div id="content:product" class="product contentSection" collapse>
+  <div id="section:product" class="product contentSection" collapse>
     <video id="collaborate" data-behavior="video2" tabindex="0" autobuffer="autobuffer" preload="preload">
       <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/_assets/media/049729858-4k-diverse-business-group-lapt.mp4"></source>
       <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/_assets/media/049729858-4k-diverse-business-group-lapt.mp4"></source>
@@ -46,7 +46,7 @@ whatever_iwant: foobar
     <div class="contentSection-overlay"></div>
   </div>
 
-  <div id="content:beyond" class="product contentSection" collapse>
+  <div id="section:beyond" class="product contentSection" collapse>
     <video id="beyond" data-behavior="video3" tabindex="0" autobuffer="autobuffer" preload="preload">
       <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/_assets/media/032785080-4k-modern-data-center-server-r.mp4"></source>
       <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/_assets/media/032785080-4k-modern-data-center-server-r.mp4"></source>
@@ -70,12 +70,11 @@ whatever_iwant: foobar
     <div class="contentSection-overlay"></div>
   </div>
 
-  <div class="aside" collapse>
+  <div class="aside" data-behavior="waypoints" collapse>
     <nav>
-      <ul class="introNav">
+      <ul class="introNav" id="section:nav">
         <li class="introNav-item" collapse><a href="" class="introNav-item-link">Home</a></li>
         <li class="introNav-item" collapse><a href="" class="introNav-item-link">Product</a></li>
-        <li class="introNav-item" collapse><a href="" class="introNav-item-link">Communication</a></li>
         <li class="introNav-item" collapse><a href="" class="introNav-item-link">Beyond</a></li>
       </ul>
     </nav>
