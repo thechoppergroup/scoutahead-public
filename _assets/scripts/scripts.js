@@ -2,37 +2,47 @@ Js.Behaviors.video = function (container) {
   console.log('video loaded')
     // select video element
   var vid = document.getElementById('vault');
-  var windowheight = $(window).height();
-
 
   var scrollpos = window.pageYOffset;
   var targetscrollpos = scrollpos;
-  var accel = 0;
-
-
-  // ---- Values you can tweak: ----
-  var accelamount = 0.01; //How fast the video will try to catch up with the target position. 1 = instantaneous, 0 = do nothing.
-  var bounceamount = 0; //value from 0 to 1 for how much backlash back and forth you want in the easing. 0 = no bounce whatsoever, 1 = lots and lots of bounce
+  var videoDirection = 0;
+  var interval = null;
 
   // pause video on load
   vid.pause();
-  window.onscroll = function(){
-    targetscrollpos = window.pageYOffset/400;
+
+  window.onscroll = function() {
+    var oldPos = scrollpos;
+    var oldDirection = videoDirection;
+    scrollpos = window.pageYOffset;
+    videoDirection = Math.sign(scrollpos - oldPos);
+    if (oldDirection === videoDirection)
+      return;
+    clearInterval(interval);
+
+    interval = setInterval(function() {
+      if (videoDirection === 0) {
+        clearInterval(interval);
+      } else if (videoDirection > 0) {
+        if (vid.ended) {
+          videoDirection = 0;
+          clearInterval(interval);
+          $(window).scrollTop(10000);
+        }
+        vid.play();
+      } else if (videoDirection < 0){
+        vid.pause();
+        var newTime = vid.currentTime - .04;
+        if (newTime < 0) {
+          newTime = 0;
+          videoDirection = 0;
+          clearInterval(interval);
+          $(window).scrollTop(0);
+        }
+        vid.currentTime = newTime;
+      }
+    }, 40);
   };
-
-
-  setInterval(function(){
-      accel += (targetscrollpos - scrollpos)*accelamount;
-
-      if (accel > 1) accel = 1;
-      if (accel < -1) accel = -1;
-
-      scrollpos = (scrollpos + accel) * (bounceamount) + (targetscrollpos * (1-bounceamount));
-
-      vid.currentTime = scrollpos;
-      vid.pause();
-
-  }, 40);
 }
 
 Js.Behaviors.shuttle = function (container) {
@@ -143,29 +153,29 @@ Js.Behaviors.faqScroll = function(container) {
   })
 }
 
-// Js.Behaviors.welcomeLink = function(container){
-//   function act() {
-//      $(container).on('click', function(e){
-//        e.preventDefault();
-//
-//        if(userIsLoggedIn) {
-//          window.location.href = "/?noredirect";
-//        } else {
-//          window.location.href = "/"
-//        }
-//      });
-//
-//   }
-//
-//   if (_.isUndefined(window.userIsLoggedIn)) {
-//     xhr.insecurePost("/login", {}, function (response) {
-//        window.userIsLoggedIn = response.loggedIn;
-//        act();
-//     });
-//   } else {
-//     act();
-//   }
-// }
+Js.Behaviors.welcomeLink = function(container){
+  function act() {
+     $(container).on('click', function(e){
+       e.preventDefault();
+
+       if(userIsLoggedIn) {
+         window.location.href = "/?noredirect";
+       } else {
+         window.location.href = "/"
+       }
+     });
+
+  }
+
+  if (typeof window.userIsLoggedIn !== 'undefined') {
+    xhr.insecurePost("/login", {}, function (response) {
+       window.userIsLoggedIn = response.loggedIn;
+       act();
+    });
+  } else {
+    act();
+  }
+}
 
 Js.Behaviors.facebookShare = function(container){
   var $this = $(container);
@@ -298,8 +308,8 @@ Js.Behaviors.product = function (container) {
   })
 }
 
-Js.Behaviors.scroll = function (container) {
-  var sectionHeight = 1000;
+Js.Behaviors.waypoints = function (container) {
+  var sectionHeight = 10000;
 
   var nav = document.getElementById('section:nav');
   var sections = [
@@ -315,10 +325,10 @@ Js.Behaviors.scroll = function (container) {
       var navItem = nav.children[i];
       if (index === i) {
         section.style.opacity = '1';
-        navItem.classList.add("active");
+        Js._addClass(navItem,"active");
       } else {
         section.style.opacity = '0';
-        navItem.classList.remove("active");
+        Js._removeClass(navItem,"active");
       }
     });
   }
@@ -329,7 +339,7 @@ Js.Behaviors.scroll = function (container) {
     console.log(e.currentTarget.pageYOffset);
 
     var scrollPos = e.currentTarget.pageYOffset;
-    var sectionIndex = Math.floor(scrollPos / 1000);
+    var sectionIndex = Math.floor(scrollPos / 10000);
 
     switchTo(sectionIndex);
   });
