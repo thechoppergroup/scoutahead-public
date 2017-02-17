@@ -99,7 +99,7 @@ h5 {
 }
 
 body {
-  height: 13500px;
+  height: 30000px;
 }
 
 
@@ -196,11 +196,6 @@ body {
   background-color: rgba(black, 0.2);
 }
 
-#product {
-  z-index: 2;
-  height: 5000px;
-}
-
 .contentSection {
   transition: opacity .25s ease;
 
@@ -235,6 +230,11 @@ body {
   }
 }
 
+.placeholder {
+  height: 10000px;
+  width: 100%;
+  float: left;
+}
 
 .is-hidden {
   display: none !important;
