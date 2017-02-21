@@ -38,7 +38,11 @@ Js.Behaviors.video = function (container) {
     } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
       state = "ending";
       body.style.overflow = 'hidden';
-      vid.currentTime = vidLoopEnd + 1;
+      Js._addClass(vid.parentElement, 'fadeout');
+      setTimeout(function () {
+        Js._removeClass(vid.parentElement, 'fadeout');
+        vid.currentTime = vidLoopEnd + 1;
+      }, 1000);
     }
 
     vid.addEventListener('ended', function () {
