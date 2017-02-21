@@ -1,48 +1,76 @@
 Js.Behaviors.video = function (container) {
   console.log('video loaded')
+  var sectionHeight = 2000;
+
     // select video element
   var vid = document.getElementById('vault');
+  var body = document.body;
+
+  // Seconds into the video the looping part starts and ends
+  var vidLoopStart = 5;
+  var vidLoopEnd = 20;
 
   var scrollpos = window.pageYOffset;
   var targetscrollpos = scrollpos;
   var videoDirection = 0;
   var interval = null;
+  var sectionIndex = 0;
+  var state = "starting";
 
   // pause video on load
   vid.pause();
 
-  window.onscroll = function() {
+  window.onscroll = function(e) {
+    if (state === "intro" || state === "ending") {
+      return;
+    }
+
     var oldPos = scrollpos;
     var oldDirection = videoDirection;
+    var oldSectionIndex = sectionIndex;
     scrollpos = window.pageYOffset;
     videoDirection = Math.sign(scrollpos - oldPos);
-    if (oldDirection === videoDirection)
-      return;
-    clearInterval(interval);
 
-    interval = setInterval(function() {
-      if (videoDirection === 0) {
-        clearInterval(interval);
-      } else if (videoDirection > 0) {
-        if (vid.ended) {
-          videoDirection = 0;
-          clearInterval(interval);
-          $(window).scrollTop(10000);
-        }
-        vid.play();
-      } else if (videoDirection < 0){
-        vid.pause();
-        var newTime = vid.currentTime - .04;
-        if (newTime < 0) {
-          newTime = 0;
-          videoDirection = 0;
-          clearInterval(interval);
-          $(window).scrollTop(0);
-        }
-        vid.currentTime = newTime;
-      }
-    }, 40);
+    if (state === "starting" && videoDirection > 0) {
+      state = "intro";
+      body.style.overflow = 'hidden';
+      vid.play();
+    } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
+      state = "ending";
+      body.style.overflow = 'hidden';
+      vid.currentTime = vidLoopEnd + 1;
+    }
+
+    vid.addEventListener('ended', function () {
+      state = "starting";
+      $(window).scrollTop(0);
+      body.style.overflow = 'auto';
+    });
   };
+
+  setInterval(function() {
+    console.log(state + " " + vid.currentTime);
+    if (vid.currentTime > vidLoopStart && state == "intro") {
+      body.style.overflow = 'auto';
+      state = "looping";
+      if (window.pageYOffset < sectionHeight)
+        $(window).scrollTop(sectionHeight);
+    }
+    if (vid.currentTime > vidLoopEnd && state == "looping") {
+      vid.currentTime = vidLoopStart;
+    }
+  }, 40);
+
+  function stopVideo() {
+    videoDirection = 0;
+    vid.pause();
+    clearInterval(interval);
+  }
+
+  function goHome() {
+    vid.currentTime = vidLoopEnd;
+    vid.play();
+  }
 }
 
 Js.Behaviors.shuttle = function (container) {
@@ -309,7 +337,7 @@ Js.Behaviors.product = function (container) {
 }
 
 Js.Behaviors.waypoints = function (container) {
-  var sectionHeight = 10000;
+
 
   var nav = document.getElementById('section:nav');
   var sections = [
@@ -337,10 +365,13 @@ Js.Behaviors.waypoints = function (container) {
 
   window.addEventListener('scroll', function (e) {
     console.log(e.currentTarget.pageYOffset);
-
-    var scrollPos = e.currentTarget.pageYOffset;
-    var sectionIndex = Math.floor(scrollPos / 10000);
-
+    var sectionIndex = getSectionIndex();
     switchTo(sectionIndex);
   });
+}
+
+function getSectionIndex () {
+    var sectionHeight = 2000;
+    var scrollPos = window.pageYOffset;
+    return Math.floor(scrollPos / sectionHeight);
 }

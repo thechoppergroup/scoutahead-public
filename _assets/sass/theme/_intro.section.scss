@@ -98,10 +98,11 @@ h5 {
   }
 }
 
-body {
-  height: 30000px;
-}
+$contentHeight: 2000px;
 
+body {
+  height: $contentHeight * 2;
+}
 
 #intro {
   z-index: -1;
@@ -197,7 +198,7 @@ body {
 }
 
 .contentSection {
-  transition: opacity .25s ease;
+  transition: opacity .5s ease;
 
   &-text {
     padding: 2rem;
@@ -231,7 +232,7 @@ body {
 }
 
 .placeholder {
-  height: 10000px;
+  height: $contentHeight;
   width: 100%;
   float: left;
 }
