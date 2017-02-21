@@ -2,14 +2,18 @@
 ---
 @charset "UTF-8";
 
-@import
-"sass/base/vars",
-"sass/utils/mixins",
-"sass/components/glob",
-"sass/vendor/glob",
-"sass/theme/glob",
-"sass/pages/glob";
+// @import
+// "sass/base/vars",
+// "sass/utils/mixins",
+// "sass/components/glob",
+// "sass/vendor/glob",
+// "sass/theme/glob",
+// "sass/pages/glob";
+
+//
+// @import
+//   "sass/themes/olympics/olympics";
 
 
 @import
-  "sass/themes/olympics/olympics";
+  "sass/theme/glob";

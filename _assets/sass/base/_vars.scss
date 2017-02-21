@@ -1,22 +1,3 @@
-$width-tablet: 768px;
-$width-desktop: 1025px;
-
-$height-footer: 10rem;
-$height-header: 5rem;
-
-$offset-body: 3rem;
-
-$grid: (
-  col: 0,
-  tablet: $width-tablet,
-  desktop: $width-desktop
-);
-
-$columns: 12;
-
-$white: #ffffff !default;
-$black: #000000 !default;
-
 $index:
   footer,
   navigation,

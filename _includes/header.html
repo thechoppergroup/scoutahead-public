@@ -1,8 +1,8 @@
-<header id="header" class="header flex not-inview js-header">
+<header id="header" class="header flex not-inview js-header" collapse>
   <button class="header-toggle" data-behavior="openMenu" data-target="js-menu"><i class="ion-navicon"></i></button>
 
   <a href="/" class="header-logo" id="logo">
-    <span class="is-hidden">{{ site.title }}</span>
+    <span class="is-hidden" collapse>{{ site.title }}</span>
     {% include svg/logo.svg %}
   </a>
 
@@ -37,8 +37,13 @@
     {% endfor %}
     </ul>
   </nav>
-  <div class="nav-login" data-behavior="loggedInHide">
+  <!-- <div class="nav-login" data-behavior="loggedInHide">
     <a href="/login.html" role="button"><i class="ion-locked"></i> Login</a>
-  </div>
-
+  </div> -->
+  <nav class="header-buttons">
+    <ul>
+      <li collapse><button class="btn">Contact</button></li>
+      <li><button class="btn">Login</button></li>
+    </ul>
+  </nav>
 </header>

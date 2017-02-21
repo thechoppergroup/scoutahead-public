@@ -1,18 +1,29 @@
 {
-  "name": "Scoutahead",
-  "version": "0.0.0",
+  "name": "scoutahead-public",
+  "homepage": "https://scoutahead.com",
   "authors": [
-    "adrianjonmiller@gmail.com"
+    "amiller@scoutahead.com"
+  ],
+  "description": "Scoutahead's public site",
+  "main": "",
+  "keywords": [
+    "public",
+    "chat",
+    "enterprise"
   ],
   "description": "Blog template using Jekyll and Angular JS",
   "keywords": [],
   "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
+    "assets/vendor",
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
