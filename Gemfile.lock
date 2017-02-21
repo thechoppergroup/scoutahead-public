@@ -154,6 +154,3 @@ DEPENDENCIES
   json
   octopress-autoprefixer
   scss_lint
-
-BUNDLED WITH
-   1.14.3

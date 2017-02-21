@@ -35,7 +35,6 @@ fieldset {
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    max-width: 100%;
     margin-top: .1rem;
   }
 
@@ -56,7 +55,7 @@ fieldset {
   padding: .5rem;
   pointer-events: none;
   white-space: nowrap;
-  z-index: z($index, tooltips);
+  z-index: 10;
 
   &:empty {
     min-width: 0;
