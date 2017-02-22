@@ -1,82 +1,3 @@
-Js.Dash.video = function (container) {
-  console.log('video loaded')
-  var sectionHeight = 2000;
-
-    // select video element
-  var vid = document.getElementById('vault');
-  var body = document.body;
-
-  // Seconds into the video the looping part starts and ends
-  var vidLoopStart = 3;
-  var vidLoopEnd = 17;
-
-  var scrollpos = window.pageYOffset;
-  var targetscrollpos = scrollpos;
-  var videoDirection = 0;
-  var interval = null;
-  var sectionIndex = 0;
-  var state = "starting";
-
-  // pause video on load
-  vid.pause();
-
-  window.onscroll = function(e) {
-    if (state === "intro" || state === "ending") {
-      return;
-    }
-
-    var oldPos = scrollpos;
-    var oldDirection = videoDirection;
-    var oldSectionIndex = sectionIndex;
-    scrollpos = window.pageYOffset;
-    videoDirection = Math.sign(scrollpos - oldPos);
-
-    if (state === "starting" && videoDirection > 0) {
-      state = "intro";
-      body.style.overflow = 'hidden';
-      vid.play();
-    } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
-      state = "ending";
-      body.style.overflow = 'hidden';
-      Js._addClass(vid.parentElement, 'fadeout');
-      setTimeout(function () {
-        Js._removeClass(vid.parentElement, 'fadeout');
-        vid.currentTime = vidLoopEnd + 1.5;
-      }, 1000);
-    }
-
-    vid.addEventListener('ended', function () {
-      state = "starting";
-      $(window).scrollTop(0);
-      body.style.overflow = 'auto';
-    });
-  };
-
-  setInterval(function() {
-    // console.log(state + " " + vid.currentTime);
-    if (vid.currentTime > vidLoopStart && state == "intro") {
-      body.style.overflow = 'auto';
-      state = "looping";
-      if (window.pageYOffset < sectionHeight)
-        $(window).scrollTop(sectionHeight);
-    }
-    if (vid.currentTime > vidLoopEnd && state == "looping") {
-      vid.currentTime = vidLoopStart;
-    }
-  }, 40);
-
-  function stopVideo() {
-    videoDirection = 0;
-    vid.pause();
-    clearInterval(interval);
-  }
-
-  function goHome() {
-    vid.currentTime = vidLoopEnd;
-    vid.play();
-  }
-}
-
 Js.Dash.shuttle = function (container) {
   console.log(container)
   window.addEventListener('scroll', function () {
@@ -325,7 +246,7 @@ Js.Dash.replaceSection = function (container) {
   section.replaceSection(null, url, function () {
     section.revealMain();
   }, function(){
-    Js._init(section);
+    Js.Init(section);
   });
 }
 
@@ -338,6 +259,85 @@ Js.Dash.product = function (container) {
       container.style.opacity = '0';
     }
   })
+}
+
+Js.Dash.video = function (container) {
+  console.log('video loaded')
+  var sectionHeight = 2000;
+
+    // select video element
+  var vid = document.getElementById('vault');
+  var body = document.body;
+
+  // Seconds into the video the looping part starts and ends
+  var vidLoopStart = 3;
+  var vidLoopEnd = 17;
+
+  var scrollpos = window.pageYOffset;
+  var targetscrollpos = scrollpos;
+  var videoDirection = 0;
+  var interval = null;
+  var sectionIndex = 0;
+  var state = "starting";
+
+  // pause video on load
+  vid.pause();
+
+  window.onscroll = function(e) {
+    if (state === "intro" || state === "ending") {
+      return;
+    }
+
+    var oldPos = scrollpos;
+    var oldDirection = videoDirection;
+    var oldSectionIndex = sectionIndex;
+    scrollpos = window.pageYOffset;
+    videoDirection = Math.sign(scrollpos - oldPos);
+
+    if (state === "starting" && videoDirection > 0) {
+      state = "intro";
+      body.style.overflow = 'hidden';
+      vid.play();
+    } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
+      state = "ending";
+      body.style.overflow = 'hidden';
+      Js._addClass(vid.parentElement, 'fadeout');
+      setTimeout(function () {
+        Js._removeClass(vid.parentElement, 'fadeout');
+        vid.currentTime = vidLoopEnd + 1.5;
+      }, 1000);
+    }
+
+    vid.addEventListener('ended', function () {
+      state = "starting";
+      $(window).scrollTop(0);
+      body.style.overflow = 'auto';
+    });
+  };
+
+  setInterval(function() {
+    // console.log(state + " " + vid.currentTime);
+    if (vid.currentTime > vidLoopStart && state == "intro") {
+      body.style.overflow = 'auto';
+      state = "looping";
+      if (window.pageYOffset < sectionHeight)
+        $(window).scrollTop(sectionHeight);
+    }
+    if (vid.currentTime > vidLoopEnd && state == "looping") {
+      vid.currentTime = vidLoopStart;
+    }
+  }, 40);
+
+  function stopVideo() {
+    videoDirection = 0;
+    vid.pause();
+    clearInterval(interval);
+  }
+
+  function goHome() {
+    vid.currentTime = vidLoopEnd;
+    vid.play();
+  }
 }
 
 Js.Dash.waypoints = function (container) {

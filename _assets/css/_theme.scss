@@ -13,9 +13,7 @@ $theme: (
   segue-blue: #183656
 );
 
-
-.welcome {
-  height: 8000px;
+html {
   font-family: 'Proxima Nova', sans-serif;
 }
 
@@ -172,6 +170,10 @@ a {
     opacity: 1;
     transition: transform 1s ease-in-out,
       opacity 1s ease;
+
+    &-placeholder {
+      height: 2000px;
+    }
 
     @at-root #home#{&} {
       color: white;

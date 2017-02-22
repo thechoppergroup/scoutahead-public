@@ -19,9 +19,10 @@ whatever_iwant: foobar
     <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
   </video>
 </section>
+
 {% assign nodes = site.pages | sort: 'order' %}
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
-  <section id="home" class="t--section align--center-center fill--hv" collapse>
+  <section class="t--section id--home align--center-center fill--hv" collapse>
     <div class="t--section-content align--center-center">
       <h2 class="t--section-heading">Welcome to Scoutahead</h2>
       <h6>Secure &amp; Encrypted Enterprise<br>Communication System</h6>
@@ -30,11 +31,23 @@ whatever_iwant: foobar
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
-    <section id="{{ node.title | slugify }}" class="t--section container--h align--center-center fill--hv" collapse>
+    <section class="t--section id--{{ node.title | slugify }} align--center-center fill--hv" collapse>
       <div class="t--section-content align--center-center">
         {{node.content}}
       </div>
+      <a class="editor-link" href="cloudcannon:collections/{{ page.relative_path }}">Edit Page</a>
     </section>
+    {% endif %}
+  {% endfor %}
+  {% endstrip %}
+</div>
+
+<div id="placeholders" collapse>
+  <div id="home" class="t--section-placeholder" collapse></div>
+  {% strip %}
+  {% for node in nodes %}
+    {% if node.order > 0 and node.order != nil %}
+    <div id="{{ node.title | slugify }}" class="t--section-placeholder" collapse></div>
     {% endif %}
   {% endfor %}
   {% endstrip %}
@@ -43,7 +56,7 @@ whatever_iwant: foobar
 <nav class="t--nav fixed--center-right">
   <ul id="nav">
     <li class="t--nav-item">
-      <a href="#" class="t--nav-item-link unstyle">Home</a>
+      <a href="#home" class="t--nav-item-link unstyle">Home</a>
     </li>
     {% assign nodes = site.pages | sort: 'order' %}
     {% strip %}
