@@ -165,9 +165,10 @@ a {
   }
 
   &-section {
-    background-color: rgba(black, 0.5);
+    background-color: rgba(black, 0.6);
     color: white;
     opacity: 1;
+    text-shadow: 0 0 1px rgba(black, 1);
     transition: transform 1s ease-in-out,
       opacity 1s ease;
 
@@ -187,6 +188,13 @@ a {
 
       .active &-content {
       }
+    }
+
+    &-icon {
+      display: inline-block;
+      fill: white;
+      margin-right: 1rem;
+      width: 3rem;
     }
 
     &:not(.active) {

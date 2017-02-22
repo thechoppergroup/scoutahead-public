@@ -265,7 +265,7 @@ Js.Dash.video = function (container) {
   console.log('video loaded')
   var sectionHeight = 2000;
 
-    // select video element
+  // select video element
   var vid = document.getElementById('vault');
   var body = document.body;
 
@@ -298,14 +298,6 @@ Js.Dash.video = function (container) {
       state = "intro";
       // body.style.overflow = 'hidden';
       vid.play();
-    } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
-      state = "ending";
-      // body.style.overflow = 'hidden';
-      Js._addClass(vid.parentElement, 'fadeout');
-      setTimeout(function () {
-        Js._removeClass(vid.parentElement, 'fadeout');
-        vid.currentTime = vidLoopEnd + 1.5;
-      }, 1000);
     }
 
     vid.addEventListener('ended', function () {
