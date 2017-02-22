@@ -33,7 +33,7 @@ slug: welcome
     <section class="t--section id-{{ node.title | slugify }} align--center-center fill--hv" collapse>
       <div class="t--section-content align--center-center">
         {{node.content}}
-        <a class="editor-link" href="cloudcannon:collections{{ node.url }}">Edit {{node.title}}</a>
+        <a class="editor-link" href="cloudcannon:collections/{{ node.path }}">Edit {{node.title}}</a>
       </div>
     </section>
     {% endif %}
