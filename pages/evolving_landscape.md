@@ -1,6 +1,6 @@
 ---
 layout: simple
-title: Evolving Communication
+title: Evolving
 order: 2
 ---
 
