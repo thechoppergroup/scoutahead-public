@@ -296,11 +296,11 @@ Js.Dash.video = function (container) {
 
     if (state === "starting" && videoDirection > 0) {
       state = "intro";
-      body.style.overflow = 'hidden';
+      // body.style.overflow = 'hidden';
       vid.play();
     } else if (state === "looping" && videoDirection < 0 && scrollpos < sectionHeight){
       state = "ending";
-      body.style.overflow = 'hidden';
+      // body.style.overflow = 'hidden';
       Js._addClass(vid.parentElement, 'fadeout');
       setTimeout(function () {
         Js._removeClass(vid.parentElement, 'fadeout');
@@ -311,7 +311,7 @@ Js.Dash.video = function (container) {
     vid.addEventListener('ended', function () {
       state = "starting";
       $(window).scrollTop(0);
-      body.style.overflow = 'auto';
+      // body.style.overflow = 'auto';
     });
   };
 
