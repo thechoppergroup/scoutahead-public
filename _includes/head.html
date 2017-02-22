@@ -1,11 +1,7 @@
-<head>
+<head collapse>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>
-    {{ site.title }}
-  </title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{{ site.keywords | join: ',' }}">
   <meta name="author" content="{{ site.author }}">
@@ -16,6 +12,7 @@
   <meta property="og:image" content="{{page.meta_image_path}}"/>
   <meta property="og:site_name" content="{{page.meta_name}}"/>
   <meta property="og:description" content="{{page.meta_description}}"/>
+  <!-- End Facebook -->
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -23,36 +20,40 @@
   <meta name="twitter:image" content="{{page.meta_image_path}}">
   <meta name="twitter:title" content="{{page.meta_name}}">
   <meta name="twitter:description" content="{{page.meta_description}}">
+  <!-- End Twitter -->
+
+  <title>
+    {{ site.title }}
+  </title>
 
   <script type="text/javascript">
     var base = "{{ site.baseurl }}";
   </script>
 
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="{{ "/_css/fonts/MyFontsWebfontsKit.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/_css/base.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/_css/theme.css" | prepend: site.baseurl }}">
+
+  {% css MyFontsWebfontsKit %}
+  {% css main %}
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
-  <!-- Slick -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
-
   <!--[if IE]>
-  <link rel="stylesheet" type="text/css" href="{{ "/_css/browser-upgrade.css" | prepend: site.baseurl }}"/>
+  {% css browser-upgrade %}
   <![endif]-->
 
   <!--[if IE 9]>
-  <link rel="stylesheet" type="text/css" href="{{ "/_css/browser-upgrade-ie9.css" | prepend: site.baseurl }}"/>
+  {% css browser-upgrade-ie9 %}
   <![endif]-->
 
   <!--[if IE 7]>
-  <link rel="stylesheet" type="text/css" href="{{ "/_css/browser-upgrade-ie7.css" | prepend: site.baseurl }}"/>
+  {% css browser-upgrade-ie7 %}
   <![endif]-->
 
   <!--[if IE 6]>
-  <link rel="stylesheet" type="text/css" href="{{ "/_css/browser-upgrade-ie6.css" | prepend: site.baseurl }}"/>
+  {% css browser-upgrade-ie6 %}
   <![endif]-->
 
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: simple
 title: Contact
 permalink: contact.html
-order: 4
+order: -1
 ---
-
-<div data-behavior="replaceSection inputsCheck" data-snip-url="/contact_snip" class="contact-container" data-container-class="contact-container">
-
+<div class="container--h align--center-center">
+  <div>
+    <h4 class="t--heading-a {{page.title | slugify }}-title">{{ page.title }}</h4>
+  </div>
+  {% include contact.html %}
 </div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %}">
+    <div class="is-hidden" collapse>
+      {% include svg_graphics.svg %}
+    </div>
+
+    <header id="header" class="t--header origin" collapse>
+      <a href="/" class="t--header-logo align--center-left" id="logo" collapse>
+        <span class="is-hidden" collapse>{{ site.title }}</span>
+        <svg viewBox="0 0 1000 122" class="align--center-right">
+          <use xlink:href="#svg:logo"></use>
+        </svg>
+      </a>
+      <p class="align--center-right paragraph--center" style="padding: 0 1rem;">
+        <a href="/">Return to Welcome Page</a>
+      </p>
+    </header>
+
+    <div role="main" class="container--h">
+      {{ content }}
+    </div>
+    {% js main %}
+  </body>
+
+</html>

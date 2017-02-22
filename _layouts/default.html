@@ -4,15 +4,41 @@
   {% include head.html %}
 
   <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %}">
+    <div class="is-hidden" collapse>
+      {% include svg_graphics.svg %}
+    </div>
 
     {% include header.html %}
 
     <div role="main">
       {{ content }}
+
+      <div id="segue:contact" class="segue">
+        <a href="#" class="segue-close align--top-right">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#svg:close"></use>
+          </svg>
+        </a>
+        <div class="align--center-center">
+          {% include contact.html %}
+        </div>
+      </div>
+
+      <div id="segue:login" class="segue">
+        <a href="#" class="segue-close align--top-right">
+          <svg viewBox="0 0 100 100">
+            <use xlink:href="#svg:close"></use>
+          </svg>
+        </a>
+        <div class="align--center-center">
+          {% include login.html %}
+        </div>
+      </div>
     </div>
 
     {% include footer.html %}
-    {% include scripts.html %}
+
+    {% js main %}
   </body>
 
 </html>
