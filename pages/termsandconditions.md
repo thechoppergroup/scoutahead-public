@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: simple
 title: Terms and Conditions
 permalink: terms.html
 order: -1

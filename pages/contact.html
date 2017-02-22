@@ -4,5 +4,9 @@ title: Contact
 permalink: contact.html
 order: -1
 ---
-
-{% include contact.html %}
+<div class="container--h align--center-center">
+  <div>
+    <h4 class="t--heading-a {{page.title | slugify }}-title">{{ page.title }}</h4>
+  </div>
+  {% include contact.html %}
+</div>

@@ -9,9 +9,12 @@
 }
 
 :root {
-  font-family: sans-serif;
-  font-size: 10pt;
-  font-size: calc(.75vh + .75vw + .25vmin);
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 9pt;
+
+  @media only screen and (min-width: 480px)  {
+    font-size: calc(.75vh + .75vw + .25vmin);
+  }
 }
 
 html,
@@ -30,10 +33,6 @@ nav {
 
 ul {
   padding-left: 1rem;
-}
-
-p + p {
-  margin-top: 0 !important;
 }
 
 video {

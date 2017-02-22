@@ -5,13 +5,9 @@ title: Login
 permalink: login.html
 order: -1
 ---
-<div class="grid flex-center collapse--half">
-  <div class="col-1 tablet-1-3">
-    <h3 class="display--page {{page.title | slugify }}-title">{{ page.title_page }}</h3>
+<div class="container--mobile fixed--center-center">
+  <div>
+    <h4 class="t--heading-a {{page.title | slugify }}-title">{{ page.title_page }}</h4>
   </div>
-</div>
-<div class="grid flex-center js-inputsCheck">
-  <div class="col-1 tablet-1-3">
-    {% include login.html %}
-  </div>
+  {% include login.html %}
 </div>

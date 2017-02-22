@@ -8,10 +8,14 @@
   &--grid {
     @extend .flex;
     margin-left: -1rem;
-    
+
     > * {
       padding-left: 1rem
     }
+  }
+
+  .flex-fill {
+    flex: 1 0 auto;
   }
 
   .flex-center {

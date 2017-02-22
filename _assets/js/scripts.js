@@ -53,7 +53,7 @@ Js.Dash.video = function (container) {
   };
 
   setInterval(function() {
-    console.log(state + " " + vid.currentTime);
+    // console.log(state + " " + vid.currentTime);
     if (vid.currentTime > vidLoopStart && state == "intro") {
       body.style.overflow = 'auto';
       state = "looping";
@@ -341,13 +341,9 @@ Js.Dash.product = function (container) {
 }
 
 Js.Dash.waypoints = function (container) {
-  console.log(container)
-
   var nav = document.getElementById('nav');
   var content = document.getElementById('content')
   var sections = content.children
-
-  console.log(sections)
 
   function switchTo (index) {
     for (var i = 0; i < sections.length; i++)

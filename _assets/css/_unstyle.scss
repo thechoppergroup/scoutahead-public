@@ -1,4 +1,14 @@
 .unstyle {
+  @at-root ul#{&} {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  @at-root ol#{&} {
+    list-style: none;
+    padding-left: 0;
+  }
+
   @at-root a#{&} {
     text-decoration: none;
   }

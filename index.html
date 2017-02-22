@@ -30,7 +30,7 @@ whatever_iwant: foobar
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
-    <section id="{{ node.title | slugify }}" class="t--section align--center-center fill--hv" collapse>
+    <section id="{{ node.title | slugify }}" class="t--section container--h align--center-center fill--hv" collapse>
       <div class="t--section-content align--center-center">
         {{node.content}}
       </div>

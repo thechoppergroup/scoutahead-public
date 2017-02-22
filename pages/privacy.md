@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: simple
 title: Scoutahead Privacy Policy
 permalink: privacy.html
 order: -1
