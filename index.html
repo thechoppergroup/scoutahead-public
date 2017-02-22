@@ -12,65 +12,48 @@ slug: welcome
 whatever_iwant: foobar
 ---
 
-
-<section id="intro" class="fixedSection" collapse>
-  <video id="vault" data-behavior="video" tabindex="0" autobuffer="autobuffer" preload="preload">
-    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/assets/intro_video.mp4"></source>
-    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/assets/intro_video.mp4"></source>
+<section id="intro" class="fixed--center-center fill--hv" collapse>
+  <video id="vault" class="js-video" tabindex="0" autobuffer="autobuffer" preload="preload">
+    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="/assets/intro.mp4"></source>
+    <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="/assets/intro.mp4"></source>
     <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
   </video>
 </section>
-
-<div id="content" data-behavior="waypoints">
-  <div id="section:intro" class="intro contentSection" collapse>
-    <h1 class="paragraph--center">Welcome to <br> Scoutahead</h1>
-    <h4 class="paragraph--center">Secure &amp; Encrypted Enterprise Collaboration System</h4>
-    <div class="flex">
-      <button class="btn flex-center">Take a Peek Inside</button>
+{% assign nodes = site.pages | sort: 'order' %}
+<div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
+  <section id="home" class="t--section align--center-center fill--hv" collapse>
+    <div class="t--section-content align--center-center">
+      <h2 class="t--section-heading">Welcome to Scoutahead</h2>
+      <h6>Secure &amp; Encrypted Enterprise<br>Communication System</h6>
     </div>
-  </div>
-
-  <div id="section:product" class="product contentSection" collapse>
-
-    <div class="contentSection-text" collapse>
-      <h3>The Product</h3>
-      <h5>An Evolving Landscape of Communications</h5>
-      <p>Businesses are adopting technologies like messaging, video-chat, and file sharing in hopes of achieving more efficient communication.</p>
-      <p>These individual applications promise solutions but often fragment communication, compromise security, and fail to address business needs.</p>
-    </div>
-    <div class="contentSection-overlay"></div>
-  </div>
-
-  <div id="section:beyond" class="product contentSection" collapse>
-
-    <div class="contentSection-text" collapse>
-      <h3>A Secure, Smart, Simple engine for Collaboration</h3>
-      <p>Secure: Controlled access safeguards your intellectual property and meets compliance requirements.
-
-      • Safeguard your information
-
-      Smart: Scoutahead’s Leadership Announcements command immediate attention from any division or the entire company. Connect in real-time with teams or direct messages to inspire productivity and collaboration.
-
-      • Inspire productivity and collaboration
-
-      Simple: Our intuitive design and user experience energizes organizational effectiveness and makes Scoutahead a natural fit for the entire workforce
-
-      • Energize organizational effectiveness</p>
-    </div>
-    <div class="contentSection-overlay"></div>
-  </div>
-
-  <div class="aside" collapse>
-    <nav>
-      <ul class="introNav" id="section:nav">
-        <li class="introNav-item" collapse><a href="#" class="introNav-item-link">Home</a></li>
-        <li class="introNav-item" collapse><a href="#product" class="introNav-item-link">Product</a></li>
-        <li class="introNav-item" collapse><a href="#beyond" class="introNav-item-link">Beyond</a></li>
-      </ul>
-    </nav>
-  </div>
+  </section>
+  {% strip %}
+  {% for node in nodes %}
+    {% if node.order > 0 and node.order != nil %}
+    <section id="{{ node.title | slugify }}" class="t--section align--center-center fill--hv" collapse>
+      <div class="t--section-content align--center-center">
+        {{node.content}}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+  {% endstrip %}
 </div>
 
-  <div class="placeholder"></div>
-  <div class="placeholder" id="product"></div>
-  <div class="placeholder" id="beyond"></div>
+<nav class="t--nav fixed--center-right">
+  <ul id="nav">
+    <li class="t--nav-item">
+      <a href="#" class="t--nav-item-link unstyle">Home</a>
+    </li>
+    {% assign nodes = site.pages | sort: 'order' %}
+    {% strip %}
+      {% for node in nodes %}
+        {% if node.order > 0 and node.order != nil %}
+        <li class="t--nav-item">
+          <a href="#{{ node.title | slugify }}" class="t--nav-item-link unstyle">{{node.title}}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    {% endstrip %}
+  </ul>
+</nav>

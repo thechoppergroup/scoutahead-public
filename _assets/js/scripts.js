@@ -1,4 +1,4 @@
-Js.Behaviors.video = function (container) {
+Js.Dash.video = function (container) {
   console.log('video loaded')
   var sectionHeight = 2000;
 
@@ -7,8 +7,8 @@ Js.Behaviors.video = function (container) {
   var body = document.body;
 
   // Seconds into the video the looping part starts and ends
-  var vidLoopStart = 5;
-  var vidLoopEnd = 20;
+  var vidLoopStart = 3;
+  var vidLoopEnd = 17;
 
   var scrollpos = window.pageYOffset;
   var targetscrollpos = scrollpos;
@@ -41,7 +41,7 @@ Js.Behaviors.video = function (container) {
       Js._addClass(vid.parentElement, 'fadeout');
       setTimeout(function () {
         Js._removeClass(vid.parentElement, 'fadeout');
-        vid.currentTime = vidLoopEnd + 1;
+        vid.currentTime = vidLoopEnd + 1.5;
       }, 1000);
     }
 
@@ -77,7 +77,7 @@ Js.Behaviors.video = function (container) {
   }
 }
 
-Js.Behaviors.shuttle = function (container) {
+Js.Dash.shuttle = function (container) {
   console.log(container)
   window.addEventListener('scroll', function () {
     container.style.top = window.pageYOffset + 'px';
@@ -85,7 +85,7 @@ Js.Behaviors.shuttle = function (container) {
 }
 
 
-Js.Behaviors.load = function(container){
+Js.Dash.load = function(container){
   var hash = window.location.hash;
   var state = hash.slice(1, window.location.hash.length);
   console.log(state);
@@ -95,7 +95,7 @@ Js.Behaviors.load = function(container){
   });
 }
 
-Js.Behaviors.inputsCheck = function (container) {
+Js.Dash.inputsCheck = function (container) {
   setInterval(function(){
     var inputs = container.querySelectorAll('input');
     Array.prototype.forEach.call(inputs, function(el, i){
@@ -120,7 +120,7 @@ Js.Behaviors.inputsCheck = function (container) {
   }, 100);
 }
 
-Js.Behaviors.openMenu = function(container) {
+Js.Dash.openMenu = function(container) {
   var $this = $(container);
   var target = $this.attr('data-target');
   var header = document.getElementsByClassName('js-header');
@@ -133,7 +133,7 @@ Js.Behaviors.openMenu = function(container) {
   });
 }
 
-Js.Behaviors.menu = function(container) {
+Js.Dash.menu = function(container) {
   var body = $('body');
 
   $(container).on('click', '.js-close', function(){
@@ -143,7 +143,7 @@ Js.Behaviors.menu = function(container) {
 }
 
 
-Js.Behaviors.inView = function(container) {
+Js.Dash.inView = function(container) {
   $this = $(container);
   var target = $('.' + $this.attr('data-target'));
 
@@ -157,7 +157,7 @@ Js.Behaviors.inView = function(container) {
 }
 
 
-Js.Behaviors.links = function(container) {
+Js.Dash.links = function(container) {
   var children = $(container).children('li');
 
   $.each(children, function(index, item){
@@ -171,7 +171,7 @@ Js.Behaviors.links = function(container) {
 }
 
 
-Js.Behaviors.faqScroll = function(container) {
+Js.Dash.faqScroll = function(container) {
   var children = $(container).children();
   $.each(children, function(index, item){
     $(item).on("click", function(e){
@@ -185,7 +185,7 @@ Js.Behaviors.faqScroll = function(container) {
   })
 }
 
-Js.Behaviors.welcomeLink = function(container){
+Js.Dash.welcomeLink = function(container){
   function act() {
      $(container).on('click', function(e){
        e.preventDefault();
@@ -209,7 +209,7 @@ Js.Behaviors.welcomeLink = function(container){
   }
 }
 
-Js.Behaviors.facebookShare = function(container){
+Js.Dash.facebookShare = function(container){
   var $this = $(container);
   $this.on('click', function(e){
     e.preventDefault();
@@ -217,7 +217,7 @@ Js.Behaviors.facebookShare = function(container){
   })
 };
 
-Js.Behaviors.twitterShare = function(container){
+Js.Dash.twitterShare = function(container){
   var $this = $(container);
   $this.on('click', function(e){
     e.preventDefault();
@@ -225,7 +225,7 @@ Js.Behaviors.twitterShare = function(container){
   })
 };
 
-// Js.Behaviors.loggedInHide = function(container) {
+// Js.Dash.loggedInHide = function(container) {
 //   if (_.isUndefined(window.userIsLoggedIn)) {
 //     xhr.insecurePost("/login", {}, function (response) {
 //       window.userIsLoggedIn = response.loggedIn;
@@ -240,7 +240,7 @@ Js.Behaviors.twitterShare = function(container){
 //   }
 // }
 
-Js.Behaviors.OlympicsTimer = function(container) {
+Js.Dash.OlympicsTimer = function(container) {
   function zeroPad(x) {
     var text = (x + '');
     return text.length > 1 ? text : '0' + text;
@@ -265,7 +265,7 @@ Js.Behaviors.OlympicsTimer = function(container) {
 }
 
 
-// Js.Behaviors.slick = function(container){
+// Js.Dash.slick = function(container){
 //   xhr.insecureGet('/surveys/weekly_polls/featured', function (response) {
 //     d3.selectOne('.js-featured-polls').templated(response, function (poll, pollLi) {
 //       pollLi.populateFrom(poll);
@@ -289,7 +289,7 @@ Js.Behaviors.OlympicsTimer = function(container) {
 //   console.log("success");
 // }
 
-Js.Behaviors.tagShow = function (container) {
+Js.Dash.tagShow = function (container) {
   var tags = container.getAttribute('data-tags');
   var parser = document.createElement('a');
   parser.href = window.location.href;
@@ -306,7 +306,7 @@ Js.Behaviors.tagShow = function (container) {
   }
 }
 
-Js.Behaviors.replaceSection = function (container) {
+Js.Dash.replaceSection = function (container) {
   var section = new ContentSection(container.getAttribute('data-container-class'));
   var queryParams = (container.getAttribute('data-query-params') || "").split(/\s*,\s*/);
   var url = container.getAttribute('data-snip-url');
@@ -329,7 +329,7 @@ Js.Behaviors.replaceSection = function (container) {
   });
 }
 
-Js.Behaviors.product = function (container) {
+Js.Dash.product = function (container) {
   container.style.display = '0';
   $(container).on('inview', function(event, inview){
     if(inview) {
@@ -340,26 +340,25 @@ Js.Behaviors.product = function (container) {
   })
 }
 
-Js.Behaviors.waypoints = function (container) {
+Js.Dash.waypoints = function (container) {
+  console.log(container)
 
+  var nav = document.getElementById('nav');
+  var content = document.getElementById('content')
+  var sections = content.children
 
-  var nav = document.getElementById('section:nav');
-  var sections = [
-    document.getElementById('section:intro'),
-    document.getElementById('section:product'),
-    document.getElementById('section:beyond')
-  ];
+  console.log(sections)
 
   function switchTo (index) {
     for (var i = 0; i < sections.length; i++)
-    sections.forEach(function (section, i) {
+    Array.prototype.forEach.call(sections, function (section, i) {
       var section = sections[i];
       var navItem = nav.children[i];
       if (index === i) {
-        section.style.opacity = '1';
+        Js._addClass(section, "active")
         Js._addClass(navItem,"active");
       } else {
-        section.style.opacity = '0';
+        Js._removeClass(section, "active")
         Js._removeClass(navItem,"active");
       }
     });

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %}">
+    <div role="main">
+      {{ content }}
+    </div>
+    {% js main %}
+  </body>
+
+</html>

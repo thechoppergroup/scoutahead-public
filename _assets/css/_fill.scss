@@ -1,0 +1,14 @@
+.fill- {
+  &-h {
+    width: 100%;
+  }
+
+  &-hv {
+    @extend .fill--v;
+    @extend .fill--h;
+  }
+
+  &-v {
+    height: 100%;
+  }
+}

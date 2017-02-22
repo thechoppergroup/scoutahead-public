@@ -1,0 +1,21 @@
+.segue {
+  position: fixed;
+  margin-top: 0;
+  background-color: rgba(white, 0.97);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: z($indexes, segue);
+
+  .segue-close {
+    transform: translate(-1rem, 1rem);
+    display: block;
+    width: 50px;
+  }
+
+  &:not(:target) {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}

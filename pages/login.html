@@ -1,5 +1,5 @@
 ---
-layout: container
+layout: simple
 title_page: Login
 title: Login
 permalink: login.html
@@ -10,8 +10,8 @@ order: -1
     <h3 class="display--page {{page.title | slugify }}-title">{{ page.title_page }}</h3>
   </div>
 </div>
-<div class="grid flex-center" data-behavior="inputsCheck">
+<div class="grid flex-center js-inputsCheck">
   <div class="col-1 tablet-1-3">
-    <div data-behavior="replaceSection" data-snip-url="/login_snip" class="contact-container" data-container-class="contact-container"></div>
+    {% include login.html %}
   </div>
 </div>

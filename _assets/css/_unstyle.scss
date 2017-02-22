@@ -1,0 +1,5 @@
+.unstyle {
+  @at-root a#{&} {
+    text-decoration: none;
+  }
+}

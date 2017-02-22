@@ -1,47 +1,18 @@
-<header id="header" class="header flex not-inview js-header" collapse>
-  <a href="/" class="header-logo" id="logo">
+<header id="header" class="t--header fill--h fixed--top-left" collapse>
+  <a href="/" class="t--header-logo align--center-left" id="logo" collapse>
     <span class="is-hidden" collapse>{{ site.title }}</span>
-    {% include svg/logo.svg %}
+    <svg viewBox="0 0 1000 122" class="align--center-right">
+      <use xlink:href="#svg:logo"></use>
+    </svg>
   </a>
 
-  <nav class="header-menu flex-end js-menu" data-behavior="menu">
-    <button class="header-menu-close collapse js-close"><i class="ion-ios-close-empty"></i></button>
-    <ul class="flex" data-behavior="links">
-      <li class="nav-style--a">
-        <a href="/" data-behavior="welcomeLink">Welcome</a>
-      </li>
-    {% assign nodes = site.pages | sort: "order" %}
-    {% for node in nodes %}
-      {% if node.title != nil and node.parent == nil and node.order > 0 %}
-      <!-- {% capture nodediff %}{{ node.url | remove:"/" }}{% endcapture %} -->
-      <li class="nav-style--a {% if page.url == node.url %} is-current {% endif %}">
-        {% if node.order == 0 %}
-        <a href="/">{{ node.title }}</a>
-        {% else %}
-        <a href="{{node.url}}">{{ node.title }}</a>
-        {% endif %}
-        {% assign children = site.pages | where:  "parent", node.title %}
-        {% if children != empty %}
-        <ul role="dropdown">
-        {% for child in children %}
-          <li class="nav-style--b">
-            <a href="{{child.url}}">{{ child.title }}</a>
-          </li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-  </nav>
-  <!-- <div class="nav-login" data-behavior="loggedInHide">
+  <!-- <div class="nav-login js-loggedInHide">
     <a href="/login.html" role="button"><i class="ion-locked"></i> Login</a>
   </div> -->
-  <nav class="header-buttons">
-    <ul>
-      <li collapse><button class="btn">Contact</button></li>
-      <li><button class="btn">Login</button></li>
+  <nav class="t--header-buttons align--center-right">
+    <ul class="flex--grid">
+      <li collapse><a href="#segue:contact" class="t--link unstyle">Contact</a></li>
+      <li><a href="#segue:login" class="t--link unstyle">Login</a></li>
     </ul>
   </nav>
 </header>
