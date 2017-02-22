@@ -22,7 +22,7 @@ whatever_iwant: foobar
 
 {% assign nodes = site.pages | sort: 'order' %}
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
-  <section class="t--section id--home align--center-center fill--hv" collapse>
+  <section class="t--section id-home align--center-center fill--hv" collapse>
     <div class="t--section-content align--center-center">
       <h2 class="t--section-heading">Welcome to Scoutahead</h2>
       <h6>Secure &amp; Encrypted Enterprise<br>Communication System</h6>
@@ -31,7 +31,7 @@ whatever_iwant: foobar
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
-    <section class="t--section id--{{ node.title | slugify }} align--center-center fill--hv" collapse>
+    <section class="t--section id-{{ node.title | slugify }} align--center-center fill--hv" collapse>
       <div class="t--section-content align--center-center">
         {{node.content}}
       </div>
