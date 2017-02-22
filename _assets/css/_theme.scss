@@ -179,7 +179,11 @@ a {
       }
 
     &-placeholder {
-      height: 2000px;
+      height: 1000px;
+    }
+
+    &-subhead {
+      transition: opacity .5s ease;
     }
 
     @at-root #home#{&} {
@@ -202,7 +206,17 @@ a {
       pointer-events: none;
     }
 
+    &-content {
+      transform: translate(-50%, -1000%);
+      transition: transform 1s ease-in-out;
+    }
+
+    &.active ~ & > &-content {
+      transform: translate(-50%, 1000%);
+    }
+
     &.active > &-content {
+      transform: translate(-50%, -50%);
     }
   }
 }

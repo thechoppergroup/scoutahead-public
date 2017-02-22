@@ -263,7 +263,7 @@ Js.Dash.product = function (container) {
 
 Js.Dash.video = function (container) {
   console.log('video loaded')
-  var sectionHeight = 2000;
+  var sectionHeight = 1000;
 
   // select video element
   var vid = document.getElementById('vault');
@@ -362,7 +362,17 @@ Js.Dash.waypoints = function (container) {
 }
 
 function getSectionIndex () {
-    var sectionHeight = 2000;
+    var sectionHeight = 1000;
     var scrollPos = window.pageYOffset;
     return Math.floor(scrollPos / sectionHeight);
+}
+
+Js.Dash.subheadShow = function (container) {
+  window.addEventListener('scroll', function (e) {
+    if (e.currentTarget.pageYOffset > 250) {
+      container.style.opacity = 1
+    } else {
+      container.style.opacity = 0
+    }
+  })
 }
