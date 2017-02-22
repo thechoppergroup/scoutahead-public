@@ -310,10 +310,10 @@ Js.Dash.video = function (container) {
   setInterval(function() {
     // console.log(state + " " + vid.currentTime);
     if (vid.currentTime > vidLoopStart && state == "intro") {
-      body.style.overflow = 'auto';
+      // body.style.overflow = 'auto';
       state = "looping";
-      if (window.pageYOffset < sectionHeight)
-        $(window).scrollTop(sectionHeight);
+      // if (window.pageYOffset < sectionHeight)
+        // $(window).scrollTop(sectionHeight);
     }
     if (vid.currentTime > vidLoopEnd && state == "looping") {
       vid.currentTime = vidLoopStart;
