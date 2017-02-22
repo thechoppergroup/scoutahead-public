@@ -1,10 +1,11 @@
 ---
 layout: simple
-title: Evolving
+title: Evolving Communication
 order: 2
 ---
-<h4>The Evolving Landscape of Communication</h4>
-<p>
-  Email alone no longer meets business needs. <br>
-  With a 20% open rate and a 6% response rate, important information is lost, buried and not immediately actionable.
-</p>
+
+
+#### The Evolving Landscape of Communication
+
+Email alone no longer meets business needs.
+<br>With a 20% open rate and a 6% response rate, important information is lost, buried and not immediately actionable.
