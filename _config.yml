@@ -31,8 +31,6 @@ assets:
       - "IE > 9"
   #
   baseurl: /assets/
-  #
-  cdn: https://res.cloudinary.com
   #  
   sources:
     - _assets/css
