@@ -9,7 +9,6 @@ meta_image_path: 'https://res.cloudinary.com/chopper/image/upload/v1483987082/Me
 expID: hAX1oS9gSdWYc9Y6s4s__A
 expVar: 0
 slug: welcome
-whatever_iwant: foobar
 ---
 
 <section id="intro" class="fixed--center-center fill--hv" collapse>
@@ -23,9 +22,9 @@ whatever_iwant: foobar
 {% assign nodes = site.pages | sort: 'order' %}
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   <section class="t--section id-home align--center-center fill--hv" collapse>
-    <div class="t--section-content align--center-center">
-      <h2 class="t--section-heading">Welcome to Scoutahead</h2>
-      <h6>Secure &amp; Encrypted Enterprise<br>Communication System</h6>
+    <div class="t--section-content align--center-center paragraph--center">
+      <h2 class="t--section-heading editable">Welcome to Scoutahead</h2>
+      <h6 class="editable">Secure &amp; Encrypted Enterprise<br>Communication System</h6>
     </div>
   </section>
   {% strip %}
@@ -34,8 +33,8 @@ whatever_iwant: foobar
     <section class="t--section id-{{ node.title | slugify }} align--center-center fill--hv" collapse>
       <div class="t--section-content align--center-center">
         {{node.content}}
+        <a class="editor-link" href="cloudcannon:collections/{{ page.relative_path }}">Edit {{node.title}}</a>
       </div>
-      <a class="editor-link" href="cloudcannon:collections/{{ page.relative_path }}">Edit Page</a>
     </section>
     {% endif %}
   {% endfor %}
