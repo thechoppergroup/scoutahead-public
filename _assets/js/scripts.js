@@ -334,8 +334,8 @@ Js.Dash.video = function (container) {
 
 Js.Dash.waypoints = function (container) {
   var nav = document.getElementById('nav');
-  var content = document.getElementById('content')
-  var sections = content.children
+  var content = document.getElementById('content');
+  var sections = content.children;
 
   function switchTo (index) {
     for (var i = 0; i < sections.length; i++)
@@ -355,9 +355,12 @@ Js.Dash.waypoints = function (container) {
   switchTo(0);
 
   window.addEventListener('scroll', function (e) {
-    console.log(e.currentTarget.pageYOffset);
     var sectionIndex = getSectionIndex();
     switchTo(sectionIndex);
+
+    var scrollIndicator = document.getElementById('nav-scroll');
+    var scrollIndicatorPosition = 35 * window.pageYOffset / 1000;
+    scrollIndicator.style.top = scrollIndicatorPosition + 'px';
   });
 }
 
