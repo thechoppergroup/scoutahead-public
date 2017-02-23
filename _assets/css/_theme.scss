@@ -17,6 +17,10 @@ html {
   font-family: 'Proxima Nova', sans-serif;
 }
 
+.simple {
+  padding: 10rem 0 5rem;
+}
+
 a {
   color: map-get($theme, links);
 }
@@ -82,6 +86,11 @@ a {
 
   &-header {
     height: 5rem;
+
+    .simple & {
+      background-color: white;
+      box-shadow: 0 0 .25rem rgba(black, 0.2);
+    }
 
     &-logo {
       display: inline-block;
@@ -178,7 +187,7 @@ a {
   }
 
   &-section {
-    background-color: rgba(black, 0.6);
+    background-color: rgba(black, 0.65);
     color: white;
     opacity: 1;
     text-shadow: 0 0 1px rgba(black, 1);

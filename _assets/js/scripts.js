@@ -271,7 +271,7 @@ Js.Dash.video = function (container) {
 
   // Seconds into the video the looping part starts and ends
   var vidLoopStart = 3;
-  var vidLoopEnd = 17;
+  var vidLoopEnd = 16;
 
   var scrollpos = window.pageYOffset;
   var targetscrollpos = scrollpos;

@@ -3,12 +3,12 @@
 
   {% include head.html %}
 
-  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %}">
+  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %} simple">
     <div class="is-hidden" collapse>
       {% include svg_graphics.svg %}
     </div>
 
-    <header id="header" class="t--header origin" collapse>
+    <header id="header" class="t--header fixed--top-left fill--h" collapse>
       <a href="/" class="t--header-logo align--center-left" id="logo" collapse>
         <span class="is-hidden" collapse>{{ site.title }}</span>
         <svg viewBox="0 0 1000 122" class="align--center-right">
