@@ -292,7 +292,7 @@ Js.Dash.video = function (container) {
     var oldDirection = videoDirection;
     var oldSectionIndex = sectionIndex;
     scrollpos = window.pageYOffset;
-    videoDirection = Math.sign(scrollpos - oldPos);
+    videoDirection = scrollpos - oldPos < 0 ? -1 : 1;
 
     if (state === "starting" && videoDirection > 0) {
       state = "intro";
