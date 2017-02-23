@@ -184,6 +184,10 @@ a {
 
     &-placeholder {
       height: 1000px;
+
+      &:last-child {
+        height: 100vh;
+      }
     }
 
     &-subhead {

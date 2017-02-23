@@ -24,7 +24,7 @@ Js.Init = function (context) {
       var behaviors = element.getAttribute('class').split(' ');
       for(j=0; j<behaviors.length; j++) {
         var behavior = behaviors[j];
-        if(behavior.startsWith("js-")) {
+        if(behavior.indexOf("js-") === 0) {
           behavior = behavior.substring("js-".length);
 
           if(!element[behavior]) {
