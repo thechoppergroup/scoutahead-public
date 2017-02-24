@@ -361,10 +361,13 @@ Js.Dash.waypoints = function (container) {
     switchTo(sectionIndex);
 
     var scrollIndicator = document.getElementById('nav-scroll');
-    var scrollIndicatorPosition = 2 * Math.floor(window.pageYOffset / 1000);
-    var height = (window.pageYOffset % 1000) / 1000 * 2;
-    scrollIndicator.style.top = scrollIndicatorPosition + 'rem';
-    scrollIndicator.style.height = height + 'rem';
+    // var scrollIndicatorPosition = 2 * Math.floor(window.pageYOffset / 1000);
+    // var height = (window.pageYOffset % 1000) / 1000 * 2;
+    var height = window.pageYOffset / 1000;
+    // console.log(scrollIndicatorPosition);
+    // scrollIndicator.style.transform = "translate(-50%, 0rem)";
+    // scrollIndicator.style.top = scrollIndicatorPosition + 'rem';
+    scrollIndicator.style.height = (height * 2) + 'rem';
   });
 }
 
