@@ -53,11 +53,19 @@ fieldset {
     font-size: 1rem;
     transition: transform .25s ease-in-out;
     height: 1rem;
+
+    @include ie-11 {
+      transform: translate(.4rem, -2.7rem);
+    }
   }
 
   &.has-content > legend,
   &.has-focus > legend{
     transform: translate(0.1rem, 0);
+
+    @include ie-11 {
+      transform: translate(.4rem, -4.7rem);
+    }
   }
 
   input {
