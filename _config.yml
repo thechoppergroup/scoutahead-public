@@ -37,7 +37,6 @@ assets:
     - _assets/fonts
     - _assets/img
     - _assets/js
-    - _assets/media
     - _assets/bower
 #
   assets:
@@ -46,7 +45,6 @@ assets:
     - "*.ttf"
     - "*.woff"
     - "*.woff2"
-    - "*.mp4"
     - "*.js"
     - "*.jpg"
     - "*.png"
