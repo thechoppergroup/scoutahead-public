@@ -195,11 +195,11 @@ a {
       position: absolute;
       top: 0;
       right: 0;
-      margin-top: 0;
-      transform: translate(-50%, 50%);
+      margin-top: .25rem;
+      transform: translate(-50%, 0);
+      transform-origin: bottom;
       border-radius: .25rem;
       z-index: -1;
-      transition: transform .2s;
     }
   }
 

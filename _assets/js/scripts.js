@@ -360,22 +360,11 @@ Js.Dash.waypoints = function (container) {
     var sectionIndex = getSectionIndex();
     switchTo(sectionIndex);
 
-    var oldScrollPosition = scrollPosition;
-    scrollPosition = window.pageYOffset;
-    var acceleration = scrollPosition - oldScrollPosition;
-    var scaleY = Math.min(1 + Math.abs(acceleration)/200, 4);
-    console.log(acceleration + ", " + scaleY);
-
     var scrollIndicator = document.getElementById('nav-scroll');
-    var scrollIndicatorPosition = 2 * (window.pageYOffset / 1000);
+    var scrollIndicatorPosition = 2 * Math.floor(window.pageYOffset / 1000);
+    var height = (window.pageYOffset % 1000) / 1000 * 2;
     scrollIndicator.style.top = scrollIndicatorPosition + 'rem';
-    scrollIndicator.style.transform = "translate(-50%, 50%) scale(1," + scaleY + ")";
-    scrollIndicator.style.transformOrigin = acceleration > 0 ? 'bottom' : 'top';
-
-    if (bounceBackFunction) clearTimeout(bounceBackFunction);
-    bounceBackFunction = setTimeout(function() {
-      scrollIndicator.style.transform = "translate(-50%, 50%) scale(1,1)";
-    }, 500);
+    scrollIndicator.style.height = height + 'rem';
   });
 }
 
