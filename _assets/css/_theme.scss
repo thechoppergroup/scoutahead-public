@@ -17,6 +17,10 @@ html {
   font-family: 'Proxima Nova', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .simple {
   padding: 10rem 0 5rem;
 }
@@ -129,21 +133,20 @@ a {
       &:after {
         content: "";
         display: block;
-        width: 1rem;
-        height: 1rem;
-        box-shadow: 0 0 0 1px white,
-          0 -1px 0 1px rgba(black, 0.3);
+        width: .5rem;
+        height: .5rem;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 50%;
+        right: .25rem;
         border-radius: 1rem;
-        background-color: rgba(black, 0.25);
+        transform: translate(0, -50%);
+        background-color: rgba(black, 0.6);
       }
 
       & + & {
         &:before {
           content: "";
-          border-right: solid thin white;
+          border-right: solid thin rgba(black, 0.6);
           height: 1rem;
           position: absolute;
           bottom: 100%;
@@ -154,7 +157,7 @@ a {
 
       &-link {
         border-bottom: solid thin transparent;
-        color: white;
+        color: rgba(white, 0.5);
         display: none;
         text-shadow: 0 1px 1px rgba(black, 0.5);
 
@@ -168,21 +171,21 @@ a {
       }
 
       &.active &-link {
-        border-bottom: solid thin white;
+        color: white;
       }
     }
 
     &-scroll {
-      width: .8rem;
-      height: .8rem;
-      border: 1px solid gray;
+      width: .5rem;
+      height: .5rem;
+      background-color: rgba(white, .75);
       position: absolute;
       top: 0;
       right: 0;
-      border-radius: 50%;
-      margin-right: 1.1rem;
-      margin-top: 1rem;
-      //background-color: rgba(black, 0.25);
+      margin-top: 0;
+      transform: translate(-50%, 50%);
+      border-radius: .25rem;
+      z-index: -1;
     }
   }
 

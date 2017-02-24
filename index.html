@@ -55,8 +55,8 @@ slug: welcome
 </div>
 
 <nav class="t--nav fixed--center-right">
-  <div class="t--nav-scroll" id="nav-scroll" collapse></div>
-  <ul id="nav">
+
+  <ul id="nav" class="origin">
     <li class="t--nav-item">
       <a href="#home" class="t--nav-item-link unstyle">Home</a>
     </li>
@@ -70,5 +70,6 @@ slug: welcome
         {% endif %}
       {% endfor %}
     {% endstrip %}
+    <li class="t--nav-scroll" id="nav-scroll" collapse></li>
   </ul>
 </nav>

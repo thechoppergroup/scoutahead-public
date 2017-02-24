@@ -359,8 +359,8 @@ Js.Dash.waypoints = function (container) {
     switchTo(sectionIndex);
 
     var scrollIndicator = document.getElementById('nav-scroll');
-    var scrollIndicatorPosition = 35 * window.pageYOffset / 1000;
-    scrollIndicator.style.top = scrollIndicatorPosition + 'px';
+    var scrollIndicatorPosition = 2 * (window.pageYOffset / 1000);
+    scrollIndicator.style.top = scrollIndicatorPosition + 'rem';
   });
 }
 
