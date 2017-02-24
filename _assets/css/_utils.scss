@@ -29,3 +29,17 @@ $desktop-width-large: 1200px !default;
     @content;
   }
 }
+
+/* IE11 */
+@mixin ie-11 {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+/* IE-Edge */
+@mixin ie-edge {
+  @supports (-ms-ime-align:auto) {
+     @content;
+  }
+}
