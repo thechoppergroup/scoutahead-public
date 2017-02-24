@@ -146,8 +146,8 @@ a {
       &:after {
         content: "";
         display: block;
-        width: .5rem;
-        height: .5rem;
+        width: 8px;
+        height: 8px;
         position: absolute;
         top: 50%;
         right: 0;
@@ -161,7 +161,7 @@ a {
       & + & {
         &:before {
           content: "";
-          border-right: solid .5rem rgba(white, 0.2);
+          border-right: solid 8px rgba(white, 0.2);
           height: 2rem;
           position: absolute;
           top: 50%;
@@ -194,9 +194,7 @@ a {
     }
 
     &-scroll {
-      box-shadow: 0 0 2px rgba(white, 0.6) inset;
-      width: .5rem;
-      height: .5rem;
+      width: 8px;
       background-color: rgba(black, .6);
       position: absolute;
       top: 0;
