@@ -301,8 +301,8 @@ Js.Dash.video = function (container) {
     }
 
     vid.addEventListener('ended', function () {
-      state = "starting";
-      $(window).scrollTop(0);
+      vid.currentTime = vidLoopStart;
+      vid.play();
       // body.style.overflow = 'auto';
     });
   };
