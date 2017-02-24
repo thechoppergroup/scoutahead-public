@@ -17,6 +17,10 @@ html {
   font-family: 'Proxima Nova', sans-serif;
 }
 
+body {
+  background-color: #333;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -32,7 +36,7 @@ a {
 #intro {
   display: none;
 
-  @include tablet {
+  @media screen and (min-device-width: 1025px) {
     display: block;
   }
 }
@@ -64,11 +68,19 @@ a {
 
   &-contact {
     &-sidebar {
-      padding-left: 4rem;
       display: none;
 
       @include tablet () {
         display: block;
+        max-width: 15rem;
+      }
+
+      &-mobile {
+        display: block;
+
+        @include tablet {
+          display: none;
+        }
       }
     }
   }
@@ -239,7 +251,7 @@ a {
       background-image: url('./home_shot_1.jpg');
     }
 
-    @include tablet {
+    @media screen and (min-device-width: 1025px) {
       background-image: none !important;
     }
 

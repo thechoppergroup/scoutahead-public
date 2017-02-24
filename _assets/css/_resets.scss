@@ -12,7 +12,7 @@
   font-family: 'Proxima Nova', sans-serif;
   font-size: 9pt;
 
-  @media only screen and (min-width: 480px)  {
+  @media only screen and (min-device-width: 767px)  {
     font-size: calc(.75vh + .75vw + .25vmin);
   }
 }
