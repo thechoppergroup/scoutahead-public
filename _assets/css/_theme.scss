@@ -29,6 +29,14 @@ a {
   color: map-get($theme, links);
 }
 
+#intro {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
 .t- {
   &-button {
     &-a {
@@ -98,8 +106,12 @@ a {
 
     &-logo {
       display: inline-block;
-      width: 15rem;
+      width: 10rem;
       padding-left: 1rem;
+
+      @include tablet {
+        width: 15rem;
+      }
 
       > svg {
         fill: map-get($theme, brand);
@@ -197,11 +209,33 @@ a {
     transition: transform 1s ease-in-out,
       opacity 1s ease;
 
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-      &.id-home {
-        background-image: url('/assets/placeholder.png');
-        background-size: cover;
-      }
+    &.id-home {
+      background-image: url('./home_shot_1.jpg');
+    }
+
+    &.id-secure {
+      background-image: url('./home_shot_2.jpg');
+    }
+
+    &.id-smart {
+      background-image: url('./home_shot_3.jpg');
+    }
+
+    &.id-simple {
+      background-image: url('./home_shot_4.jpg');
+    }
+
+    &.id-product {
+      background-image: url('./home_shot_1.jpg');
+    }
+
+    @include tablet {
+
+    }
 
     &-placeholder {
       height: 1000px;
@@ -238,6 +272,12 @@ a {
     &-content {
       transform: translate(-50%, -1000%);
       transition: transform 1s ease-in-out;
+      padding: 0 3rem;
+      width: 100%;
+
+      @include tablet {
+        max-width: 66vw;
+      }
     }
 
     &.active ~ & > &-content {
