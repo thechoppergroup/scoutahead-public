@@ -105,16 +105,17 @@ a {
     }
 
     &-logo {
-      display: inline-block;
-      width: 10rem;
+      display: block;
       padding-left: 1rem;
-
-      @include tablet {
-        width: 15rem;
-      }
 
       > svg {
         fill: map-get($theme, brand);
+        width: 10rem;
+        height: 3rem;
+
+        @include tablet {
+          width: 15rem;
+        }
       }
     }
 
@@ -234,7 +235,7 @@ a {
     }
 
     @include tablet {
-
+      background-image: none !important;
     }
 
     &-placeholder {
@@ -261,6 +262,7 @@ a {
       display: inline-block;
       fill: white;
       margin-right: 1rem;
+      height: 3rem;
       width: 3rem;
     }
 
