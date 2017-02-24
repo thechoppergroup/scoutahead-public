@@ -147,30 +147,35 @@ a {
       &:after {
         content: "";
         display: block;
-        width: .5rem;
-        height: .5rem;
+        width: 8px;
+        height: 8px;
         position: absolute;
         top: 50%;
-        right: .25rem;
+        right: 0;
         border-radius: 1rem;
         transform: translate(0, -50%);
+        transition: background-color .25s ease;
         background-color: rgba(black, 0.6);
+        z-index: 2;
       }
 
       & + & {
         &:before {
           content: "";
-          border-right: solid thin rgba(black, 0.6);
-          height: 1rem;
+          border-right: solid 8px rgba(white, 0.2);
+          height: 2rem;
           position: absolute;
-          bottom: 100%;
-          right: .5rem;
+          top: 50%;
+          right: 0;
           display: block;
+          transform: translate(0, -100%);
+          z-index: 1;
         }
       }
 
       &-link {
         border-bottom: solid thin transparent;
+        transition: color .5s ease;
         color: rgba(white, 0.5);
         display: none;
         text-shadow: 0 1px 1px rgba(black, 0.5);
@@ -190,14 +195,13 @@ a {
     }
 
     &-scroll {
-      width: .5rem;
-      height: .5rem;
-      background-color: rgba(white, .75);
+      width: 8px;
+      background-color: rgba(black, .6);
       position: absolute;
       top: 0;
       right: 0;
-      margin-top: 0;
-      transform: translate(-50%, 50%);
+      margin-top: .25rem;
+      transition: transform .25s ease-in-out;
       border-radius: .25rem;
       z-index: -1;
     }

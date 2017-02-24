@@ -301,8 +301,8 @@ Js.Dash.video = function (container) {
     }
 
     vid.addEventListener('ended', function () {
-      state = "starting";
-      $(window).scrollTop(0);
+      vid.currentTime = vidLoopStart;
+      vid.play();
       // body.style.overflow = 'auto';
     });
   };
@@ -336,6 +336,8 @@ Js.Dash.waypoints = function (container) {
   var nav = document.getElementById('nav');
   var content = document.getElementById('content');
   var sections = content.children;
+  var scrollPosition = window.pageYOffset;
+  var bounceBackFunction = null;
 
   function switchTo (index) {
     for (var i = 0; i < sections.length; i++)
@@ -359,8 +361,8 @@ Js.Dash.waypoints = function (container) {
     switchTo(sectionIndex);
 
     var scrollIndicator = document.getElementById('nav-scroll');
-    var scrollIndicatorPosition = 2 * (window.pageYOffset / 1000);
-    scrollIndicator.style.top = scrollIndicatorPosition + 'rem';
+    var height = window.pageYOffset / 1000;
+    scrollIndicator.style.height = (height * 2) + 'rem';
   });
 }
 
