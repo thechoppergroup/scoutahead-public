@@ -30,8 +30,6 @@ assets:
       - "last 2 versions"
       - "IE > 9"
   #
-  baseurl: /assets/
-  #
   sources:
     - _assets/css
     - _assets/fonts
