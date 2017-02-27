@@ -1,0 +1,45 @@
+$tablet-width: 480px !default;
+$desktop-width: 1025px !default;
+$desktop-width-large: 1200px !default;
+
+/* Custom Media Query */
+@mixin media($media) {
+  @media only screen and (min-width: #{$media}) {
+    @content;
+  }
+}
+
+/* Tablet */
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+/* Desktop/Wide Tablet */
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+/* Desktop */
+@mixin desktop-lg {
+  @media (min-width: #{$desktop-width-large}) {
+    @content;
+  }
+}
+
+/* IE11 */
+@mixin ie-11 {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+/* IE-Edge */
+@mixin ie-edge {
+  @supports (-ms-ime-align:auto) {
+     @content;
+  }
+}

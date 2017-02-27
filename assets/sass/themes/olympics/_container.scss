@@ -1,0 +1,44 @@
+.olympics-container {
+  padding: 3rem;
+  background-color: get($olympics-colors, backgroundTrans);
+
+  .olympics-container-heading {
+    font-size: 36pt;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+  }
+
+  .olympics-container-sidebar {
+    @include tablet {
+      border-left: solid thin $white;
+      padding-left: 2rem;
+    }
+
+    hr {
+      border-top: solid thin get($olympics-colors, brand);
+      margin-bottom: 1rem;
+    }
+
+    .olympics-container-sidebar-number {
+      display: flex;
+      counter-increment: counter;
+
+      + .olympics-container-sidebar-number {
+        margin-top: 1rem;
+      }
+
+      &:before {
+        content: counter(counter);
+        font-size: 54pt;
+        color: get($olympics-colors, brand);
+        line-height: 1em;
+        margin-right: 1rem;
+        max-width: 3rem;
+        width: 100%;
+        font-weight: 700;
+        display: block;
+      }
+    }
+  }
+}
