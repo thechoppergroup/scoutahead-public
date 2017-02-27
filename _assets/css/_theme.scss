@@ -287,7 +287,7 @@ a {
     &-content {
       transform: translate(-50%, -1000%);
       transition: transform 1s ease-in-out;
-      padding: 0 3rem;
+      padding: 3rem 3rem 0;
       width: 100%;
 
       @include tablet {
