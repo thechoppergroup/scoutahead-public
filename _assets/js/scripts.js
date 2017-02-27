@@ -262,8 +262,7 @@ Js.Dash.product = function (container) {
 }
 
 Js.Dash.video = function (container) {
-  console.log('video loaded')
-  var sectionHeight = 1000;
+  console.log('video loaded');
 
   // select video element
   var vid = document.getElementById('vault');
@@ -296,24 +295,18 @@ Js.Dash.video = function (container) {
 
     if (state === "starting" && videoDirection > 0) {
       state = "intro";
-      // body.style.overflow = 'hidden';
       vid.play();
     }
 
     vid.addEventListener('ended', function () {
       vid.currentTime = vidLoopStart;
       vid.play();
-      // body.style.overflow = 'auto';
     });
   };
 
   setInterval(function() {
-    // console.log(state + " " + vid.currentTime);
     if (vid.currentTime > vidLoopStart && state == "intro") {
-      // body.style.overflow = 'auto';
       state = "looping";
-      // if (window.pageYOffset < sectionHeight)
-        // $(window).scrollTop(sectionHeight);
     }
     if (vid.currentTime > vidLoopEnd && state == "looping") {
       vid.currentTime = vidLoopStart;
@@ -357,19 +350,15 @@ Js.Dash.waypoints = function (container) {
   switchTo(0);
 
   window.addEventListener('scroll', function (e) {
-    var sectionIndex = getSectionIndex();
+    var sectionHeight = window.innerHeight;
+    var scrollPos = window.pageYOffset;
+    var sectionIndex =  Math.floor(scrollPos / sectionHeight);
     switchTo(sectionIndex);
 
     var scrollIndicator = document.getElementById('nav-scroll');
-    var height = window.pageYOffset / 1000;
+    var height = window.pageYOffset / sectionHeight;
     scrollIndicator.style.height = (height * 2) + 'rem';
   });
-}
-
-function getSectionIndex () {
-    var sectionHeight = 1000;
-    var scrollPos = window.pageYOffset;
-    return Math.floor(scrollPos / sectionHeight);
 }
 
 Js.Dash.subheadShow = function (container) {
