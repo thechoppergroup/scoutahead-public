@@ -17,6 +17,10 @@ html {
   font-family: 'Proxima Nova', sans-serif;
 }
 
+.welcome {
+  background-color: map-get($theme, footer);
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
