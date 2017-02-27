@@ -5,3 +5,4 @@ gem 'octopress-autoprefixer'
 gem 'autoprefixer-rails'
 gem 'jekyll-assets'
 gem 'json'
+gem "mini_magick"

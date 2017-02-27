@@ -22,17 +22,19 @@
   <meta name="twitter:description" content="{{page.meta_description}}">
   <!-- End Twitter -->
 
-  {
-    "@context": "http://schema.org",
-    "@type": "Organization",
-    "name": "Scoutahead",
-    "alternateName": "Innovative Collaboration for Today’s Workforce",
-    "url": "https://scoutahead.com",
-    "logo": "https://scoutahead.com/assets/logo.png"
-  }
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Company",
+      "name": "Scoutahead",
+      "alternateName": "Innovative Collaboration for Today’s Workforce",
+      "url": "https://scoutahead.com",
+      "logo": "https://scoutahead.com/assets/logo.png"
+    }
+  </script>
 
   <title>
-    {{ site.title }}
+    {{ site.title }} {{site.description}}
   </title>
 
   <script type="text/javascript">
