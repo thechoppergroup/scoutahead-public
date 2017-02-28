@@ -1,4 +1,9 @@
 <head collapse>
+  {% if jekyll.environment == "production" %}
+    {% assign js = ".min.js"%}
+  {% else %}
+    {% assign js = ".js"%}
+  {% endif %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,20 +72,11 @@
   {% css browser-upgrade-ie6 %}
   <![endif]-->
 
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ "/js/lodash-4.15.0.min.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/d3.3.5.6.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/d3-jetpack.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/moment.min.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/d3_selection.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/utility.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/xhr.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/js_hooks.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/table.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/card_form.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/entry_form.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/company/content_section.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/site/change_password.js" | prepend: site.baseurl }}"></script>
+  {% for script in site.data.scripts %}
+    {% if script.header and script.pages contains "all" or script.pages contains page.title %}
+    <script type="text/javascript" src="js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
+    {% endif %}
+  {% endfor %}
 
   <script src="https://www.google-analytics.com/analytics.js"></script>
 

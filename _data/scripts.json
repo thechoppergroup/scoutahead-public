@@ -1,0 +1,67 @@
+[
+  {
+    "script": "lodash-4.15.0",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "d3.3.5.6",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "d3-jetpack",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "moment",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/d3_selection",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/utility",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/xhr",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/js_hooks",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/table",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password"],
+    "header": true
+  },
+  {
+    "script": "site/card_form",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password"],
+    "header": true
+  },
+  {
+    "script": "site/entry_form",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password"],
+    "header": true
+  },
+  {
+    "script": "site/content_section",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/change_password",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+]
