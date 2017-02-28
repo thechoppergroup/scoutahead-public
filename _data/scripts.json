@@ -55,7 +55,7 @@
     "header": true
   },
   {
-    "script": "site/content_section",
+    "script": "site/company/content_section",
     "pages": ["all"],
     "header": true
   },
