@@ -14,7 +14,7 @@ markdown: kramdown
 
 exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
 
-uploads_dir: "_assets/img"
+uploads_dir: "img"
 
 _editable_regions:
   image:
@@ -33,7 +33,7 @@ assets:
   sources:
     - _assets/css
     - _assets/fonts
-    - _assets/img
+    - img
     - _assets/js
     - _assets/bower
     #
@@ -60,13 +60,14 @@ collections:
     permalink: /privacy-policy/:path/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
-      type: "welcomes" # a collection in your site, in plural form
+      type: "pages"
     values:
-      slug: "welcome"
-      order: -1
+      layout: page
+      permalink: /:basename:output_ext
+
+
 gems:
 - jekyll-mentions
 - jemoji
@@ -74,3 +75,7 @@ gems:
 - jekyll-sitemap
 - jekyll-assets
 - mini_magick
+
+
+exclude:
+  - img
