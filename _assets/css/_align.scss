@@ -3,7 +3,7 @@
 }
 
 .align- {
-  position: relative;
+  position: absolute;
 
   &-center {
     @extend .align-;

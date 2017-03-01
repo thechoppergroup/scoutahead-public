@@ -1,5 +1,4 @@
 ---
-layout: simple
 title: Secure
 order: 2
 ---

@@ -4,48 +4,22 @@
   {% else %}
     {% assign js = ".js"%}
   {% endif %}
+
+  <title>
+    {{ site.title }} {{site.description}}
+  </title>
+
+  <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{{ site.keywords | join: ',' }}">
   <meta name="author" content="{{ site.author }}">
+  {% include head/facebook.html %}
+  {% include head/twitter.html %}
 
-  <!-- Facebook -->
-  <meta property="og:title" content="{{page.meta_title}}"/>
-  <meta property="og:url" content="https://scoutahead.com/"/>
-  <meta property="og:image" content="{{page.meta_image_path}}"/>
-  <meta property="og:site_name" content="{{page.meta_name}}"/>
-  <meta property="og:description" content="{{page.meta_description}}"/>
-  <!-- End Facebook -->
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@ScoutaheadHQ">
-  <meta name="twitter:image" content="{{page.meta_image_path}}">
-  <meta name="twitter:title" content="{{page.meta_name}}">
-  <meta name="twitter:description" content="{{page.meta_description}}">
-  <!-- End Twitter -->
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Company",
-      "name": "Scoutahead",
-      "alternateName": "Innovative Collaboration for Today’s Workforce",
-      "url": "https://scoutahead.com",
-      "logo": "https://scoutahead.com/assets/logo.png"
-    }
-  </script>
-
-  <title>
-    {{ site.title }} {{site.description}}
-  </title>
-
-  <script type="text/javascript">
-    var base = "{{ site.baseurl }}";
-  </script>
-
+  <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -72,25 +46,20 @@
   {% css browser-upgrade-ie6 %}
   <![endif]-->
 
+  <!-- Javascript -->
+
+  <script type="text/javascript">
+    var base = "{{ site.baseurl }}";
+  </script>
+
   {% for script in site.data.scripts %}
     {% if script.header and script.pages contains "all" or script.pages contains page.title %}
     <script type="text/javascript" src="js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
     {% endif %}
   {% endfor %}
 
-  <script src="https://www.google-analytics.com/analytics.js"></script>
+  {% include head/ldjson.html %}
 
-  <script type="text/javascript">
+  {% include head/googleAnalytics.html %}
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72053902-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
 </head>
