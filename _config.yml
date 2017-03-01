@@ -14,7 +14,7 @@ markdown: kramdown
 
 exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
 
-uploads_dir: "assets/img"
+uploads_dir: "_assets/img"
 
 _editable_regions:
   image:
@@ -24,19 +24,19 @@ assets:
   compress:
     css: default
     js: default
-    #
+  #
   autoprefixer:
     browsers:
       - "last 2 versions"
       - "IE > 9"
   #
   sources:
-    - assets/css
-    - assets/fonts
-    - assets/img
-    - assets/js
-    - assets/bower
-#
+    - _assets/css
+    - _assets/fonts
+    - _assets/img
+    - _assets/js
+    - _assets/bower
+    #
   assets:
     - "*.eot"
     - "*.svg"
@@ -74,7 +74,3 @@ gems:
 - jekyll-sitemap
 - jekyll-assets
 - mini_magick
-
-
-exclude:
-  - assets
