@@ -1,5 +1,4 @@
 ---
-layout: simple
 title: Simple
 order: 4
 ---

@@ -9,6 +9,7 @@ meta_image: 'https://res.cloudinary.com/chopper/image/upload/v1483987082/Meta%20
 expID: hAX1oS9gSdWYc9Y6s4s__A
 expVar: 0
 slug: welcome
+permalink: '/'
 ---
 
 <section id="intro" class="fixed--center-center fill--hv" collapse>
@@ -19,7 +20,9 @@ slug: welcome
     <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
   </video>
 </section>
-{% assign nodes = site.pages | sort: 'order' %}
+
+{% assign nodes = site.sections | sort: 'order' %}
+
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   <section class="t--section id-home align--center-center fill--hv active" collapse>
     <div class="t--section-content align--center-center paragraph--center">
@@ -59,7 +62,6 @@ slug: welcome
     <li class="t--nav-item">
       <a href="#home" class="t--nav-item-link unstyle">Home</a>
     </li>
-    {% assign nodes = site.pages | sort: 'order' %}
     {% strip %}
       {% for node in nodes %}
         {% if node.order > 0 and node.order != nil %}

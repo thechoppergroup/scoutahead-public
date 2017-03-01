@@ -55,9 +55,9 @@ collections:
   welcomes:
     output: true
     permalink: /welcome/:path/
-  privacy policy:
-    output: true
-    permalink: /privacy-policy/:path/
+  sections:
+    output: false
+    path: "_sections"
 
 defaults:
   - scope:
