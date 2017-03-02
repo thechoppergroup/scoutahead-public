@@ -138,17 +138,32 @@ a {
   }
 
   &-link {
-    background-color: rgba(black, 0.6);
     border-radius: 2.5rem;
-    box-shadow: 0 0 0 1px rgba(white, 1), 0 0 0 2px rgba(black, .1);
-    color: white;
+    color: map-get($theme, brand);
+    box-shadow: 0 0 0 1px rgba(map-get($theme, brand), 1);
     display: inline-block;
     line-height: 1.2em;
     padding: .5rem 1.5rem;
     transition: background-color .5s ease;
 
     &:hover {
-      background-color: rgba(map-get($theme, brand), 1)
+      background-color: rgba(map-get($theme, brand), 1);
+      color: $white;
+    }
+
+    .welcome & {
+      background-color: rgba(black, 0.6);
+      border-radius: 2.5rem;
+      box-shadow: 0 0 0 1px rgba(white, 1), 0 0 0 2px rgba(black, .1);
+      color: white;
+      display: inline-block;
+      line-height: 1.2em;
+      padding: .5rem 1.5rem;
+      transition: background-color .5s ease;
+
+      &:hover {
+        background-color: rgba(map-get($theme, brand), 1)
+      }
     }
   }
 
