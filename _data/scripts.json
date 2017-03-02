@@ -15,7 +15,7 @@
     "header": true
   },
   {
-    "script": "moment",
+    "script": "moment-2.17.1",
     "pages": ["all"],
     "header": true
   },
@@ -58,6 +58,21 @@
     "script": "site/company/content_section",
     "pages": ["all"],
     "header": true
+  },
+  {
+    "script": "site/table",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+  {
+    "script": "site/card_form",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+  {
+    "script": "site/entry_form",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
   },
   {
     "script": "site/change_password",
