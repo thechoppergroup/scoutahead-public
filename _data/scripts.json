@@ -60,6 +60,21 @@
     "header": true
   },
   {
+    "script": "site/table",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+  {
+    "script": "site/card_form",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+  {
+    "script": "site/entry_form",
+    "pages": ["all"],
+    "header": ["Reset Password", "Forgot Password"]
+  },
+  {
     "script": "site/change_password",
     "pages": ["all"],
     "header": ["Reset Password", "Forgot Password"]
