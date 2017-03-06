@@ -14,7 +14,7 @@ markdown: kramdown
 
 exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
 
-uploads_dir: "img"
+uploads_dir: "_assets/img/"
 
 _editable_regions:
   image:
