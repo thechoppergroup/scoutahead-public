@@ -13,7 +13,6 @@
   <meta name="google-site-verification" content="Dgli6Wi62TAnwYdNeCxabHT0eZwVQCwixdYQaqAomfM" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="{{ site.keywords | join: ',' }}">
   <meta name="author" content="{{ site.author }}">
@@ -55,12 +54,19 @@
 
   {% for script in site.data.scripts %}
     {% if script.header and script.pages contains "all" or script.pages contains page.title %}
-    <script type="text/javascript" src="js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
+    {% if jekyll.environment == "development" %}
+      {% assign scriptbase = "https://localhost:8443/"%}
+    {% else %}
+      {% assign scriptbase = "/"%}
+    {% endif %}
+    <script type="text/javascript" src="{{scriptbase}}js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
     {% endif %}
   {% endfor %}
 
   {% include head/ldjson.html %}
 
   {% include head/googleAnalytics.html %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
 
 </head>

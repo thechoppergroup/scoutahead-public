@@ -18,7 +18,7 @@ html {
 }
 
 .welcome {
-  background-color: map-get($theme, footer);
+  background-color: black;
 }
 
 ::-webkit-scrollbar {
@@ -240,34 +240,34 @@ a {
   }
 
   &-section {
-    background-color: rgba(black, 0.65);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
     text-shadow: 0 0 1px rgba(black, 1);
     transition: transform 1s ease-in-out,
       opacity 1s ease;
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    &.id-home {
+    @at-root #section-home#{&} {
       background-image: url('./home_shot_1.jpg');
     }
 
-    &.id-secure {
+    @at-root #section-secure#{&} {
       background-image: url('./home_shot_2.jpg');
     }
 
-    &.id-smart {
+    @at-root #section-smart#{&} {
       background-image: url('./home_shot_3.jpg');
     }
 
-    &.id-simple {
+    @at-root #section-simple#{&} {
       background-image: url('./home_shot_4.jpg');
     }
 
-    &.id-product {
+    @at-root #section-product#{&} {
       background-image: url('./home_shot_1.jpg');
     }
 
