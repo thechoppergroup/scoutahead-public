@@ -1,12 +1,13 @@
 ---
-title: Smart
+title: Reduce Risks
 order: 3
 ---
 
 
-#### Increase Productivity and Efficiency
+#### Reduce Security & Legal Risks
 
-* Reduce internal emails and meetings with real-time, natural collaboration tools for teams and individuals
-* Use Scoutahead Leadership Announcements to control the message, and keep everyone informed between multi-office organizations and remote employees
-* Improve turnaround time on projects with seamless file, photo and video sharing
-* Connect and collaborate through audio and video conferencing
+* Protect your proprietary information with two-factor authentication and encryption
+
+* Sync with Active Directory, manage users and control permissioning through an administrative console&nbsp;
+
+* Customize archiving and retention with options to integrate with third party compliance solutions
