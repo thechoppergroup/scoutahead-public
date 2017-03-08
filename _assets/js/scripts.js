@@ -352,7 +352,7 @@ Js.Dash.waypoints = function (container) {
   window.addEventListener('scroll', function (e) {
     var sectionHeight = window.innerHeight;
     var scrollPos = window.pageYOffset;
-    var sectionIndex =  Math.floor(scrollPos / sectionHeight);
+    var sectionIndex =  Math.max(0, Math.floor(scrollPos / sectionHeight));
     switchTo(sectionIndex);
 
     var scrollIndicator = document.getElementById('nav-scroll');
