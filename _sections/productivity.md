@@ -1,5 +1,5 @@
 ---
-title: productivity
+title: Productivity
 order: 6
 ---
 
