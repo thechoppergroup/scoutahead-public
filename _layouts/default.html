@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+  {% if jekyll.environment == "development" %}
+    {% assign scriptbase = "https://localhost:8443/"%}
+  {% else %}
+    {% assign scriptbase = "/"%}
+  {% endif %}
 
   {% include head.html %}
 
@@ -12,32 +17,9 @@
 
     <div role="main">
       {{ content }}
-
-      <div id="segue:contact" class="segue">
-        <a href="#" class="segue-close align--top-right">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#svg:close"></use>
-          </svg>
-        </a>
-        <div class="align--center-center">
-          {% include contact.html %}
-        </div>
-      </div>
-
-      <div id="segue:login" class="segue">
-        <a href="#" class="segue-close align--top-right">
-          <svg viewBox="0 0 100 100">
-            <use xlink:href="#svg:close"></use>
-          </svg>
-        </a>
-        <div class="align--center-center">
-          {% include login.html %}
-        </div>
-      </div>
     </div>
 
     {% include footer.html %}
-
     {% js main %}
   </body>
 

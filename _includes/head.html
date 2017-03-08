@@ -46,22 +46,19 @@
   {% css browser-upgrade-ie6 %}
   <![endif]-->
 
+  {% strip %}
+    {% for script in site.data.scripts %}
+      {% if script.header and script.pages contains "all" or script.pages contains page.title %}
+        <script type="text/javascript" src="{{scriptbase}}js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
+      {% endif %}
+    {% endfor %}
+  {% endstrip %}
+
   <!-- Javascript -->
 
   <script type="text/javascript">
     var base = "{{ site.baseurl }}";
   </script>
-
-  {% for script in site.data.scripts %}
-    {% if script.header and script.pages contains "all" or script.pages contains page.title %}
-    {% if jekyll.environment == "development" %}
-      {% assign scriptbase = "https://localhost:8443/"%}
-    {% else %}
-      {% assign scriptbase = "/"%}
-    {% endif %}
-    <script type="text/javascript" src="{{scriptbase}}js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
-    {% endif %}
-  {% endfor %}
 
   {% include head/ldjson.html %}
 
