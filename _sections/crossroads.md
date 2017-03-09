@@ -1,14 +1,10 @@
 ---
-title: Collaboration has evolved
+title: Enterprise collaboration has evolved
 order: 2
 ---
 
 
-##### **Enterprises have reached a communication and collaboration crossroads.**
-
-##### &nbsp;
-
-###### Overflowing email inboxes and an overwhelming number of apps and personal devices have resulted in:
+##### Overflowing email inboxes and an overwhelming number of apps and personal devices have resulted in:
 
 &nbsp;
 
