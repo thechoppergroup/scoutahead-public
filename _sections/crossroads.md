@@ -1,14 +1,14 @@
 ---
-title: Crossroads
+title: Collaboration Has Evolved
 order: 2
 parent: "Welcome"
 ---
+###### Employees report spending 30% of their day in email trying to find people and information to get work done.
 
+###### To compensate, they've brought personal devices and apps to the workplace to fill the gaps.
 
-##### Enterprises have reached a communication and collaboration crossroads - Email inboxes are full; “Bring your own device” policies have led to everyone bringing their own apps and no one being on the same system. These trends have revealed:
+###### This has led to:
 
-* Increased risk for security breaches
-
-* Increased time to find critical information and people
-
-* Increased complexity in collaborating
+* ###### Increased risk for security breaches
+* ###### Increased time to find critical information and people
+* ###### Increased complexity in collaborating

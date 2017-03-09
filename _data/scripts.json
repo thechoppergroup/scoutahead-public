@@ -78,5 +78,5 @@
     "script": "site/change_password",
     "pages": ["Reset Password", "Forgot Password", "Signup"],
     "header": true
-  },
+  }
 ]
