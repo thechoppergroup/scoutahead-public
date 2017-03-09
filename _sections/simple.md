@@ -1,7 +1,7 @@
 ---
 title: Simple
-nav_title: Navigation Title
-order: 0
+nav_title: Simple
+order: 3
 parent: Product
 section_image:
 ---

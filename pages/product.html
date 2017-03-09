@@ -5,15 +5,21 @@ permalink: product.html
 order: 1
 ---
 
-{% assign nodes = (site.sections | where: "parent" , page.title | sort: 'order' ) %}
+{% assign nodes = (site.sections | where: "parent" , "Product" | sort: "order" ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
     <section id="section-{{ node.title | slugify }}" class="t--section align--center-center fill--hv" collapse>
-      <div class="t--section-content align--center-center">
-        {{node.content | markdownify}}
+      <div class="t--section-content align--center-center flex--grid">
+        <div class="flex-fill">
+          {{node.section_image}}
+        </div>
+        <div class="flex-fill">
+          <h3 class="t--page-{{ page.title | slugify }}-heading">{{node.title}}</h3>
+          {{node.content | markdownify}}
+        </div>
         <a class="editor-link" href="cloudcannon:collections/{{ node.path }}">Edit {{node.title}}</a>
       </div>
     </section>
@@ -38,7 +44,11 @@ order: 1
       {% for node in nodes %}
         {% if node.order > 0 and node.order != nil %}
         <li class="t--nav-item">
-          <a href="#{{ node.title | slugify }}" class="t--nav-item-link unstyle">{{node.title}}</a>
+          {% if node.nav_title != nil %}
+            <a href="#{{ node.title | slugify }}" class="t--nav-item-link unstyle">{{node.nav_title}}</a>
+            {% else %}
+            <a href="#{{ node.title | slugify }}" class="t--nav-item-link unstyle">{{node.title}}</a>
+          {% endif %}
         </li>
         {% endif %}
       {% endfor %}
