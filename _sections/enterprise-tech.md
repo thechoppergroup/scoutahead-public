@@ -1,6 +1,7 @@
 ---
 title: Enterprise Tech
 order: 3
+parent: "Welcome"
 ---
 
 

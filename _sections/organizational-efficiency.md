@@ -1,6 +1,7 @@
 ---
 title: Organizational Efficiency
 order: 4
+parent: "Welcome"
 ---
 
 

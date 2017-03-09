@@ -1,6 +1,7 @@
 ---
 title: Reduce Risks
 order: 3
+parent: "Welcome"
 ---
 
 

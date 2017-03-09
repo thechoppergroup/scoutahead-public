@@ -20,7 +20,7 @@ permalink: /
   </video>
 </section>
 
-{% assign nodes = site.sections | sort: 'order' %}
+{% assign nodes = (site.sections | where: "parent" , page.title | sort: 'order' ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   <section id="section-home" class="t--section id-home align--center-center active" collapse>
