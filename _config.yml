@@ -33,7 +33,7 @@ assets:
   sources:
     - _assets/css
     - _assets/fonts
-    - img
+    - img/
     - _assets/js
     - _assets/bower
     #
