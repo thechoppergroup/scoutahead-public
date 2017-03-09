@@ -10,12 +10,8 @@ order: 2
 
 ###### To compensate, they've brought personal devices and apps to the workplace to fill the gaps.
 
-###### &nbsp;
-
 ###### This has led to:
 
-* Increased risk for security breaches
-
-* Increased time to find critical information and people
-
-* Increased complexity in collaborating
+* ###### Increased risk for security breaches
+* ###### Increased time to find critical information and people
+* ###### Increased complexity in collaborating
