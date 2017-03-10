@@ -41,37 +41,22 @@
   },
   {
     "script": "site/table",
-    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup"],
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
     "header": true
   },
   {
     "script": "site/card_form",
-    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup"],
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
     "header": true
   },
   {
     "script": "site/entry_form",
-    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup"],
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
     "header": true
   },
   {
     "script": "site/company/content_section",
     "pages": ["all"],
-    "header": true
-  },
-  {
-    "script": "site/table",
-    "pages": ["Reset Password", "Forgot Password", "Signup"],
-    "header": true
-  },
-  {
-    "script": "site/card_form",
-    "pages": ["Reset Password", "Forgot Password", "Signup"],
-    "header": true
-  },
-  {
-    "script": "site/entry_form",
-    "pages": ["Reset Password", "Forgot Password", "Signup"],
     "header": true
   },
   {
