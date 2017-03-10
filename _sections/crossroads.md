@@ -9,10 +9,4 @@ parent: Welcome
 
 ###### &nbsp;
 
-##### Employees report spending 30% of their day in email trying to find people and information to get work done.
-
-##### Overflowing email inboxes and the "bring your own app" trend have resulted in:
-
-* ##### Increased risk for security breaches
-* ##### Increased time to find critical information and people
-* ##### Increased complexity in collaborating&nbsp;
+##### Employees report spending 30% of their day in email trying to find people and information to get work done. Leading to significant productivity loss.
