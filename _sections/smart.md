@@ -9,7 +9,7 @@ section_image: /img/Smart.png
 
 ###### Reduce Security & Legal Risks
 
-* Protect your proprietary information with two-factor authentication and encryption
+* Protect your IP with two-factor authentication and encryption
 
 * Sync with Active Directory, manage users and control permissioning through an administrative console&nbsp;
 
