@@ -3,11 +3,18 @@ layout: simple
 title: Product
 permalink: product.html
 order: 1
+background_image:
 ---
 
 {% assign nodes = (site.sections | where: "parent" , "Product" | sort: "order" ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
+  <section id="section-{{page.title | slugify}}" class="t--section id-home align--center-center active" {% if page.background_image %}style="background-image: {{page.background_image}};"{% endif %} collapse>
+    <div class="t--section-content align--center-center paragraph--center">
+      <h3 class="t--section-heading editable">Collaborate Securely</h3>
+      <h5 class="t--section-subhead editable js-subheadShow" style="opacity: 0">Secure &amp; Encrypted<br />Collaboration System</h5>
+    </div>
+  </section>
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
@@ -48,6 +55,7 @@ order: 1
 </div>
 
 <div id="placeholders" collapse>
+  <div id="{{page.title | slugify}}" class="t--section-placeholder" collapse></div>
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
@@ -59,8 +67,11 @@ order: 1
 
 <nav class="t--nav fixed--center-right">
   <ul id="nav" class="origin">
-    {% strip %}
+    <li class="t--nav-item">
+      <a href="#{{page.title | slugify}}" class="t--nav-item-link unstyle">{{page.title}}</a>
+    </li>
       {% for node in nodes %}
+      {% strip %}
         {% if node.order > 0 and node.order != nil %}
         <li class="t--nav-item">
           {% if node.nav_title != nil %}
@@ -70,8 +81,8 @@ order: 1
           {% endif %}
         </li>
         {% endif %}
+        {% endstrip %}
       {% endfor %}
-    {% endstrip %}
     <li class="t--nav-scroll" id="nav-scroll" collapse></li>
   </ul>
 </nav>
