@@ -12,11 +12,13 @@ background_image: img/product_bg.png
   <section id="section-{{page.title | slugify}}" class="t--section id-home align--center-center active" {% if page.background_image %}style="background-image: url('{% asset_path "{{page.background_image | split: '/' | last}}" %}');"{% endif %} collapse>
     <div class="t--section-content align--center-center paragraph--center">
       <h4 class="t--section-heading t--heading-thin editable">Collaborate Securely</h4>
-      <ul>
-        <li class="editable">Safeguard Intellectual property</li>
-        <li class="editable">Find the right people and information in real-time</li>
-        <li class="editable">Keep everyone aligned and inspired, whether across the office or across the planet</li>
-      </ul>
+      <div class="edtiable">
+        <ul>
+          <li>Safeguard Intellectual property</li>
+          <li>Find the right people and information in real-time</li>
+          <li>Keep everyone aligned and inspired, whether across the office or across the planet</li>
+        </ul>
+      </div>
       <div class="flex">
         <div class="flex-center">
           <a href="/contact.html" class="t--link unstyle" type="button" name="button">Request a Demo</a>
