@@ -87,6 +87,10 @@ a {
     }
   }
 
+  &-footer {
+    transform: translate(-1rem, -1rem);
+  }
+
   &-heading {
     &-a {
       display: inline-block;
@@ -121,7 +125,7 @@ a {
 
     &-nav {
       transform-origin: right center;
-      transform: translate(-20rem, -50%);
+      transform: translate(-10rem, -50%);
     }
 
     &-logo {

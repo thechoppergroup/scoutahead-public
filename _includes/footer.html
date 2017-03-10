@@ -1,42 +1,27 @@
-<footer id="footer" class="footer" style="display: none;">
-  <div class="container">
-    {% comment %}
-    <nav class="flex">
-      <ul class="flex centered">
-        <li class="nav-style--b"><a href="/" class="js-welcomeLink">Welcome</a></li>
-        <li class="nav-style--b"><a href="/about.html">About</a></li>
-        <li><a href="/" class="footer-logo">{% include svg/logo.html %}</a></li>
-        <li class="nav-style--b"><a href="/contact.html">Contact</a></li>
-        <li class="nav-style--b"><a href="/login.html">About</a></li>
-      </ul>
-    </nav>
-    {% endcomment %}
-    <p class="p-centered inverse">
-      Check us out on...
-    </p>
-    <nav class="footer-social">
-      <ul class="flex flex-center unstyle--list">
-        <li class="social-link--a inverse"><a href="https://twitter.com/ScoutaheadHQ"><i class="ion-social-twitter"></i></a></li>
-        <li class="social-link--a inverse"><a href="https://www.facebook.com/ScoutaheadHQ"><i class="ion-social-facebook"></i></a></li>
-        <li class="social-link--a inverse"><a href="https://plus.google.com/+Scoutahead"><i class="ion-social-googleplus"></i></a></li>
-      </ul>
-    </nav>
+<footer id="footer" class="t--footer fixed--bottom-right">
+  <div class="flex--grid">
     <div class="copyright collapse">
       <p class="p-centered inverse">
       Copyright &copy; 2015-16 - Scoutahead.com, LLC
       </p>
     </div>
-
-    {% comment %}
-    <nav>
-      <ul class="footer-sublinks">
-        <li class="footer-link--a"><a href="/privacy.html" title="Privacy Policy">Privacy Policy</a></li>
-        <li class="footer-link--a"><a href="/terms.html" title="Terms of Service">Terms of Service</a></li>
+    <div>
+      <ul class="flex--grid unstyle--list">
+        <li class="collapse">
+           <a role="button" class="button--facebook-md" onclick="facebookFeedDialog(window.userIsLoggedIn);">
+            <i class="ion-social-facebook"></i>
+            <span>facebook</span>
+          </a>
+          <a style="display:none" class="js-share-facebook popup"></a>
+        </li>
+        <li>
+          <a role="button" class="button--twitter-md" onclick="twitterFeedDialog(window.userIsLoggedIn);">
+            <i class="ion-social-twitter"></i>
+            <span>twitter</span>
+          </a>
+          <a style="display:none" class="js-share-twitter popup"></a>
+        </li>
       </ul>
-    </nav>
-    {% endcomment %}
-  </div>
-  <div class="footer-share">
-    {% include social.share.html %}
+    </div>
   </div>
 </footer>
