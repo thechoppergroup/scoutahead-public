@@ -1,6 +1,6 @@
 ---
-title: Enterprise Cloud Ready
-nav_title: Enterprise Cloud Ready
+title: Enterprise Cloud-Ready
+nav_title: Enterprise Cloud-Ready
 order: 4
 parent: Product
 section_image: /img/Enterprise.png

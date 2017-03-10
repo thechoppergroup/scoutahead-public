@@ -1,14 +1,16 @@
 ---
-title: Transforming Collaboration
+title: "For Today's Leaders"
 order: 3
 parent: Welcome
 ---
 
 
-CEOs, HR, Communications and IT leaders have an opportunity to lead transformation within their organizations by providing employees access to the information and people they need to be productive, in real-time. &nbsp;&nbsp;
+For CEO’s who are looking for one system to reach all employees in real-time with critical updates;
 
-Whether communicating critical information about a merger, on-boarding a new employee, or sharing the company's earnings report, employees are craving a better way to stay connected and engaged.
+For HR and Corporate Communications leaders who are focused on attracting and retaining top talent and keeping them engaged;
 
-[Meet Scoutahead](/product.html)
+For CIO’s and CTO’s who are seeking a more secure and intuitive real-time collaboration solution that drives greater productivity
 
-&nbsp;
+Scoutahead provides a secure collaboration system where employees can find the right people and information they need as quickly as possible, while keeping their intellectual property safe.
+
+###### &nbsp;

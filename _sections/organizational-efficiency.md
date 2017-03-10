@@ -1,6 +1,6 @@
 ---
 title: Organizational Efficiency
-order: -1
+order: 4
 parent: Welcome
 ---
 
