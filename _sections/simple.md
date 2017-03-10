@@ -7,8 +7,8 @@ section_image: /img/Simple.png
 ---
 
 
-###### Drive Organizational Efficiency
+###### Energize Organizational Efficiency
 
-* Share critical updates through leadership announcements&nbsp;
-* Get notified of urgent messages from teammates and leaders&nbsp;
-* Collaborate on desktop, iPhone and Android mobile apps with an intuitive and easy-to-use system&nbsp;
+* Share critical updates through system-wide leadership announcements
+* Get immediate notifications of urgent messages from teammates and leaders
+* Communicate and collaborate on desktop, iPhone and Android mobile apps with an intuitive and easy-to-use system
