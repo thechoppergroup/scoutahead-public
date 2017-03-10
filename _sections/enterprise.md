@@ -1,12 +1,12 @@
 ---
-title: Built for Enterprise Technology Needs
-nav_title: Enterprise
+title: Enterprise Cloud Ready
+nav_title: Enterprise Cloud Ready
 order: 4
-parent: "Product"
+parent: Product
 section_image: /img/Enterprise.png
 ---
 
-* Built on Amazon Web Services Cloud Infrastructure
-* 99.99% uptime, global data centers and redundancy
+
+* Built on Amazon Web Services and hosted across global data centers
 * Custom integrations with third-party applications
-* 24/7 customer support
+* Customer support via email and phone
