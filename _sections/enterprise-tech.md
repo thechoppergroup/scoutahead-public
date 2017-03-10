@@ -5,7 +5,7 @@ parent: Welcome
 ---
 
 
-###### CEOs, HR, Communications and IT leaders have an opportunity to lead transformation within their organizations so employees can find the information and people they need in real-time to be productive. &nbsp;&nbsp;
+CEOs, HR, Communications and IT leaders have an opportunity to lead transformation within their organizations by providing employees access to the information and people they need in real-time to be productive. &nbsp;&nbsp;
 
 &nbsp;
 
