@@ -1,20 +1,17 @@
 ---
-title: "For Today's Leaders"
+title: Transforming Collaboration
 order: 3
-parent: "Welcome"
+parent: Welcome
 ---
 
 
+###### Today, overflowing email inboxes and the "bring your own app" trend have resulted in:
 
-###### For CEOs who are looking for one system to reach all employees in real-time with critical updates…
+* ###### Increased risk for security breaches
+* ###### Increased time to find critical information and people
+* ###### Increased complexity in collaborating&nbsp;
 
-&nbsp;
-
-###### For HR and Corporate Communications leaders who are focused on attracting and retaining top talent and keeping them engaged…
-
-&nbsp;
-
-###### For CIOs and CTOs who are seeking a more secure and intuitive real-time collaboration solution that drives greater productivity…
+###### CEOs, HR, Communications and IT leaders have an opportunity to lead transformation within their organizations so employees can find the information and people they need to be productive. &nbsp;
 
 &nbsp;
 
