@@ -13,10 +13,8 @@ parent: Welcome
 
 &nbsp;
 
-They've brought personal devices and apps in to compensate, but that's led to:
+###### To compensate, they're using personal devices and apps, but that's led to:
 
-* Increased risk for security breaches
-
-* Increased time to find critical information and people
-
-* Increased complexity in collaborating
+* ###### Increased risk for security breaches
+* ###### Increased time to find critical information and people
+* ###### Increased complexity in collaborating
