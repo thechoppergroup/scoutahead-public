@@ -247,7 +247,7 @@ Js.Dash.replaceSection = function (container) {
     section.revealMain();
   }, function(){
     Js.Init(section);
-  });
+  }, noop, null, null);
 }
 
 Js.Dash.product = function (container) {
