@@ -7,7 +7,9 @@ parent: Welcome
 
 #### Email isn't working for collaboration.
 
-###### Employees report spending 30% of their day in email trying to find people and information to get work done.
+###### Employees report spending 30% of their day in email
+
+###### trying to find people and information to get work done.
 
 They've brought personal devices and apps in to compensate, but that's led to:
 
