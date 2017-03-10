@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Welcome"
 splash_image: 'https://res.cloudinary.com/chopper/image/upload/f_auto/v1463851804/Site%20Images/homepage-hero-img_2.jpg'
 meta_name: 'Secure &amp; Encrypted Enterprise Communications System'
 meta_title: Scoutahead
@@ -20,7 +21,7 @@ permalink: /
   </video>
 </section>
 
-{% assign nodes = (site.sections | where: "parent" , page.title | sort: 'order' ) %}
+{% assign nodes = (site.sections | where: "parent" , page.title | sort: "order" ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   <section id="section-home" class="t--section id-home align--center-center active" collapse>

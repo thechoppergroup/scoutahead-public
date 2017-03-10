@@ -1,4 +1,5 @@
 $theme: (
+  accent: #FD6361,
   brand: #40b1bd,
   heading: #555,
   background: #FDFDFD,
@@ -118,6 +119,11 @@ a {
       box-shadow: 0 0 .25rem rgba(black, 0.2);
     }
 
+    &-nav {
+      transform-origin: right center;
+      transform: translate(-20rem, -50%);
+    }
+
     &-logo {
       display: block;
       padding-left: 1rem;
@@ -135,6 +141,12 @@ a {
 
     &-buttons {
       padding-right: 1rem;
+    }
+  }
+
+  &-heading {
+    &-thin {
+      font-weight: map-get($weights, thin);
     }
   }
 
@@ -199,7 +211,7 @@ a {
       & + & {
         &:before {
           content: "";
-          border-right: solid 8px rgba(white, 0.1);
+          border-right: solid 8px rgba(black, 0.1);
           height: 2rem;
           position: absolute;
           top: 50%;
@@ -207,6 +219,10 @@ a {
           display: block;
           transform: translate(0, -100%);
           z-index: 1;
+
+          .welcome & {
+            border-right: solid 8px rgba(white, 0.1);
+          }
         }
       }
 
@@ -286,28 +302,49 @@ a {
       text-shadow: 0 0 1px rgba(black, 1);
     }
 
-    @at-root #section-home#{&} {
+    @at-root .welcome #section-home#{&} {
       background-image: url('./home_shot_1.jpg');
     }
 
-    @at-root #section-secure#{&} {
+    @at-root .welcome #section-secure#{&} {
       background-image: url('./home_shot_2.jpg');
     }
 
-    @at-root #section-smart#{&} {
+    @at-root .welcome #section-smart#{&} {
       background-image: url('./home_shot_3.jpg');
     }
 
-    @at-root #section-simple#{&} {
+    @at-root .welcome #section-simple#{&} {
       background-image: url('./home_shot_4.jpg');
     }
 
-    @at-root #section-product#{&} {
+    @at-root .welcome #section-product#{&} {
       background-image: url('./home_shot_1.jpg');
     }
 
+    @at-root #home#{&} {
+      color: white;
+      text-align: center;
+    }
+
+    @at-root .product #section-product#{&} &-content {
+      background-color: rgba(black, 0.8);
+      text-align: left;
+      color: $white;
+      left: 0;
+      padding: 2rem;
+      transform: translate(0, -50%);
+      border-left: solid 1rem map-get($theme, accent);
+
+      @media screen and (min-width: 720px) {
+        max-width: 50%
+      }
+    }
+
     @media screen and (min-device-width: 1025px) {
-      background-image: none !important;
+      @at-root .welcome & {
+        background-image: none !important;
+      }
     }
 
     &-placeholder {
@@ -316,14 +353,6 @@ a {
 
     &-subhead {
       transition: opacity .5s ease;
-    }
-
-    @at-root #home#{&} {
-      color: white;
-      text-align: center;
-
-      .active &-content {
-      }
     }
 
     &-icon {

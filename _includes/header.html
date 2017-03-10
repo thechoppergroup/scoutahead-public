@@ -6,6 +6,29 @@
     </svg>
   </a>
 
+  {% assign nodes = site.pages | sort: "order" %}
+  <nav class="t--header-nav align--center-right" collapse>
+    <ul class="flex--grid">
+      {% strip %}
+        {% for node in nodes %}
+          {% if node.title != nil and node.order > 0 %}
+            <li class="s--nav-header origin {% if node.title == page.title %}is-active{% endif %}">
+              <a href="{{ node.url | prepend:site.baseurl }}" class="unstyle" collapse>{{ node.title }}</a>
+              {% assign subnodes = site[{{node.children}}]%}
+              {% if subnodes.size > 0 %}
+              <ul class="s--nav-header-submenu unstyle align--bottom-left">
+                {% for subnode in subnodes %}
+                <li class="{% if subnode.title == page.title %}is-active{% endif %}"><a href="{{ subnode.url | prepend:site.baseurl }}">{{subnode.title}}</a></li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endstrip %}
+    </ul>
+  </nav>
+
   <!-- <div class="nav-login js-loggedInHide">
     <a href="/login.html" role="button"><i class="ion-locked"></i> Login</a>
   </div> -->

@@ -3,16 +3,20 @@ layout: simple
 title: Product
 permalink: product.html
 order: 1
-background_image:
+background_image: img/product_bg.png
 ---
 
-{% assign nodes = (site.sections | where: "parent" , "Product" | sort: "order" ) %}
+{% assign nodes = (site.sections | where: "parent" , page.title | sort: "order" ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
-  <section id="section-{{page.title | slugify}}" class="t--section id-home align--center-center active" {% if page.background_image %}style="background-image: {{page.background_image}};"{% endif %} collapse>
+  <section id="section-{{page.title | slugify}}" class="t--section id-home align--center-center active" {% if page.background_image %}style="background-image: url('{% asset_path "{{page.background_image | split: '/' | last}}" %}');"{% endif %} collapse>
     <div class="t--section-content align--center-center paragraph--center">
-      <h3 class="t--section-heading editable">Collaborate Securely</h3>
-      <h5 class="t--section-subhead editable js-subheadShow" style="opacity: 0">Secure &amp; Encrypted<br />Collaboration System</h5>
+      <h4 class="t--section-heading t--heading-thin editable">With Scoutahead’s secure collaboration system</h4>
+      <ul class="editable">
+        <li>Safeguard Intellectual property</li>
+        <li>Find the right people and information in real-time</li>
+        <li>Keep everyone aligned and inspired, whether across the office or across the planet</li>
+      </ul>
     </div>
   </section>
   {% strip %}
