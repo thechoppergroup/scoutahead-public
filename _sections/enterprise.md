@@ -7,6 +7,6 @@ section_image: /img/Enterprise.png
 ---
 
 
-* Built on Amazon Web Services and hosted across global data centers
+* Built on Amazon Web Services and available in global data centers
 * Custom integrations with third-party applications
 * Customer support via email and phone
