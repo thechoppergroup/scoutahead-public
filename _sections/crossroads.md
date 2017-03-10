@@ -13,4 +13,8 @@ parent: Welcome
 
 &nbsp;
 
-&nbsp;
+Overflowing email inboxes and the "bring your own app" trend have resulted in:
+
+* Increased risk for security breaches
+* Increased time to find critical information and people
+* Increased complexity in collaborating&nbsp;
