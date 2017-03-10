@@ -1,20 +1,11 @@
 ---
-title: "For Today's Leaders"
+title: Transforming Collaboration
 order: 3
-parent: "Welcome"
+parent: Welcome
 ---
 
 
-
-###### For CEOs who are looking for one system to reach all employees in real-time with critical updates…
-
-&nbsp;
-
-###### For HR and Corporate Communications leaders who are focused on attracting and retaining top talent and keeping them engaged…
-
-&nbsp;
-
-###### For CIOs and CTOs who are seeking a more secure and intuitive real-time collaboration solution that drives greater productivity…
+###### CEOs, HR, Communications and IT leaders have an opportunity to lead transformation within their organizations so employees can find the information and people they need in real-time to be productive. &nbsp;&nbsp;
 
 &nbsp;
 
