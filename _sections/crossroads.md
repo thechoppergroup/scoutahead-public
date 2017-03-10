@@ -9,7 +9,7 @@ parent: Welcome
 
 &nbsp;
 
-Today, employees solve overwhelming email inboxes by bringing in personal apps to be productive. But, that's led to:
+Today, employees avoid overwhelming email inboxes by bringing in personal apps to be productive. But, that's led to:
 
 * Increased risk for security breaches
 * Increased time to find critical information and people

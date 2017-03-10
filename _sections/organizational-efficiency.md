@@ -1,12 +1,12 @@
 ---
 title: Organizational Efficiency
-order: 4
-parent: "Welcome"
+order: -1
+parent: Welcome
 ---
 
 
 #### Energize Organizational Efficiency
 
-* Share critical updates through system-wide leadership announcements&nbsp;
-* Get immediate notifications of urgent messages from teammates and leaders&nbsp;
-* Communicate and collaborate on desktop, iPhone and Android mobile apps with an intuitive and easy-to-use system&nbsp;
+* Share critical updates through system-wide leadership announcements
+* Get immediate notifications of urgent messages from teammates and leaders
+* Communicate and collaborate on desktop, iPhone and Android mobile apps with an intuitive and easy-to-use system
