@@ -7,10 +7,8 @@ section_image: /img/Smart.png
 ---
 
 
-###### Reduce Security & Legal Risks
+###### Increase Productivity
 
-* Protect your proprietary information with two-factor authentication and encryption
-
-* Sync with Active Directory, manage users and control permissioning through an administrative console&nbsp;
-
-* Customize archiving and retention with options to integrate with third party compliance solutions
+* Reduce emails and meetings with real-time messaging for teams and individuals
+* Find information quickly through robust search and seamless file, photo and video sharing
+* Connect and collaborate through audio and video conferencing
