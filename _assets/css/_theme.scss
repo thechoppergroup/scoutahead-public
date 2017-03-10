@@ -178,6 +178,7 @@ a {
       height: 1rem;
 
       &:after {
+        background-color: rgba(black, 0.4);
         content: "";
         display: block;
         width: 8px;
@@ -188,8 +189,11 @@ a {
         border-radius: 1rem;
         transform: translate(0, -50%);
         transition: background-color .25s ease;
-        background-color: rgba(black, 0.6);
         z-index: 2;
+
+        .welcome & {
+          background-color: rgba(black, 0.6);
+        }
       }
 
       & + & {
@@ -209,9 +213,13 @@ a {
       &-link {
         border-bottom: solid thin transparent;
         transition: color .5s ease;
-        color: rgba(white, 0.5);
         display: none;
-        text-shadow: 0 1px 1px rgba(black, 0.5);
+        color: map-get($theme, heading);
+
+        .welcome & {
+          color: rgba(white, 0.5);
+          text-shadow: 0 1px 1px rgba(black, 0.5);
+        }
 
         @include tablet () {
           display: inline-block;
@@ -219,17 +227,26 @@ a {
       }
 
       &.active:after {
-        background-color: white;
+        background-color: map-get($theme, brand);
+
+        .welcome & {
+          background-color: white;
+        }
       }
 
       &.active &-link {
-        color: white;
+        color: map-get($theme, brand);
+
+        .welcome & {
+          color: white;
+        }
       }
     }
 
     &-scroll {
       width: 8px;
-      background-color: rgba(black, .8);
+      min-height: 8px;
+      background-color: rgba(black, .15);
       position: absolute;
       top: 0;
       right: 0;
@@ -237,6 +254,10 @@ a {
       transition: transform .25s ease-in-out;
       border-radius: .25rem;
       z-index: -1;
+
+      .welcome & {
+        background-color: rgba(black, .8);
+      }
     }
   }
 

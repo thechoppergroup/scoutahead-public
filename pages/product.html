@@ -11,7 +11,7 @@ order: 1
   {% strip %}
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
-    <section id="section-{{ node.title | slugify }}" class="t--section align--center-center fill--hv" collapse>
+    <section id="section-{{ node.title | slugify }}" class="t--section align--center-center fill--hv" {% if node.background_image %}style="background-image: {{node.background_image}};"{% endif %} collapse>
       {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       {% if thecycle == 'odd' %}
       <div class="t--section-content align--center-center flex--grid">
