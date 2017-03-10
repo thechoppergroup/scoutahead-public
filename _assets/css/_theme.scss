@@ -88,7 +88,10 @@ a {
   }
 
   &-footer {
-    transform: translate(-1rem, -1rem);
+    transform: translate(-1rem, -3rem);
+    position: fixed;
+    top: 100vh;
+    right: 0;
   }
 
   &-heading {
