@@ -3,7 +3,7 @@ title: Simple
 nav_title: Simple
 order: 3
 parent: Product
-section_image:
+section_image: /img/Simple.png
 ---
 
 

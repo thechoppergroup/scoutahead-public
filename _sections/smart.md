@@ -3,11 +3,11 @@ title: Smart
 nav_title: Smart
 order: 2
 parent: Product
-section_image:
+section_image: /img/Smart.png
 ---
 
 
-#### Reduce Security & Legal Risks
+###### Reduce Security & Legal Risks
 
 * Protect your proprietary information with two-factor authentication and encryption
 

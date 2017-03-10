@@ -3,7 +3,7 @@ title: Built for Enterprise Technology Needs
 nav_title: Enterprise
 order: 4
 parent: "Product"
-section_image:
+section_image: /img/Enterprise.png
 ---
 
 * Built on Amazon Web Services Cloud Infrastructure

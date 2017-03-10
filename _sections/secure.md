@@ -3,7 +3,7 @@ title: Secure
 nav_title: Secure
 order: 1
 parent: Product
-section_image:
+section_image: img/Secure.png
 ---
 
 

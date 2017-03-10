@@ -12,16 +12,35 @@ order: 1
   {% for node in nodes %}
     {% if node.order > 0 and node.order != nil %}
     <section id="section-{{ node.title | slugify }}" class="t--section align--center-center fill--hv" collapse>
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      {% if thecycle == 'odd' %}
       <div class="t--section-content align--center-center flex--grid">
-        <div class="flex-fill">
-          {{node.section_image}}
+        {% if node.section_image != nil %}
+        <div>
+          {% img "{{node.section_image | split: '/' | last}}" width:"200" height:"auto" %}
         </div>
+        {% endif %}
         <div class="flex-fill">
           <h3 class="t--page-{{ page.title | slugify }}-heading">{{node.title}}</h3>
           {{node.content | markdownify}}
         </div>
         <a class="editor-link" href="cloudcannon:collections/{{ node.path }}">Edit {{node.title}}</a>
       </div>
+      {% endif %}
+      {% if thecycle == 'even' %}
+      <div class="t--section-content align--center-center flex--grid">
+        <div class="flex-fill">
+          <h3 class="t--page-{{ page.title | slugify }}-heading">{{node.title}}</h3>
+          {{node.content | markdownify}}
+        </div>
+        {% if node.section_image != nil %}
+        <div>
+          {% img "{{node.section_image | split: '/' | last}}" width:"200" height:"auto" %}
+        </div>
+        {% endif %}
+        <a class="editor-link" href="cloudcannon:collections/{{ node.path }}">Edit {{node.title}}</a>
+      </div>
+      {% endif %}
     </section>
     {% endif %}
   {% endfor %}
