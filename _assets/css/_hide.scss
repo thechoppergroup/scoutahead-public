@@ -1,0 +1,19 @@
+.hide- {
+  &-mobile {
+    &-sm {
+      @media only screen
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+          display: none;
+      }
+    }
+
+    &-lg {
+      @media only screen
+        and (max-device-width: 736px)
+        and (-webkit-min-device-pixel-ratio: 3) {
+        display: none;
+      }
+    }
+  }
+}

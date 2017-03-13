@@ -1,9 +1,10 @@
 ---
 layout: default
+title: Welcome
 splash_image: 'https://res.cloudinary.com/chopper/image/upload/f_auto/v1463851804/Site%20Images/homepage-hero-img_2.jpg'
 meta_name: 'Secure &amp; Encrypted Enterprise Communications System'
 meta_title: Scoutahead
-meta_description: 'Foster real-time, natural collaboration among teams and individuals.'
+meta_description: Foster real-time collaboration among teams and individuals.
 meta_image: 'https://res.cloudinary.com/chopper/image/upload/v1483987082/Meta%20Photos/Facebook_ad_17.01.09_1.png'
 expID: hAX1oS9gSdWYc9Y6s4s__A
 expVar: 0
@@ -20,13 +21,14 @@ permalink: /
   </video>
 </section>
 
-{% assign nodes = site.sections | sort: 'order' %}
+{% assign nodes = (site.sections | where: "parent" , page.title | sort: "order" ) %}
 
 <div id="content" class="fixed--center-center fill--hv js-waypoints" collapse>
   <section id="section-home" class="t--section id-home align--center-center active" collapse>
     <div class="t--section-content align--center-center paragraph--center">
-      <h3 class="t--section-heading editable">Collaboration Securely</h3>
-      <h5 class="t--section-subhead editable js-subheadShow" style="opacity: 0">{{scriptbase}} Secure &amp; Encrypted<br />Collaboration System</h5>
+      <h3 class="t--section-heading editable">Collaborate Securely</h3>
+      <h5 class="t--section-subhead editable js-subheadShow" style="opacity: 0">Secure &amp; Encrypted<br />Collaboration System</h5>
+      <a href="/product.html" class="t--link unstyle editable">Meet Scoutahead</a>
     </div>
   </section>
   {% strip %}

@@ -35,10 +35,12 @@
 
     &-left {
       @extend .fixed--bottom;
+      left: 0;
     }
 
     &-right {
       @extend .fixed--bottom;
+      right: 0;
     }
   }
 

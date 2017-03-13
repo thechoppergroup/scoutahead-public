@@ -1,11 +1,13 @@
 ---
-title: Organizational Efficiency
-order: 4
-parent: Welcome
+title: Simple
+nav_title: Simple
+order: 3
+parent: Product
+section_image: /img/Simple.png
 ---
 
 
-#### Energize Organizational Efficiency
+###### Energize Organizational Efficiency
 
 * Share critical updates through system-wide leadership announcements
 * Get immediate notifications of urgent messages from teammates and leaders

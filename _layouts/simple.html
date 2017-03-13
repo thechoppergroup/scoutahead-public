@@ -13,25 +13,40 @@
       {% include svg_graphics.svg %}
     </div>
 
-    <header id="header" class="t--header fixed--top-left fill--h" collapse>
-      <a href="/" class="t--header-logo align--center-left" id="logo" collapse>
-        <span class="is-hidden" collapse>{{ site.title }}</span>
-        <svg viewBox="0 0 1000 122">
-          <use xlink:href="#svg:logo"></use>
-        </svg>
-      </a>
-      <nav class="t--header-buttons align--center-right">
-        <ul class="flex--grid">
-          <li collapse><a href="contact.html" class="t--link unstyle">Contact</a></li>
-          <li><a href="login.html" class="t--link unstyle">Login</a></li>
-        </ul>
-      </nav>
-    </header>
+    {% include header.html %}
 
     <div role="main" class="container--h">
       {{ content }}
     </div>
     {% js main %}
+
+    <footer id="footer" class="t--footer">
+      <div class="flex--grid">
+        <div class="copyright collapse">
+          <p class="p-centered editable">
+          &copy; Scoutahead.com, LLC
+          </p>
+        </div>
+        <div>
+          <ul class="flex--grid unstyle">
+            <li class="collapse">
+               <a role="button" href="https://www.facebook.com/ScoutaheadHQ/" target="_blank" class="button--facebook-md unstyle">
+                <i class="ion-social-facebook" collapse></i>
+                <span>facebook</span>
+              </a>
+              <a style="display:none" class="js-share-facebook popup"></a>
+            </li>
+            <li>
+              <a role="button" href="https://twitter.com/ScoutaheadHQ" target="_blank" class="button--twitter-md unstyle">
+                <i class="ion-social-twitter" collapse></i>
+                <span>twitter</span>
+              </a>
+              <a style="display:none" class="js-share-twitter popup"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 
 </html>

@@ -1,13 +1,12 @@
 ---
-title: Crossroads
+title: Collaboration Has Evolved
 order: 2
+parent: Welcome
 ---
 
 
-##### Enterprises have reached a communication and collaboration crossroads - Email inboxes are full; “Bring your own device” policies have led to everyone bringing their own apps and no one being on the same system. These trends have revealed:
+Enterprises are at a communication and collaboration crossroads. The trends of overflowing email inboxes and an overwhelming number of apps and personal devices have resulted in:
 
 * Increased risk for security breaches
-
 * Increased time to find critical information and people
-
 * Increased complexity in collaborating
