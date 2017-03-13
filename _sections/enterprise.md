@@ -1,6 +1,6 @@
 ---
 title: Built for Enterprise
-nav_title: Built for Enterprise
+nav_title: Enterprise
 order: 4
 parent: Product
 section_image: /img/Enterprise.png
