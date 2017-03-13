@@ -6,8 +6,8 @@ parent: Welcome
 section_image:
 ---
 
-##### Energize Organizational Efficiency
-##### Increase Productivity & Efficiency
+
+#### Increase Productivity & Efficiency
 
 * Share critical updates through system-wide leadership announcements
 * Get immediate notifications of urgent messages from teammates and leaders
@@ -16,6 +16,4 @@ section_image:
 * Find information quickly through robust search and seamless file, photo and video sharing
 * Connect and collaborate through audio and video conferencing
 
-<div class="flex">
-  <div class="flex-center"><a href="/product.html" class="t--link unstyle">Learn More</a></div>
-</div>
+<div class="flex"><div class="flex-center"><a class="t--link unstyle" href="/product.html">Learn More</a></div></div>
