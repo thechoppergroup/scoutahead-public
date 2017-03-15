@@ -12,7 +12,7 @@ pagination: 3
 # Build settings
 markdown: kramdown
 
-exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor]
+exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor, img]
 
 uploads_dir: "img/"
 
@@ -76,6 +76,3 @@ gems:
 - jekyll-assets
 - mini_magick
 
-
-exclude:
-  - img
