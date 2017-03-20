@@ -6,7 +6,7 @@
   {% endif %}
 
   <title>
-    {{ site.title }} {{page.title}}
+    {{ site.title }} | {{page.title}}
   </title>
 
   <!-- Meta -->
@@ -14,8 +14,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" content="{{ site.keywords | join: ',' }}">
+  <meta name="keywords" content="{{ site.data.keywords | join: ', ' }}">
   <meta name="author" content="{{ site.author }}">
+
   {% include head/facebook.html %}
   {% include head/twitter.html %}
 
