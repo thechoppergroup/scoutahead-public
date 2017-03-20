@@ -244,9 +244,9 @@ Js.Dash.replaceSection = function (container) {
   });
 
   section.replaceSection(null, url, function () {
-    section.revealMain();
-  }, function(){
     Js.Init(section);
+  }, function () {
+    section.revealMain();
   }, noop, null, null);
 }
 
