@@ -1,0 +1,142 @@
+input,
+textarea,
+keygen,
+select,
+button {
+  font-family: inherit;
+  -webkit-appearance: none;
+}
+
+$inputs-text:
+  date,
+  email,
+  number,
+  password,
+  search,
+  tel,
+  text,
+  time,
+  url;
+
+@each $type in $inputs-text {
+  input[type="#{$type}"] {
+    box-shadow: 0 .1rem .1rem rgba(black, 0.05) inset, 0 0 0 .1rem rgba(black, 0.1);
+    height: 2.5rem;
+    font-size: 16px;
+    border-radius: .1rem;
+    display: block;
+    padding: 0 .25em;
+    width: 100%;
+    border: none;
+
+    &:disabled {
+      opacity: .5;
+    }
+
+    &:focus {
+      box-shadow: 0 .1rem .1rem rgba(black, 0.05) inset, 0 0 0 .1rem rgba(black, 0.1), 0 0 .25rem rgba(black, 0.2);
+      outline: none;
+    }
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0.01em 0 0 0;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+
+  legend {
+    padding: 0;
+    display: table;
+    margin-top: 0;
+    white-space: nowrap;
+    transform: translate(.1rem, 1.75rem);
+    line-height: 1rem;
+    font-size: 1rem;
+    transition: transform .25s ease-in-out;
+    height: 1rem;
+    color: #555;
+  }
+
+  &.has-content > legend,
+  &.has-focus > legend{
+    transform: translate(0.1rem, 0);
+  }
+
+  input {
+    margin-top: 0 !important;
+  }
+
+  > select {
+    margin-top: 0;
+    display: block;
+    width: 100%;
+    padding: 0 .25rem;
+    border-radius: 0;
+    background: transparent;
+               outline: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  > textarea {
+    width: 100%;
+    display: block;
+    outline: none;
+    padding: .25em;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  > label  {
+    white-space: nowrap;
+    display: block;
+     -webkit-tap-highlight-color: transparent;
+
+    > input[type="checkbox"],
+    > input[type="radio"] {
+
+      + span {
+        display: inline-block;
+        margin-top: .5rem;
+      }
+    }
+
+    + label {
+      margin-top: 0;
+    }
+
+    + input {
+      margin-top: 0;
+    }
+  }
+
+  input[type="search"] {
+    -webkit-appearance: textfield;
+  }
+
+  body:not(:-moz-handler-blocked) & {
+    display: table-cell;
+  }
+}
+
+textarea {
+  border: none;
+  border-radius: .1rem;
+  box-shadow: 0 .1rem .1rem rgba(black, 0.05) inset, 0 0 0 .1rem rgba(black, 0.1);
+  margin-top: 0 !important;
+}
+
+.input-error {   
+  color: red; 
+}

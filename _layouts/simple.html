@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  {% if jekyll.environment == "development" %}
+    {% assign scriptbase = "https://localhost:8443/"%}
+  {% else %}
+    {% assign scriptbase = "/"%}
+  {% endif %}
+
+  {% include head.html %}
+
+  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %} simple">
+    <div class="is-hidden" collapse>
+      {% include svg_graphics.svg %}
+    </div>
+
+    {% include header.html %}
+
+    <div role="main" class="container--h" data-cms-content-wrapper="/_layouts/simple.html">
+      {{ content }}
+    </div>
+    {% js main %}
+
+    <footer id="footer" class="t--footer">
+      <div class="flex--grid">
+        <div class="copyright collapse">
+          <p class="p-centered editable">&copy; Scoutahead LLC</p>
+        </div>
+        <div>
+          <ul class="flex--grid unstyle">
+            <li class="collapse">
+               <a role="button" href="https://www.facebook.com/ScoutaheadHQ/" target="_blank" class="button--facebook-md unstyle">
+                <i class="ion-social-facebook" collapse></i>
+                <span>facebook</span>
+              </a>
+              <a style="display:none" class="js-share-facebook popup"></a>
+            </li>
+            <li>
+              <a role="button" href="https://twitter.com/ScoutaheadHQ" target="_blank" class="button--twitter-md unstyle">
+                <i class="ion-social-twitter" collapse></i>
+                <span>twitter</span>
+              </a>
+              <a style="display:none" class="js-share-twitter popup"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

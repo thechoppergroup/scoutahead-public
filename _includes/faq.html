@@ -1,0 +1,4 @@
+{% if include.post %}
+	<h4 id="faq-{{include.index}}" class="text--heading">{{ post.name }}</h4>
+  {{ post.content | strip }}
+{% endif %}

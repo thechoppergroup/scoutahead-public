@@ -1,0 +1,7 @@
+{% if jekyll.environment == "development" %}
+  {% assign scriptbase = "https://localhost:8443/"%}
+{% else %}
+  {% assign scriptbase = "/"%}
+{% endif %}
+
+<div data-snip-url="{{scriptbase}}contact_snip" class="contact-container js-replaceSection js-inputsCheck" data-container-class="contact-container"></div>

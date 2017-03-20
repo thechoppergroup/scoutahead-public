@@ -1,0 +1,21 @@
+	<!-- {% if site.expID %}
+	  <script>
+	    if (window.location === 'scoutahead.com') {
+	      var gaTracker = ga.create('UA-72053902-1', 'auto');
+	      ga('set', 'expId', '{{ page.expID }}');
+	      ga('set', 'expVar', '{{ page.expVar }}');
+	      gaTracker.send('pageview');
+	      window.addEventListener('error', function (e) {
+	        gaTracker.send('exception', {exDescription: 'JavaScript Error ' + e.message + ' ' + e.filename + ': ' + e.lineno});
+	      });
+	      jQuery(document).ajaxError(function (e, request, settings) {
+	        gaTracker.send('exception', {exDescription: 'Ajax Error ' + settings.url + ' ' + e.result});
+	      });
+	    }
+	  </script>
+	{% endif %} -->
+
+
+{% js main %}
+
+<!-- End App -->

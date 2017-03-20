@@ -1,0 +1,397 @@
+$theme: (
+  accent: #FD6361,
+  brand: #40b1bd,
+  heading: #555,
+  background: #FDFDFD,
+  sidebar: #6ea1a2,
+  graphics: #A4BFBE,
+  error: #8a3324,
+  links: #39afb0,
+  footer: #241f1f,
+  label: #a3a3a3,
+  questions-header: #303030,
+  message-urgent: #E4ECEC,
+  segue-blue: #183656
+);
+
+html {
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+.welcome {
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.simple {
+  padding: 10rem 0 5rem;
+}
+
+a {
+  color: map-get($theme, links);
+}
+
+#intro {
+  display: none;
+
+  @media screen and (min-device-width: 1025px) {
+    display: block;
+  }
+}
+
+.t- {
+  &-button {
+    &-a {
+      background-color: map-get($theme, brand);
+    }
+
+    &-b {
+      box-shadow: 0 0 0 1px map-get($theme, brand);
+      color: map-get($theme, brand);
+      height: 3rem;
+      width: 3rem;
+      display: inline-block;
+      text-align: center;
+      line-height: 3rem;
+      border-radius: 3rem;
+      transition: background .25s ease-in-out,
+        color .25s ease-in-out;
+
+      &:hover {
+        background-color: map-get($theme, brand);
+        color: white;
+      }
+    }
+  }
+
+  &-contact {
+    &-sidebar {
+      display: none;
+
+      @include tablet () {
+        display: block;
+        max-width: 15rem;
+        padding-left: 5rem;
+      }
+
+      &-mobile {
+        display: block;
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    transform: translate(-1rem, -3rem);
+    position: fixed;
+    top: 100vh;
+    right: 0;
+  }
+
+  &-heading {
+    &-a {
+      display: inline-block;
+      font-weight: map-get($weights, extra-bold);
+      position: relative;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+
+      &:after {
+        content: "";
+        border-bottom: solid .5rem map-get($theme, brand);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+      }
+    }
+
+    &-b {
+      font-weight: map-get($weights, heading);
+      color: map-get($theme, heading);
+    }
+  }
+
+  &-header {
+    height: 5rem;
+
+    .simple & {
+      background-color: white;
+      box-shadow: 0 0 .25rem rgba(black, 0.2);
+    }
+
+    &-nav {
+      transform-origin: right center;
+      transform: translate(-10rem, -50%);
+    }
+
+    &-logo {
+      display: block;
+      padding-left: 1rem;
+
+      > svg {
+        fill: map-get($theme, brand);
+        width: 10rem;
+        height: 3rem;
+
+        @include tablet {
+          width: 15rem;
+        }
+      }
+    }
+
+    &-buttons {
+      padding-right: 1rem;
+    }
+  }
+
+  &-heading {
+    &-thin {
+      font-weight: map-get($weights, thin);
+    }
+  }
+
+  &-link {
+    border-radius: 2.5rem;
+    color: map-get($theme, brand);
+    box-shadow: 0 0 0 1px rgba(map-get($theme, brand), 1);
+    display: inline-block;
+    line-height: 1.2em;
+    padding: .5rem 1.5rem;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: rgba(map-get($theme, brand), 1);
+      color: $white;
+    }
+
+    .welcome & {
+      background-color: rgba(black, 0.6);
+      border-radius: 2.5rem;
+      box-shadow: 0 0 0 1px rgba(white, 1), 0 0 0 2px rgba(black, .1);
+      color: white;
+      display: inline-block;
+      line-height: 1.2em;
+      padding: .5rem 1.5rem;
+      transition: background-color .5s ease;
+
+      &:hover {
+        background-color: rgba(map-get($theme, brand), 1)
+      }
+    }
+  }
+
+  &-nav {
+    padding: 1rem;
+    text-align: right;
+
+    &-item {
+      padding-right: 2rem;
+      position: relative;
+      height: 1rem;
+
+      &:after {
+        background-color: rgba(black, 0.4);
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border-radius: 1rem;
+        transform: translate(0, -50%);
+        transition: background-color .25s ease;
+        z-index: 2;
+
+        .welcome & {
+          background-color: rgba(black, 0.6);
+        }
+      }
+
+      & + & {
+        &:before {
+          content: "";
+          border-right: solid 8px rgba(black, 0.1);
+          height: 2rem;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          display: block;
+          transform: translate(0, -100%);
+          z-index: 1;
+
+          .welcome & {
+            border-right: solid 8px rgba(white, 0.1);
+          }
+        }
+      }
+
+      &-link {
+        border-bottom: solid thin transparent;
+        transition: color .5s ease;
+        display: none;
+        color: map-get($theme, heading);
+
+        .welcome & {
+          color: rgba(white, 0.5);
+          text-shadow: 0 1px 1px rgba(black, 0.5);
+        }
+
+        @include tablet () {
+          display: inline-block;
+        }
+      }
+
+      &.active:after {
+        background-color: map-get($theme, brand);
+
+        .welcome & {
+          background-color: white;
+        }
+      }
+
+      &.active &-link {
+        color: map-get($theme, brand);
+
+        .welcome & {
+          color: white;
+        }
+      }
+    }
+
+    &-scroll {
+      width: 8px;
+      min-height: 8px;
+      background-color: rgba(black, .15);
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: .25rem;
+      transition: transform .25s ease-in-out;
+      border-radius: .25rem;
+      z-index: -1;
+
+      .welcome & {
+        background-color: rgba(black, .8);
+      }
+    }
+  }
+
+  &-page {
+    &-product {
+      &-heading {
+        font-weight: map-get($weights, light);
+        color: map-get($theme, brand);
+      }
+    }
+  }
+
+  &-section {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    transition: transform 1s ease-in-out,
+      opacity 1s ease;
+
+    .welcome & {
+      background-color: rgba(black, 0.75);
+      color: white;
+      text-shadow: 0 0 1px rgba(black, 1);
+    }
+
+    @at-root .welcome #section-home#{&} {
+      background-image: url('./home_shot_1.jpg');
+    }
+
+    @at-root .welcome #section-secure#{&} {
+      background-image: url('./home_shot_2.jpg');
+    }
+
+    @at-root .welcome #section-smart#{&} {
+      background-image: url('./home_shot_3.jpg');
+    }
+
+    @at-root .welcome #section-simple#{&} {
+      background-image: url('./home_shot_4.jpg');
+    }
+
+    @at-root .welcome #section-product#{&} {
+      background-image: url('./home_shot_1.jpg');
+    }
+
+    @at-root #home#{&} {
+      color: white;
+      text-align: center;
+    }
+
+    @at-root .product #section-product#{&} &-content {
+      background-color: rgba(black, 0.8);
+      text-align: left;
+      color: $white;
+      left: 0;
+      padding: 2rem;
+      transform: translate(0, -50%);
+      border-left: solid 1rem map-get($theme, accent);
+
+      @media screen and (min-width: 720px) {
+        max-width: 50%
+      }
+    }
+
+    @media screen and (min-device-width: 1025px) {
+      @at-root .welcome & {
+        background-image: none !important;
+      }
+    }
+
+    &-placeholder {
+      height: 100vh;
+    }
+
+    &-subhead {
+      transition: opacity .5s ease;
+    }
+
+    &-icon {
+      display: inline-block;
+      fill: white;
+      margin-right: 1rem;
+      height: 3rem;
+      width: 3rem;
+    }
+
+    &:not(.active) {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    &-content {
+      transform: translate(-50%, -1000%);
+      transition: transform 1s ease-in-out;
+      padding: 3rem 3rem 0;
+      width: 100%;
+
+      @include tablet {
+        max-width: 66vw;
+      }
+    }
+
+    &.active ~ & > &-content {
+      transform: translate(-50%, 1000%);
+    }
+
+    &.active > &-content {
+      transform: translate(-50%, -50%);
+    }
+  }
+}

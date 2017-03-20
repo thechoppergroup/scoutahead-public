@@ -1,0 +1,78 @@
+# Site settings
+title: Scoutahead
+description: > # this means to ignore newlines until "baseurl:"
+  Innovative Collaboration for Today’s Workforce
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://scoutahead.com" # the base hostname & protocol for your site
+twitter_username: ScoutaheadHQ
+facebook_username: ScoutaheadHQ
+keywords: ["professionals", "students", "companies", "career", "jobs", "survey", "self improvement"]
+pagination: 3
+
+# Build settings
+markdown: kramdown
+
+exclude: [README.md, bower.json, Gemfile, Gemfile.lock, vendor, img]
+
+uploads_dir: "img/"
+
+_editable_regions:
+  image:
+    url_src: true
+
+assets:
+  compress:
+    css: default
+    js: default
+  #
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
+  #
+  sources:
+    - _assets/css
+    - _assets/fonts
+    - img
+    - _assets/js
+    - _assets/bower
+    #
+  assets:
+    - "*.eot"
+    - "*.svg"
+    - "*.ttf"
+    - "*.woff"
+    - "*.woff2"
+    - "*.js"
+    - "*.jpg"
+    - "*.png"
+
+  features:
+    automatic_img_size: true
+    automatic_img_alt: true
+
+collections:
+  welcomes:
+    output: true
+    permalink: /welcome/:path/
+  sections:
+    output: false
+    path: "_sections"
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+      permalink: /:basename:output_ext
+
+
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
+- jekyll-assets
+- mini_magick
+

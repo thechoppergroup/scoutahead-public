@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: $height-header;
+  min-height: 100vh;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+
+[role="main"] {
+  margin-top: $offset-body;
+  width: 100%;
+}

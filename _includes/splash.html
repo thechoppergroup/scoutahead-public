@@ -1,0 +1,14 @@
+{% if include.image %}
+<div class="splash js-splashInView" data-target="js-header">
+	<img src="{{ include.image }}" alt="">
+	<div class="splash-heading">
+		{% if include.subhead %}
+			<h2 class="banner--hero-subhead inverse p-centered">{{ include.subhead }}</h2>
+		{% endif %}
+
+		{% if include.heading %}
+			<h1 class="banner--hero inverse p-centered">{{ include.heading }}</h1>
+		{% endif %}
+	</div>
+</div>
+{% endif %}

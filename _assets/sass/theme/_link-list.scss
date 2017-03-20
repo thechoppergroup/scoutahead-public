@@ -1,0 +1,50 @@
+.linklist {
+  color: $color-b;
+  > li {
+    line-height: 1.5rem;
+
+    + li {
+      margin-top: 1rem;
+    }
+  }
+
+  i {
+    color: $color-d;
+    float: left;
+    margin-right: .25rem;
+  }
+
+  a {
+    display: inline;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.list-heirarchy {
+  list-style: none;
+  
+  * {
+    margin: 0;
+    margin-top: 1rem;
+  }
+  .top-level,
+  .second-level {
+    position: relative;
+    padding-left: 15pt;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(data-list)".";
+    }
+  }
+  .second-level {
+    margin-left: 10pt;
+    > ol {
+      padding-left: 10pt;
+      list-style: lower-alpha;
+    }
+  }
+}

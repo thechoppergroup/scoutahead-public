@@ -1,0 +1,70 @@
+<head collapse>
+  {% if jekyll.environment == "production" %}
+    {% assign js = ".min.js"%}
+  {% else %}
+    {% assign js = ".js"%}
+  {% endif %}
+
+  <title>
+    {{ site.title }} | {{page.title}}
+  </title>
+
+  <!-- Meta -->
+  <meta name="google-site-verification" content="Dgli6Wi62TAnwYdNeCxabHT0eZwVQCwixdYQaqAomfM" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{{ site.data.keywords | join: ', ' }}">
+  <meta name="author" content="{{ site.author }}">
+
+  {% include head/facebook.html %}
+  {% include head/twitter.html %}
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  {% css MyFontsWebfontsKit %}
+  {% css main %}
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!--[if IE]>
+  {% css browser-upgrade %}
+  <![endif]-->
+
+  <!--[if IE 9]>
+  {% css browser-upgrade-ie9 %}
+  <![endif]-->
+
+  <!--[if IE 7]>
+  {% css browser-upgrade-ie7 %}
+  <![endif]-->
+
+  <!--[if IE 6]>
+  {% css browser-upgrade-ie6 %}
+  <![endif]-->
+
+  {% strip %}
+    {% for script in site.data.scripts %}
+      {% if script.header and script.pages contains "all" or script.pages contains page.title %}
+        <script type="text/javascript" src="{{scriptbase}}js/{{ script.script | prepend: site.baseurl }}{{js}}"></script>
+      {% endif %}
+    {% endfor %}
+  {% endstrip %}
+
+  <!-- Javascript -->
+
+  <script type="text/javascript">
+    var base = "{{ site.baseurl }}";
+  </script>
+
+  {% include head/ldjson.html %}
+
+  {% include head/googleAnalytics.html %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, height=device-height">
+
+</head>

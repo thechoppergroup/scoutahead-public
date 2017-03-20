@@ -1,0 +1,67 @@
+[
+  {
+    "script": "lodash-4.15.0",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "d3.3.5.6",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "d3-jetpack",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "moment-2.17.1",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/d3_selection",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/utility",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/xhr",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/js_hooks",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/table",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
+    "header": true
+  },
+  {
+    "script": "site/card_form",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
+    "header": true
+  },
+  {
+    "script": "site/entry_form",
+    "pages": ["Login", "Contact", "Reset Password", "Forgot Password", "Signup", "Request a Demo"],
+    "header": true
+  },
+  {
+    "script": "site/company/content_section",
+    "pages": ["all"],
+    "header": true
+  },
+  {
+    "script": "site/change_password",
+    "pages": ["Reset Password", "Forgot Password", "Signup"],
+    "header": true
+  }
+]

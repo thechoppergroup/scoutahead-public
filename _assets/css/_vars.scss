@@ -1,0 +1,99 @@
+%hide {
+  margin: -1px !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  clip: rect(0, 0, 0, 0) !important;
+  position: absolute !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+@function pow($base, $exponents) {
+  $raised: 1;
+
+  @for $i from 1 through $exponents {
+    $raised: $raised * $base;
+  }
+
+  @return $raised;
+}
+
+// Index check function
+@function z($list, $element) {
+   $z-index: index($list, $element);
+
+   @if $z-index {
+      @return $z-index;
+   }
+
+   @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+   @return null;
+}
+
+$black: #000;
+$white: #fff;
+
+$radius: .5pt;
+
+$color-wheel: (
+  yellow: #f7ec1f,
+  yellow-orange: #ffd108,
+  orange: #faa71a,
+  red-orange: #f47c20,
+  red: #ee2c24,
+  red-violet: #ed2490,
+  violet: #7f4098,
+  blue-violet: #2e429b,
+  blue: #2077bd,
+  blue-green: #00b2d7,
+  green: #21b24b,
+  yellow-green: #85c441
+);
+
+$headings: (small, body, h6, h5, h4, h3, h2, h1);
+
+$indexes:
+  footer,
+  navigation,
+  trays,
+  origin,
+  header,
+  sidebar,
+  dropdowns,
+  trays,
+  toast,
+  tooltips,
+  popovers,
+  segue,
+  modals !default;
+
+$interval: perfect-fourth;
+
+$scale: (
+  minor-second: 1.067,
+  major-second: 1.125,
+  minor-third: 1.2,
+  major-third: 1.25,
+  perfect-fourth: 1.333,
+  augmented-fourth: 1.414,
+  perfect-fifth: 1.5,
+  golden-ratio: 1.618,
+  octave: 2
+);
+
+$weights: (
+  thin: 100,
+  hairline: 100,
+  extra-light: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  demi-bold: 600,
+  bold: 700,
+  extra-bold: 800,
+  black: 900
+);

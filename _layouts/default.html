@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  {% if jekyll.environment == "development" %}
+    {% assign scriptbase = "https://localhost:8443/"%}
+  {% else %}
+    {% assign scriptbase = "/"%}
+  {% endif %}
+
+  {% include head.html %}
+
+  <body class="{% if page.slug %}{{ page.slug | slugify }}{% else %}{{ page.title | slugify }}{% endif %}">
+    <div class="is-hidden" collapse>
+      {% include svg_graphics.svg %}
+    </div>
+
+    {% include header.html %}
+
+    <div role="main">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+    {% js main %}
+  </body>
+
+</html>

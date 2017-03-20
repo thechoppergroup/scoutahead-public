@@ -1,0 +1,9 @@
+{% if include.template %}
+<ul class="unstyle--list">
+  {% for post in include.posts %}
+    <li class="col">
+      {% include {{include.template}} post=post index=forloop.index %}
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
